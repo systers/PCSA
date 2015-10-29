@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PCSA</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="get_help">Get Help now</string>
+    <string name="circle">Circle of Trust</string>
+    <string name="reporting">Reporting Process</string>
+    <string name="safety">Safety Resources</string>
+    <string name="helping_others">Helping Others</string>
+</resources>
