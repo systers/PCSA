@@ -2,4 +2,17 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Title and sub-title font sizes-->
+    <dimen name="title_font">24sp</dimen>
+    <dimen name="sub_title_font">20sp</dimen>
+    <dimen name="menu_icon_width">200dp</dimen>
+
+    <!-- Background colors-->
+    <color name="background_app">#2FAA96</color>
+    <color name="background_textview">#3b8471</color>
+    <color name="background_clicked">#FFC25C</color>
+
+    <!-- Text colors-->
+    <color name="Title_color">#ffff</color>
 </resources>

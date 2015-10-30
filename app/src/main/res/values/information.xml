@@ -1,0 +1,133 @@
+<resources>
+    <!-- This file includes all hard-coded information that is displayed in the app-->
+
+    <!-- Reporting steps-->
+    <string name="reporting_step1">&lt;b>Step 1&lt;/b> &lt;br/> &lt;br/>Get to a safe place</string>
+    <string name="reporting_step2">&lt;b>Step 2&lt;/b> &lt;br/>&lt;br/>Call PCMO/Duty Officer&lt;br/>&lt;br/> &lt;i>All victims of sexual assault are entitled to a medical examination with the PCMO present.  In some cases, forensic exams may be helpful and required to document and collect evidence.  The exams are referred to as a Sexual Assault Forensic Examination or SAFE&lt;/i></string>
+    <string name="reporting_step3">&lt;b>Step 3&lt;/b> &lt;br/>&lt;br/> If there are serious injuries, seek immediate treatment</string>
+    <string name="reporting_step4">&lt;b>Step 4&lt;/b> &lt;br/>&lt;br/>Do not go to the local police alone&lt;br/>&lt;br/>&lt;i>
+-Typically begins with a complaint to local authorities&lt;br/>
+-Police may take statements, collect evidence, attempt to establish identity of the offender, develop working theory&lt;br/>
+-Police will arrest suspect, conduct identification of suspect&lt;br/>
+-Police will present evidence and investigative report to Prosecutor&lt;br/>
+-Prosecutor will review evidence and charge suspect if possible&lt;/i></string>
+    <string name="reporting_step5">&lt;b>Step 5&lt;/b> &lt;br/>&lt;br/>Protect physical evidence</string>
+    <string name="reporting_step6">&lt;b>Step 6&lt;/b> &lt;br/>&lt;br/>Tell someone</string>
+
+    <!-- Reporting FAQ-->
+    <string name="reporting_faq1_header">What is the difference between a Restricted Report and a Standard Report?</string>
+    <string name="reporting_faq1">
+        Both types of reports are confidential in nature. Until you provide Peace Corps with your preference, staff will treat your
+        information as if you filed a Restricted Report.\n\n
+
+        A Restricted Report limits your information to only those individuals who have a specific need-to-know that information in order
+        to provide you with basic services (medical, mental health, or safety).\n\n
+
+        A Standard Report allows you to access all of the same services offered through Restricted Reporting in addition to other support
+        services such as filing a police report, switching host families, and changing to a new site. Because additional services
+        may be requested, a Standard Report increases the number of people with a need-to-know.
+    </string>
+
+    <string name="reporting_faq2_header">Should I choose Standard or Restricted?</string>
+    <string name="reporting_faq2">
+        The choice between filing a Standard or Restricted Report is an individual one. Some services, however, can only be
+        offered under standard reporting. Peace Corps believes it can best support you through standard reporting as it allows
+        the agency to leverage additional resources and offer additional services such as conducting an in-depth risk assessment.
+        The agency recognizes however that for some Volunteers the most important thing is strict confidentiality and a need for
+        as few people to know as possible.
+    </string>
+
+    <string name="reporting_faq3_header">What does “need-to-know” mean?</string>
+    <string name="reporting_faq3">
+        A need-to-know means that someone has a specific role that requires basic knowledge about the assault. Only service
+        providers typically have a need-to-know and therefore have access to information about the assault as reported by you.
+        Only medical staff have information about any medical treatment you receive.\n\n
+
+        A role may be mandated by Peace Corps policies and procedures, US law, or local laws. For example, a Country Director has
+        a responsibility to know where each Volunteer is located and new site development requires time and resources managed by
+        the Country Director. As such, a Country Director has a need-to-know when a Volunteer requests a site change.
+    </string>
+
+    <string name="reporting_faq4_header">What if I change my mind later?</string>
+    <string name="reporting_faq4">
+        All reports start as a Restricted Report. A Volunteer can change from Restricted to Standard at any time. Once a report
+        becomes Standard, the report cannot be converted back to Restricted because staff that might help provide additional standard
+        report services will have been provided with basic information.\n\n
+        Volunteers can request additional services at any time, and Volunteers can discontinue/cancel a request for services at any
+        time.
+    </string>
+
+    <string name="reporting_faq5_header">Will I get the services/type of reporting I want?</string>
+    <string name="reporting_faq5">
+        Volunteer preferences are very important to Peace Corps. We strive to ensure that Volunteer choices are respected. In
+        most cases Volunteers receive all the services they desire. Where something is not possible, Peace Corps staff have a
+        responsibility to explain why a service is not possible.\n\n
+
+        Because Peace Corps staff members have a responsibility to protect not only you, but other Volunteers, there may be limited
+        situations that require the agency to either disclose your name or convert your report from Restricted to Standard.  This is
+        most likely in situations where staff believe there is a serious or imminent threat to your health or safety that Peace Corps
+        cannot mitigate without additional support or resources. Conversion of a report without a Volunteer’s consent are very rare.
+    </string>
+
+    <string name="reporting_faq6_header">What is a SARL?</string>
+    <string name="reporting_faq6">
+        A SARL is a Sexual Assault Response Liaison. SARLs are typically Peace Corps staff that have had training in how to support
+        people that have experienced a sexual assault. SARLs help Volunteers with issues not handled by the PCMO or SSM. For example,
+        a SARL might accompany a Volunteer when traveling to an appointment with a local lawyer.
+    </string>
+    
+    <!-- Details of Other Staff to be contacted in case of crime and the contact number-->
+    <string name="reporting_desc_pcsaves">
+        The PC SAVES Helpline provides anonymous confidential crisis intervention, support and information to Peace Corps Volunteers
+        and trainees who have been affected by sexual assault via a variety of different platforms. All options are staffed by
+        trained professionals not affiliated with Peace Corps, available 24/7.  No personally identifying information will be
+        collected.\n\n
+        Learn More: pcsaveshelpline.org
+    </string>
+    <string name="reporting_contact_pcsaves">001 408 844 4357</string>
+    
+    <string name="reporting_desc_ova">
+        Centralized resource to Volunteers who are victims of sexual assault and violent crime regarding the services they are
+        entitled to receive, and ensuring their voices are heard and considered in all decisions affecting their service and care.\n\n
+        e-mail: victimadvocate@peacecorps.gov
+    </string>
+    <string name="reporting_contact_ova">202 409 2701</string>
+
+    <string name="reporting_desc_oig">
+        Resource for those who have been harmed by misconduct or criminal wrongdoing by a fellow Volunteer or Peace Corps Staff.
+        Independent from Peace Corps with law enforcement officers  who have the unique authorities to help seek a fair resolution and,
+        in appropriate cases, to seek prosecution in the United States or host country.\n\n
+        e-mail: victimadvocate@peacecorps.gov\n\n
+        Learn more: peacecorps.gov/OIG
+    </string>
+    <string name="reporting_contact_oig">202 692 2915</string>
+    
+    <string name="reporting_desc_ocrd">
+        Resource to provide leadership and guidance on all civil rights, equal employment opportunity and diversity matters; and to address
+        issues of discrimination and harassment, including sexual harassment, in the recruitment/service of Volunteers/Trainees.\n\n
+        email: ocrd@peacecorps.gov
+    </string>
+    <string name="reporting_contact_ocrd">202 692 2139</string>
+
+    <!-- Correct locations and corresponding details should be added here-->
+    <array name="locations">
+        <item>Uganda</item>
+        <item>Syria</item>
+        <item>Tunisia</item>
+    </array>
+
+    <string name="loc1_name">Uganda</string>
+    <string name="loc1_pcmo">1111</string>
+    <string name="loc1_ssm">2222</string>
+    <string name="loc1_sarl">3333</string>
+
+    <string name="loc2_name">Syria</string>
+    <string name="loc2_pcmo">4444</string>
+    <string name="loc2_ssm">5555</string>
+    <string name="loc2_sarl">6666</string>
+
+    <string name="loc3_name">Tunisia</string>
+    <string name="loc3_pcmo">7777</string>
+    <string name="loc3_ssm">8888</string>
+    <string name="loc3_sarl">9999</string>
+</resources>

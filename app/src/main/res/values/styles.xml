@@ -3,6 +3,16 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:spinnerItemStyle">@style/pcsaSpinnerShownStyle</item>
+    </style>
+
+    <style name="pcsaSpinnerShownStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/primary_text_default_material_dark</item>
+    </style>
+
+    <style name="pcsaAlertDialogStyle">
+        <item name="android:background">@color/background_app</item>
+        <item name="android:textColorLink">@color/primary_text_default_material_dark</item>
     </style>
 
 </resources>

@@ -1,10 +1,108 @@
 <resources>
     <string name="app_name">PCSA</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!--******************************************
+    Strings related to reporting
+    ******************************************-->
+    <string name="reporting_process">Reporting Process</string>
+    <string name="reporting_process_sub">Learn all about reporting</string>
+    <string name="reporting_types">Reporting Types</string>
+    <string name="reporting_services">Reporting Services</string>
+    <string name="reporting_steps">Reporting Steps</string>
+    <string name="reporting_contact">Contact Staff to Report</string>
+    <string name="reporting_resources">More Reporting Resources</string>
+    <string name="reporting_confidentiality">Confidentiality</string>
+    <string name="reporting_faq">Learn More about the Reporting Types</string>
+    <string name="reporting_faq_title">FAQ</string>
+    <string name="title_activity_types">Types</string>
+    <string name="reporting_get_help">Get Help Now</string>
+    <string name="reporting_get_help_sub1">Post Staff</string>
+    <string name="reporting_get_help_foot1">Contact Other Staff &gt;&gt;</string>
+    <string name="reporting_get_help_foot2">&lt;&lt; Contact Post Staff</string>
+    <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
+·	Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
+·	A sexual assault forensic exam (SAFE) to preserve evidence \n\n
+·	Counseling from a licensed mental health professional\n\n
+·	Medical evacuation\n\n
+·	Accompaniment during medical evacuation\n\n
+·	Safety planning\n\n
+·	Explanation of your legal options\n \n
+·	Assistance with making and going to appointments related to the assault (SARL assistance)\n\n
+·	Help understanding your rights and ensuring that you receive the services requested (victim advocate assistance)
+    </string>
+    <string name="reporting_desc_restricted"><b><i>Services only available with a Standard Report</i></b>\n\n
+·	Consultation with my Country Director\n\n
+·	File a report with local law enforcement\n\n
+·	Request a site change\n\n
+·	Request a host family change\n\n
+·	File a sexual misconduct complaint against another Volunteer/Trainee (Administrative Hearing)\n\n
+·	Request the Peace Corps Office of Inspector General conduct an investigation\n\n
+·	Request the Peace Corps Office of Civil Rights and Diversity conduct an investigation\n\n
+</string>
+    <string name="title_activity_steps">Steps</string>
+    <string name="title_activity_faq">FAQ</string>
+    <string name="title_activity_testing">Testingg</string>
+    <string name="title_activity_confidentiality">Confidentiality</string>
+    <string name="title_activity_resources">Resources</string>
+    <string name="title_activity_contact_post_staff">ContactPostStaff</string>
+    
+    <!-- Button texts and other texts for contact staff-->
+    <string name="contact_pcmo">Contact PCMO</string>
+    <string name="contact_ssm">Contact SSM</string>
+    <string name="contact_sarl">Contact SARL</string>
+    <string name="reporting_change_location">Change Location</string>
+    <string name="reporting_current_location">This is information for</string>
+
+    <!-- Locations that are available on dropdown of Contact Staff-->
+    <string-array name="locations_array">
+        <item>Uganda</item>
+        <item>Syria</item>
+        <item>Tunisia</item>
+    </string-array>
     <string name="get_help">Get Help now</string>
     <string name="circle">Circle of Trust</string>
     <string name="reporting">Reporting Process</string>
     <string name="safety">Safety Resources</string>
     <string name="helping_others">Helping Others</string>
+    <string name="title_activity_circle_of_trust">CircleOfTrust</string>
+    <string name="str_cnt_mnu_edit">Edit</string>
+    <string name="str_cnt_mnu_share">Share</string>
+    <string name="str_cnt_mnu_delete">Delete</string>
+    <string name="title_activity_trustees">Trustees</string>
+    <string name="title_activity_get_help_now">GetHelpNow</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_circle_intro">CircleIntro</string>
+    <string name="title_activity_saftey_resources">SafteyResources</string>
+
+    <string name="contact_pcsaves">PC SAVES Anonymous Helpline</string>
+    <string name="contact_ova">Office of Victim Advocacy</string>
+    <string name="contact_oig">Office of Inspector General</string>
+    <string name="contact_ocrd">Office of Civil Rights and Diversity</string>
+
+    <!--String related to Circle of Trust-->
+    <string name="circle_title">CIRCLE OF TRUST</string>
+    <string name="home_title">A confidential Safety resource for Peace Corps Volunteers</string>
+    <string name="helping">Helping</string>
+    <string name="friends_and_community">Friends and community members</string>
+    <string name="learn_effect">learn about the effect of Sexual Assualt</string>
+    <string name="bystander">Bystander intervention tactic</string>
+    <string name="predator_tactic">Predator tactics</string>
+    <string name="comrade_title">Add the Comrade Numbers here</string>
+    <string name="comrade1">Comrade 1</string>
+    <string name="comrade2">Comrade 2</string>
+    <string name="comrade3">Comrade 3</string>
+    <string name="comrade4">Comrade 4</string>
+    <string name="comrade5">Comrade 5</string>
+    <string name="comrade6">Comrade 6</string>
+    <string name="ok_button">OK</string>
+    <string name="slide_one_head">Just a few Steps on how to use</string>
+    <string name="slide_one_button">Circle Of Trust</string>
+    <string name="slide_2_head">When you are feeling insecure or needs a comrades attention.\nPrees the button</string>
+    <string name="slide_three_head">Circle Of Trust</string>
+    <string name="slide_three_bottom">Select the message you want to send from here!</string>
+    <string name="slide_four_head">The message will be sent to 6 Comrades for immediate intervention</string>
+    <string name="slide_four_bottom">Done</string>
 </resources>

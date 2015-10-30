@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is the common layout used for Buttons-->
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/bg_btn_rounded_rectangle"
+    android:textColor="@color/primary_text_default_material_dark"
+    android:textStyle="bold"/>

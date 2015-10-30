@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/faq_title_and_image"
+        android:background="@drawable/bg_textview_rounded_rectangle">
+    <TextView
+        android:id="@+id/arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_btn_arrow"
+        android:rotation="90"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <TextView
+
+        android:id="@+id/faqtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:padding="10dp"
+        android:textStyle="bold|italic"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/faqdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:maxLines="0"
+        android:visibility="invisible"
+        android:background="@drawable/bg_textview_faq_rounded_lower"
+        android:padding="10dp"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment"
+    android:name="com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment"
+    tools:layout="@layout/fragment_circle_of_trust"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent" />
