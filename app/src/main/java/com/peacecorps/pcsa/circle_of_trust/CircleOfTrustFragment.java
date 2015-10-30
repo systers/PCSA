@@ -51,14 +51,14 @@ public class CircleOfTrustFragment extends Fragment {
     public void showOptions(){
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(
                 getActivity());
-        builderSingle.setTitle("Select a request");
+        builderSingle.setTitle(R.string.select_request);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 getActivity(),
                 android.R.layout.select_dialog_singlechoice);
-        arrayAdapter.add("Come get me");
-        arrayAdapter.add("Call I need an interruption");
-        arrayAdapter.add("I need to talk");
-        builderSingle.setNegativeButton("cancel",
+        arrayAdapter.add(getString(R.string.come_get_me));
+        arrayAdapter.add(getString(R.string.need_interruption));
+        arrayAdapter.add(getString(R.string.need_to_talk));
+        builderSingle.setNegativeButton(R.string.cancel,
                 new DialogInterface.OnClickListener() {
 
                     @Override
@@ -87,33 +87,33 @@ public class CircleOfTrustFragment extends Fragment {
         switch(optionSelected)
         {
             case "Come get me":
-                message = "Come and get me. I need help getting home Safely. Call ASAP to get my Location.Sent through First Aide's Circle of Trust.";
+                message = getString(R.string.come_get_me_message);
                 break;
             case "Call I need an interruption":
-                message = "Call and pretend you need me. I need an interruption. Message sent through First Aide's Circle of Trust";
+                message = getString(R.string.interruption_message);
                 break;
             case "I need to talk":
-                message = "I need to talk. Message sent through First Aide's Circle of Trust";
+                message = getString(R.string.need_to_talk_message);
                 break;
         }
 
         try {
             // The numbers variable holds the Comrades numbers
-            String numbers[] = {"+2348103425729", "+2348111875720"};
+            String numbers[] = {getString(R.string.comrade1_number), getString(R.string.comrade2_number)};
 
             for(String number : numbers) {
                 sms.sendTextMessage(number, null, message, null, null);
             }
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Message sent"); // title bar string
-            builder.setPositiveButton("OK", null);
-            builder.setMessage("This message has been sent to 6 Comrades");
+            builder.setTitle(R.string.msg_sent); // title bar string
+            builder.setPositiveButton(R.string.ok, null);
+            builder.setMessage(R.string.comfirmation_message);
             AlertDialog errorDialog = builder.create();
             errorDialog.show(); // display the Dialog
 
         }catch (Exception e)
         {
-            Toast.makeText(getActivity(), "Message Sending Failed, Try again Later", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), R.string.message_failed, Toast.LENGTH_LONG).show();
         }
 
     }

@@ -105,4 +105,18 @@
     <string name="slide_three_bottom">Select the message you want to send from here!</string>
     <string name="slide_four_head">The message will be sent to 6 Comrades for immediate intervention</string>
     <string name="slide_four_bottom">Done</string>
+    <string name="select_request">Select a request</string>
+    <string name="come_get_me">Come get me</string>
+    <string name="need_interruption">Call I need an interruption</string>
+    <string name="need_to_talk">I need to talk</string>
+    <string name="cancel">cancel</string>
+    <string name="come_get_me_message">Come and get me. I need help getting home Safely. Call ASAP to get my Location.Sent through First Aide\'s Circle of Trust.</string>
+    <string name="interruption_message">Call and pretend you need me. I need an interruption. Message sent through First Aide\'s Circle of Trust</string>
+    <string name="need_to_talk_message">I need to talk. Message sent through First Aide\'s Circle of Trust</string>
+    <string name="comrade1_number">+2348103425729</string>
+    <string name="comrade2_number">+2348111875720</string>
+    <string name="msg_sent">Message sent</string>
+    <string name="ok">OK</string>
+    <string name="comfirmation_message">This message has been sent to 6 Comrades</string>
+    <string name="message_failed">Message Sending Failed, Try again Later</string>
 </resources>

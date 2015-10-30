@@ -49,28 +49,6 @@ public class Trustees extends ActionBarActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                 *This portion of code saves different comrades numbers.
-                 *Since we don't have these numbers at hand, I decided to comment it.
-
-                String com1  = comrade1editText.getText().toString();
-                String com2  = comrade2editText.getText().toString();
-                String com3  = comrade3editText.getText().toString();
-                String com4  = comrade4editText.getText().toString();
-                String com5  = comrade5editText.getText().toString();
-                String com6  = comrade6editText.getText().toString();
-
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-
-                editor.putString(comrade1, com1);
-                editor.putString(comrade2, com2);
-                editor.putString(comrade3, com3);
-                editor.putString(comrade4, com4);
-                editor.putString(comrade5, com5);
-                editor.putString(comrade6, com6);
-                editor.commit();
-
-                */
                 Toast.makeText(getApplicationContext(),"Comrades phone numbers has been updated", Toast.LENGTH_LONG).show();
             }
         });
