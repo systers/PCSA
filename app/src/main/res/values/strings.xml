@@ -87,7 +87,7 @@
     <string name="home_title">A confidential Safety resource for Peace Corps Volunteers</string>
     <string name="helping">Helping</string>
     <string name="friends_and_community">Friends and community members</string>
-    <string name="learn_effect">learn about the effect of Sexual Assualt</string>
+    <string name="learn_effect">learn about the effect of Sexual Assault</string>
     <string name="bystander">Bystander intervention tactic</string>
     <string name="predator_tactic">Predator tactics</string>
     <string name="comrade_title">Add the Comrade Numbers here</string>
@@ -117,6 +117,6 @@
     <string name="comrade2_number">+2348111875720</string>
     <string name="msg_sent">Message sent</string>
     <string name="ok">OK</string>
-    <string name="comfirmation_message">This message has been sent to 6 Comrades</string>
+    <string name="confirmation_message">This message has been sent to 6 Comrades</string>
     <string name="message_failed">Message Sending Failed, Try again Later</string>
 </resources>

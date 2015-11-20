@@ -24,6 +24,7 @@ public class CircleOfTrustFragment extends Fragment {
     ImageButton editButton;
 
     private String optionSelected;
+
     public CircleOfTrustFragment() {
     }
 

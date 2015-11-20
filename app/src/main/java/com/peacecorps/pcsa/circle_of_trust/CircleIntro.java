@@ -46,7 +46,7 @@ public class CircleIntro extends AppIntro {
     @Override
     public void onSkipPressed() {
         loadMainActivity();
-//        Toast.makeText(getApplicationContext(),getString(R.strig.skip),Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
