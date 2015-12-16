@@ -1,8 +1,10 @@
 package com.peacecorps.pcsa.circle_of_trust;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
@@ -22,6 +24,7 @@ import com.peacecorps.pcsa.R;
 public class CircleOfTrustFragment extends Fragment {
     ImageButton requestButton;
     ImageButton editButton;
+    SharedPreferences sharedPreferences;
 
     private String optionSelected;
     public CircleOfTrustFragment() {
@@ -98,16 +101,30 @@ public class CircleOfTrustFragment extends Fragment {
         }
 
         try {
+            int totalComrades = 0;
+            sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
             // The numbers variable holds the Comrades numbers
-            String numbers[] = {getString(R.string.comrade1_number), getString(R.string.comrade2_number)};
+            String numbers[] = {sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
+                    sharedPreferences.getString(Trustees.comrade3, ""), sharedPreferences.getString(Trustees.comrade4, ""),
+                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, ""),};
 
             for(String number : numbers) {
-                sms.sendTextMessage(number, null, message, null, null);
+                if(number != ""){
+                    sms.sendTextMessage(number, null, message, null, null);
+                    totalComrades++;
+                }
             }
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle(R.string.msg_sent); // title bar string
             builder.setPositiveButton(R.string.ok, null);
-            builder.setMessage(R.string.comfirmation_message);
+
+            //Can't say that you sent it to 6 people, if you don't have 6 comrades!
+            if(totalComrades == 1){
+                builder.setMessage("This message has been sent to " + totalComrades + " Comrade");
+            }else{
+                builder.setMessage("This message has been sent to " + totalComrades + " Comrades");
+            }
+
             AlertDialog errorDialog = builder.create();
             errorDialog.show(); // display the Dialog
 
