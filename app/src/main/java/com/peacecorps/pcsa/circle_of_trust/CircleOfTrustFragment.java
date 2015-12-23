@@ -3,9 +3,11 @@ package com.peacecorps.pcsa.circle_of_trust;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,7 @@ import com.peacecorps.pcsa.R;
 public class CircleOfTrustFragment extends Fragment {
     ImageButton requestButton;
     ImageButton editButton;
+    SharedPreferences sharedPreferences;
 
     private String optionSelected;
     public CircleOfTrustFragment() {
@@ -99,7 +102,12 @@ public class CircleOfTrustFragment extends Fragment {
 
         try {
             // The numbers variable holds the Comrades numbers
-            String numbers[] = {getString(R.string.comrade1_number), getString(R.string.comrade2_number)};
+            String numbers[] = {sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
+                    sharedPreferences.getString(Trustees.comrade3, ""), sharedPreferences.getString(Trustees.comrade4, ""),
+                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, ""),};
+
+            Log.e("ta", numbers[0]);
+
 
             for(String number : numbers) {
                 sms.sendTextMessage(number, null, message, null, null);
