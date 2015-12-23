@@ -32,6 +32,7 @@ public class Trustees extends AppCompatActivity {
     public static final String comrade5 = "comrade5Key";
     public static final String comrade6 = "comrade6Key";
     SharedPreferences sharedpreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +44,31 @@ public class Trustees extends AppCompatActivity {
         comrade4editText = (EditText) findViewById(R.id.comrade4EditText);
         comrade5editText = (EditText) findViewById(R.id.comrade5EditText);
         comrade6editText = (EditText) findViewById(R.id.comrade6EditText);
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        comrade1editText.setText(sharedpreferences.getString(comrade1, ""));
+        comrade2editText.setText(sharedpreferences.getString(comrade2, ""));
+        comrade3editText.setText(sharedpreferences.getString(comrade3, ""));
+        comrade4editText.setText(sharedpreferences.getString(comrade4, ""));
+        comrade5editText.setText(sharedpreferences.getString(comrade5, ""));
+        comrade6editText.setText(sharedpreferences.getString(comrade6, ""));
+
         okButton = (Button) findViewById(R.id.okButton);
 
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        editor = sharedpreferences.edit();
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Comrades phone numbers has been updated", Toast.LENGTH_LONG).show();
+                editor.putString(comrade1, comrade1editText.getText().toString());
+                editor.putString(comrade2, comrade2editText.getText().toString());
+                editor.putString(comrade3, comrade3editText.getText().toString());
+                editor.putString(comrade4, comrade4editText.getText().toString());
+                editor.putString(comrade5, comrade5editText.getText().toString());
+                editor.putString(comrade6, comrade6editText.getText().toString());
+
+                editor.commit();
             }
         });
     }
