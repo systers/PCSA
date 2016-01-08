@@ -26,7 +26,6 @@ public class CircleIntro extends AppIntro {
             addSlide(new SecondSlide(), getApplicationContext());
             addSlide(new ThirdSlide(), getApplicationContext());
             addSlide(new FourthSlide(), getApplicationContext());
-
             setFadeAnimation();
 
         } else{ loadMainActivity();}
