@@ -35,7 +35,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
             <ImageButton
                 android:id="@+id/com1Button"
                 android:layout_width="50dp"
@@ -46,7 +47,7 @@
                 android:text="CM 1"
                 android:src="@mipmap/ic_comrade"
                 android:layout_marginTop="50dp"
-                android:layout_marginLeft="60dp"/>
+                android:layout_marginLeft="0dp"/>
             <ImageButton
                 android:id="@+id/com2Button"
                 android:layout_width="50dp"
@@ -62,7 +63,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
             <ImageButton
                 android:id="@+id/com6Button"
                 android:layout_width="50dp"
@@ -73,7 +76,7 @@
                 android:background="@drawable/btn_rounded_rectangle"
                 android:text="Com 6"
                 android:layout_marginTop="50dp"
-                android:layout_marginLeft="12dp"/>
+               />
 
             <ImageButton
                 android:id="@+id/requestButton"
@@ -94,13 +97,14 @@
                 android:background="@drawable/btn_rounded_rectangle"
                 android:text="Com 3"
                 android:layout_marginTop="50dp"
-                android:layout_marginLeft="54dp"/>
+                android:layout_marginLeft="40dp"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
             <ImageButton
                 android:id="@+id/com5Button"
                 android:layout_width="50dp"
@@ -110,8 +114,7 @@
                 android:textSize="@dimen/text_normal"
                 android:background="@drawable/btn_rounded_rectangle"
                 android:text="Com 5"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="60dp"/>
+                android:layout_marginTop="50dp" />
             <ImageButton
                 android:id="@+id/com4Button"
                 android:layout_width="50dp"

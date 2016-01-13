@@ -36,7 +36,7 @@ Press the play button inside Android Studio, choose the emulator, and the PCSA a
 Latest documentation for PCSA can be found [here](https://github.com/systers/PCSA-Android/tree/develop/docs)
 
 ## Contributing
-Please submit a pull request if you wish to add on any improvements you have made to the app
+If you want to contribute to PCSA-Android, subscribe to our [systers-dev](http://systers.org/mailman/listinfo/systers-dev) mailing list and shoot an introductory email. Pick an open issue from the [issue list](https://github.com/systers/PCSA-Android/issues) claim it in the comments, fix the issue and send us a pull request. If you have any suggestions or issues to report, you can also discuss them in the mailing list.
 
 ## Troubleshooting/Issues
 
@@ -44,7 +44,6 @@ If there are any problems encountered when installing the IDE, you may want to c
 
 If there are any other questions or concerns, please contact the Systers contributors. 
 
-To help us fix some issues or to post the ones you found, go to the [issue list](https://github.com/systers/PCSA-Android/issues)
 
 
 
