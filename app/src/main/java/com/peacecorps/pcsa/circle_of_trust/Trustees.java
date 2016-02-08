@@ -56,6 +56,7 @@ public class Trustees extends AppCompatActivity {
         comrade3editText.setText(sharedpreferences.getString(comrade3, ""));
         comrade4editText.setText(sharedpreferences.getString(comrade4, ""));
         comrade5editText.setText(sharedpreferences.getString(comrade5, ""));
+        comrade6editText.setText(sharedpreferences.getString(comrade6, ""));
 
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +70,7 @@ public class Trustees extends AppCompatActivity {
 
                 editor.commit();
                 Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
+                finish();
             }
         });
     }
