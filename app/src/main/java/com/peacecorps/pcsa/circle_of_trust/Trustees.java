@@ -71,6 +71,11 @@ public class Trustees extends AppCompatActivity {
 
                 editor.commit();
                 Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
+
+                //Need to start Circle of Trusts with updated Data
+                Intent intent = new Intent(Trustees.this,CircleOfTrust.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
