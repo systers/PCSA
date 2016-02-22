@@ -68,7 +68,7 @@
             android:textColor="@color/primary_text_default_material_dark"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/layout_marginTop"
             android:text="@string/reporting_get_help_foot2"/>
 
     </LinearLayout>

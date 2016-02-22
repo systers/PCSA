@@ -28,27 +28,27 @@
             android:id="@+id/getButton"
             style="@style/NavigateButton"
             android:text="@string/get_help"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="@dimen/fifty"/>
         <Button
             android:id="@+id/circleButton"
             style="@style/NavigateButton"
             android:text="@string/circle"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="@dimen/twenty"/>
         <Button
             android:id="@+id/reportButton"
             style="@style/NavigateButton"
             android:text="@string/reporting"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="@dimen/twenty"/>
         <Button
             android:id="@+id/safetyResourceButton"
             style="@style/NavigateButton"
             android:text="@string/safety"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="@dimen/twenty"/>
         <Button
             android:id="@+id/getHelpButton"
             style="@style/NavigateButton"
             android:text="@string/helping_others"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="@dimen/twenty"/>
 
     </LinearLayout>
 

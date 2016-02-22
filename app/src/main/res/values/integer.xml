@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="intro4_layout_weight" >10</integer>
+    <integer name="intro4_textView_weight" >3</integer>
+    <integer name="intro4_linear_layout_weight" >5</integer>
+    <integer name="intro4_weight_sum">1</integer>
+    <integer name="rotation">90</integer>
+    <integer name="zero">0</integer>
+    <integer name="ems">10</integer>
+    <integer name="six">6</integer>
+</resources>

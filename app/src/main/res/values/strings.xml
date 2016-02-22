@@ -129,4 +129,11 @@
     <string name="confirmation_message">This message has been sent to all registered Comrades</string>
     <string name="message_failed">Message Sending Failed, Try again Later</string>
 
+    <!-- INTRO screen strings-->
+    <string name="intro_top_text">Just a few Steps on how to use.</string>
+    <string name="intro_bottom_text">Circle Of Trust</string>
+    <string name="intro2_top_text">When you are feeling insecure or needs a comrades attention.\nPrees the button</string>
+    <string name="intro3_bottom_text">Select the message you want to send from here!</string>
+    <string name="intro4_top_text">The message will be sent to 6 Comrades for immediate intervention</string>
+    <string name="intro4_bottom_text">Done</string>
 </resources>
