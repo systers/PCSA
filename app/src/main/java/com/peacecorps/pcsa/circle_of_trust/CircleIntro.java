@@ -15,6 +15,7 @@ import com.peacecorps.pcsa.circle_of_trust.slides.ThirdSlide;
 public class CircleIntro extends AppIntro {
     public SharedPreferences settings;
     public boolean firstRun;
+    //Commit
 
     @Override
     public void init(Bundle savedInstanceState) {
