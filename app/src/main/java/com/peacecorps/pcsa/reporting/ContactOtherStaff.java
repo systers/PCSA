@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
@@ -16,7 +17,7 @@ import com.peacecorps.pcsa.R;
  */
 public class ContactOtherStaff extends Activity {
 
-    TextView contactPostStaff;
+    ImageView contactPostStaff;
     Button contactPcSaves;  //Button to access PC Saves Anonymous HelpLine
     Button contactOva;      //Button to access Office of Victim Advocacy
     Button contactOig;      //Button to access Office of Inspector General
@@ -32,7 +33,7 @@ public class ContactOtherStaff extends Activity {
         contactOig = (Button) findViewById(R.id.oig);
         contactOcrd = (Button) findViewById(R.id.ocrd);
 
-        contactPostStaff = (TextView) findViewById(R.id.link_to_post_staff);
+        contactPostStaff = (ImageView) findViewById(R.id.link_to_post_staff);
 
         contactPcSaves.setText(R.string.contact_pcsaves);
         contactOva.setText(R.string.contact_ova);

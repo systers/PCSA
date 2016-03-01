@@ -49,13 +49,38 @@
 
         <include
             android:id="@+id/post_staff_pcmo"
-            layout="@layout/button"/>
-        <include
-            android:id="@+id/post_staff_ssm"
-            layout="@layout/button"/>
+            layout="@layout/button"
+            android:layout_height="wrap_content"
+            android:layout_width="265dp"
+            android:layout_marginTop="30dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+            <include
+                android:id="@+id/post_staff_ssm"
+                layout="@layout/button"
+                android:layout_height="wrap_content"
+                android:layout_width="265dp" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/link_to_other_staff"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:src="@mipmap/ic_arrow_right"
+                android:layout_weight="0.75"/>
+
+        </LinearLayout>
+
         <include
             android:id="@+id/post_staff_sarl"
-            layout="@layout/button"/>
+            layout="@layout/button"
+            android:layout_height="wrap_content"
+            android:layout_width="265dp"
+            android:layout_marginTop="30dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -87,15 +112,7 @@
             android:textSize="@dimen/text_small"
             android:textColor="@color/primary_text_default_material_dark"/>
 
-        <TextView
-            android:id="@+id/link_to_other_staff"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/primary_text_default_material_dark"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:text="@string/reporting_get_help_foot1"/>
+
 
     </LinearLayout>
 </ScrollView>
