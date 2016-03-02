@@ -12,10 +12,10 @@
 
     <ImageView
         android:id="@+id/dialog_img"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="15dp"
+        android:layout_width="@dimen/dialog_icon_size"
+        android:layout_height="@dimen/dialog_icon_size"
+        android:layout_marginLeft="@dimen/dialog_icon_marginleft"
+        android:layout_marginRight="@dimen/dialog_icon_marginright"
         />
 
 
@@ -24,7 +24,7 @@
         android:id="@+id/dialog_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="27sp"
+        android:textSize="@dimen/text_large"
         android:layout_gravity="center"
         android:textColor="#FFFFFF"
         />
