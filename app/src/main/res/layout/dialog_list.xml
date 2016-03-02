@@ -9,8 +9,8 @@
         android:id="@+id/dialog_listview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:dividerHeight="2dp"
-        android:divider="#FFFFFF"
+        android:dividerHeight="@dimen/dialog_divider_height"
+        android:divider="@color/primary_text_default_material_dark"
         />
 
 </LinearLayout>

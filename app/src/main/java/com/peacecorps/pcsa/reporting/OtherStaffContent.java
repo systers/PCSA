@@ -37,7 +37,6 @@ public class OtherStaffContent extends Activity implements AdapterView.OnItemCli
     TextView contactDescription;
     Button contactNow;
     static String contactNumber;
-    private Dialog listDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,61 +57,9 @@ public class OtherStaffContent extends Activity implements AdapterView.OnItemCli
         contactNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog("Contact "+details.getString(CONTACT_NAME) + " via");
+                CustomAdapter.createDialog(getString(R.string.contact)+details.getString(CONTACT_NAME)+getString(R.string.via),OtherStaffContent.this).show();
             }
         });
-    }
-
-    /**
-     * Creates a Dialog for the user to choose Dialer app or SMS app
-     * @param title title of the dialog box
-     */
-    private void createDialog(final String title){
-        //Initialising the dialog box
-        listDialog = new Dialog(this);
-        listDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        listDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        LayoutInflater layoutInflater = LayoutInflater.from(this);
-
-        //Initialising the list view
-        View view = layoutInflater.inflate(R.layout.dialog_list, null);
-        listDialog.setContentView(view);
-        ListView list1 = (ListView) listDialog.findViewById(R.id.dialog_listview);
-        list1.setAdapter(new CustomAdapter(this));
-
-        //Adding the header(title) to the dialogbox
-        TextView textView = new TextView(this);
-        textView.setText(title);
-        textView.setTextColor(getResources().getColor(R.color.primary_text_default_material_dark));
-        textView.setTypeface(Typeface.DEFAULT_BOLD);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        textView.setGravity(Gravity.CENTER);
-        list1.addHeaderView(textView);
-
-        //Providing functionality to the listitems (Call and Message)
-        list1.setOnItemClickListener(this);
-
-        listDialog.show();
-    }
-
-    /**
-     * Opens Dialer or SMS
-     * @param action which app to open
-     * @param contactNumber the contact number of the selected person
-     */
-    private void contactStaff(int action, String contactNumber){
-        switch (action){
-            case DialogInterface.BUTTON_POSITIVE:
-                Intent callingIntent = new Intent(Intent.ACTION_CALL);
-                callingIntent.setData(Uri.parse("tel:" + contactNumber));
-                startActivity(callingIntent);
-                break;
-
-            case DialogInterface.BUTTON_NEGATIVE:
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                smsIntent.setData(Uri.parse("sms:"+contactNumber));
-                startActivity(smsIntent);
-        }
     }
 
     @Override
@@ -132,6 +79,5 @@ public class OtherStaffContent extends Activity implements AdapterView.OnItemCli
             smsIntent.setData(Uri.parse("sms:"+contactNumber));
             startActivity(smsIntent);
         }
-        listDialog.cancel();
     }
 }

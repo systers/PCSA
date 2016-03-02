@@ -21,4 +21,11 @@
     <dimen name="photo_border_width">2dp</dimen>
     <dimen name="contact_pick_padding_top_bottom">5dp</dimen>
 
+    <!-- Dialog Box -->
+    <dimen name="dialog_icon_size">55dp</dimen>
+    <dimen name="dialog_icon_marginleft">30dp</dimen>
+    <dimen name="dialog_icon_marginright">15dp</dimen>
+    <dimen name="dialog_divider_height">2dp</dimen>
+    <dimen name="dialog_header_textsize">20dp</dimen>
+
 </resources>
