@@ -15,7 +15,7 @@ import com.peacecorps.pcsa.R;
  */
 public class CustomAdapter extends BaseAdapter {
 
-    public static String[] result = {"Voice Call","Send message"};
+    public static String[] caption = {"Voice Call","Send message"};
     Context context;
     public static int[] icons = {R.mipmap.ic_call, R.mipmap.ic_message};
     private static LayoutInflater inflater;
@@ -27,7 +27,7 @@ public class CustomAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return result.length;
+        return caption.length;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class CustomAdapter extends BaseAdapter {
         rowView = inflater.inflate(R.layout.dialog_listitem, null);
         TextView textView = (TextView)rowView.findViewById(R.id.dialog_txt);
         ImageView imageView = (ImageView)rowView.findViewById(R.id.dialog_img);
-        textView.setText(result[position]);
+        textView.setText(caption[position]);
         imageView.setImageResource(icons[position]);
         return rowView;
     }
