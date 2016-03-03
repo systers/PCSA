@@ -18,8 +18,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="40sp"
-                android:textColor="#fff"
+                android:textSize="@dimen/safety_resource_text_size"
+                android:textColor="@color/fragment_safety_resource_text_color"
                 android:text="Helping"
                 />
             <TextView
@@ -27,33 +27,33 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="@dimen/text_normal"
-                android:textColor="#fff"
+                android:textColor="@color/fragment_safety_resource_text_color"
                 android:text="Friends and community members"
                 />
 
             <Button
                 android:id="@+id/PCMOButton"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/safety_resource_height"
                 android:textSize="@dimen/text_normal"
                 android:text="learn about the effect of Sexual Assualt"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/safety_resource_marginTop_50"
                 style="@style/AppButton"/>
             <Button
                 android:id="@+id/SSMButton"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/safety_resource_height"
                 android:textSize="@dimen/text_normal"
                 android:text="Bystander intervention tactics"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="@dimen/safety_resource_marginTop_70"
                 style="@style/AppButton"/>
             <Button
                 android:id="@+id/SARLButton"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/safety_resource_height"
                 android:textSize="@dimen/text_normal"
                 android:text="Predator tactics"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="@dimen/safety_resource_marginTop_70"
                 style="@style/AppButton"/>
 
         </LinearLayout>

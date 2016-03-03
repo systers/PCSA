@@ -7,7 +7,7 @@
         android:textSize="@dimen/abc_text_size_medium_material"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/bg_textview_rounded_rectangle"
-        android:padding="10dp"
+        android:padding="@dimen/textview_padding"
         android:scrollbars="vertical"
         android:fadeScrollbars="false"
         android:layout_marginBottom="@dimen/activity_vertical_margin"

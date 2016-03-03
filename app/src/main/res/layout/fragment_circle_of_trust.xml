@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#2FAA96"
+    android:background="@color/background_fragment_circle_of_trust"
     tools:context="com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment">
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,20 +18,19 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="@dimen/text_normal"
-            android:textColor="#ffff"
+            android:textColor="@color/intro_text_color"
             android:text="CIRCLE OF TRUST"
             />
         <ImageButton
             android:id="@+id/editButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:textColor="#fff5faf6"
+            android:layout_width="@dimen/circle_of_trust_width"
+            android:layout_height="@dimen/circle_of_trust_height"
+            android:textColor="@color/fragment_of_trust_text_color"
             android:src="@mipmap/ic_edit_button"
             android:textSize="@dimen/text_normal"
             android:background="@drawable/btn_rounded_rectangle"
             android:text="Com 4"
-
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="@dimen/circle_of_trust_marginRight"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -39,27 +38,27 @@
             android:gravity="center_horizontal">
             <com.peacecorps.pcsa.circle_of_trust.CircularImageView
                 android:id="@+id/com1Button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="#fff5faf6"
+                android:layout_width="@dimen/circle_of_trust_width"
+                android:layout_height="@dimen/circle_of_trust_height"
+                android:textColor="@color/fragment_of_trust_text_color"
                 android:textSize="@dimen/text_normal"
                 android:text="CM 1"
                 android:src="@mipmap/ic_comrade"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="0dp"
+                android:layout_marginTop="@dimen/circle_of_trust_width"
+                android:layout_marginLeft="@dimen/zero"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"/>
             <com.peacecorps.pcsa.circle_of_trust.CircularImageView
                 android:id="@+id/com2Button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="#fff5faf6"
+                android:layout_width="@dimen/circle_of_trust_width"
+                android:layout_height="@dimen/circle_of_trust_height"
+                android:textColor="@color/fragment_of_trust_text_color"
                 android:src="@mipmap/ic_comrade"
                 android:textSize="@dimen/text_normal"
                 android:text="CM 2"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="70dp"
+                android:layout_marginTop="@dimen/circle_of_trust_width"
+                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"/>
@@ -72,12 +71,12 @@
             android:gravity="center_horizontal">
             <com.peacecorps.pcsa.circle_of_trust.CircularImageView
                 android:id="@+id/com6Button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="#fff5faf6"
+                android:layout_width="@dimen/circle_of_trust_width"
+                android:layout_height="@dimen/circle_of_trust_height"
+                android:textColor="@color/fragment_of_trust_text_color"
                 android:src="@mipmap/ic_comrade"
                 android:textSize="@dimen/text_normal"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/circle_of_trust_width"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"
@@ -85,23 +84,23 @@
 
             <ImageButton
                 android:id="@+id/requestButton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:textColor="#fff5faf6"
+                android:layout_width="@dimen/circle_of_trust_image_width"
+                android:layout_height="@dimen/circle_of_trust_image_height"
+                android:textColor="@color/fragment_of_trust_text_color"
                 android:background="@mipmap/ic_help_me"
                 android:text="Request Help"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="40dp"/>
+                android:layout_marginTop="@dimen/circle_of_trust_width"
+                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft_40"/>
             <com.peacecorps.pcsa.circle_of_trust.CircularImageView
                 android:id="@+id/com3Button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="#fff5faf6"
+                android:layout_width="@dimen/circle_of_trust_width"
+                android:layout_height="@dimen/circle_of_trust_height"
+                android:textColor="@color/fragment_of_trust_text_color"
                 android:src="@mipmap/ic_comrade"
                 android:textSize="@dimen/text_normal"
                 android:text="Com 3"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginTop="@dimen/circle_of_trust_width"
+                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft_40"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"/>
@@ -114,26 +113,26 @@
             android:gravity="center_horizontal">
             <com.peacecorps.pcsa.circle_of_trust.CircularImageView
                 android:id="@+id/com5Button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="#fff5faf6"
+                android:layout_width="@dimen/circle_of_trust_width"
+                android:layout_height="@dimen/circle_of_trust_height"
+                android:textColor="@color/fragment_of_trust_text_color"
                 android:src="@mipmap/ic_comrade"
                 android:textSize="@dimen/text_normal"
                 android:text="Com 5"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/circle_of_trust_width"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"/>
             <com.peacecorps.pcsa.circle_of_trust.CircularImageView
                 android:id="@+id/com4Button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:textColor="#fff5faf6"
+                android:layout_width="@dimen/circle_of_trust_width"
+                android:layout_height="@dimen/circle_of_trust_height"
+                android:textColor="@color/fragment_of_trust_text_color"
                 android:src="@mipmap/ic_comrade"
                 android:textSize="@dimen/text_normal"
                 android:text="Com 4"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="70dp"
+                android:layout_marginTop="@dimen/circle_of_trust_width"
+                android:layout_marginLeft="@dimen/circle_of_trust_marginLeft"
                 app:border="true"
                 app:border_color="@color/photo_border"
                 app:border_width="@dimen/photo_border_width"/>

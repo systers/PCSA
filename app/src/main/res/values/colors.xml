@@ -4,5 +4,16 @@
     <color name="background_app">#2FAA96</color>
     <color name="background_textview">#3b8471</color>
     <color name="background_clicked">#FFC25C</color>
+    <color name="background_fragment_circle_of_trust">#2FAA96</color>
+    <color name="intro_background">#ffdfb68a</color>
+    <color name="intro2_background">#018e9f</color>
+    <color name="intro3_background">#5C6BC0</color>
+    <color name="intro4_background">#4CAF50</color>
+    <color name="intro_text_color">#ffffff</color>
+    <color name="fragment_of_trust_text_color">#fff5faf6</color>
+    <color name="fragment_safety_resource_text_color">#fff</color>
+    <color name="activity_trustee_background">#2FAA96</color>
+    <color name="activity_trustee_text_color">#fffaf3f1</color>
+    <color name="activity_trustee_edittext_color">#000</color>
     <color name="photo_border">#FFFFFF</color>
 </resources>

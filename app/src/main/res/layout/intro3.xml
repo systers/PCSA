@@ -2,52 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5C6BC0"
-    android:layout_weight="10"
+    android:background="@color/intro3_background"
+    android:layout_weight="@integer/intro4_layout_weight"
     android:id="@+id/main">
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingLeft="32dp"
-        android:layout_weight="3"
+        android:paddingLeft="@dimen/intro_padding"
+        android:layout_weight="@integer/intro4_textView_weight"
         android:fontFamily="sans-serif-thin"
-        android:textColor="#ffffff"
-        android:paddingRight="32dp"
+        android:textColor="@color/intro_text_color"
+        android:paddingRight="@dimen/intro_padding"
         android:textSize="@dimen/text_large"
-        android:text="Circle Of Trust"/>
+        android:text="@string/slide_three_head"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_weight="5"
-        android:weightSum="1">
+        android:layout_weight="@integer/intro4_linear_layout_weight"
+        android:weightSum="@integer/intro4_weight_sum">
 
         <ImageView
             android:layout_width="214dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
+            android:paddingLeft="@dimen/intro_padding_16"
+            android:paddingRight="@dimen/intro_padding_16"
             android:src="@mipmap/ic_message_option" />
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_height="@dimen/zero"
+        android:layout_weight="@integer/intro4_linear_layout_weight"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textColor="#ffffff"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
+        android:textColor="@color/intro_text_color"
+        android:paddingLeft="@dimen/intro_padding_64"
+        android:paddingRight="@dimen/intro_padding_64"
         android:textSize="@dimen/text_normal"
         android:fontFamily="sans-serif-thin"
-        android:text="Select the message you want to send from here!"/>
+        android:text="@string/slide_three_bottom"/>
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="64dp" />
+        android:layout_height="@dimen/intro_padding_64" />
 </LinearLayout>
