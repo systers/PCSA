@@ -34,6 +34,8 @@
     <string name="title_activity_contact_post_staff">ContactPostStaff</string>
     <string name="title_activity_contact_other_staff">Contact Other Staff</string>
     <string name="title_activity_other_staff_content">Other Staff Content</string>
+    <string name="dialog_call">Voice Call</string>
+    <string name="dialog_message">Send message</string>
 
     <!-- Button texts and other texts for contact staff-->
     <string name="contact_pcmo">Contact PCMO</string>
@@ -41,6 +43,9 @@
     <string name="contact_sarl">Contact SARL</string>
     <string name="reporting_change_location">Change Location</string>
     <string name="reporting_current_location">This is information for</string>
+    <string name="contact_pcmo_via">Contact PCMO Via</string>
+    <string name="contact_ssm_via">Contact SSM Via</string>
+    <string name="contact_sarl_via">Contact SARL Via</string>
 
     <!-- Locations that are available on dropdown of Contact Staff-->
     <string-array name="locations_array">

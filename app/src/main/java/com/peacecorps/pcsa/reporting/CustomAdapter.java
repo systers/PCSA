@@ -25,7 +25,7 @@ import com.peacecorps.pcsa.R;
  */
 public class CustomAdapter extends BaseAdapter {
 
-    public static String[] caption = {"Voice Call","Send message"};
+    public static int[] caption = {R.string.dialog_call,R.string.dialog_message};
     Context context;
     public static int[] icons = {R.mipmap.ic_call, R.mipmap.ic_message};
     private static LayoutInflater inflater;

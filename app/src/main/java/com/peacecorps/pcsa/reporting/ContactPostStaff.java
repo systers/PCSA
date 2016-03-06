@@ -74,7 +74,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getPcmoContact();
-                CustomAdapter.createDialog("Contact PCMO via", ContactPostStaff.this).show();
+                CustomAdapter.createDialog(getString(R.string.contact_pcmo_via), ContactPostStaff.this).show();
             }
         });
 
@@ -82,7 +82,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getSsmContact();
-                CustomAdapter.createDialog("Contact SSM via", ContactPostStaff.this).show();
+                CustomAdapter.createDialog(getString(R.string.contact_ssm_via)+"via", ContactPostStaff.this).show();
             }
         });
 
@@ -90,7 +90,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getSarlContact();
-                CustomAdapter.createDialog("Contact SARL via", ContactPostStaff.this).show();
+                CustomAdapter.createDialog(getString(R.string.contact_sarl_via), ContactPostStaff.this).show();
             }
         });
 
