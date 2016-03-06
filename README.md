@@ -42,10 +42,13 @@ If you find an issue yourself you can report it, a community member will get bac
 ### Avoid doing the following mistakes
 1. Fix a new issue and submit a PR without reporting and getting it approved at first.
 2. Fix an issue assigned to somebody else and submit a PR before the assignee does. 
+3. Report issues which are previously reported by others. (Please check the closed issues too before you report an issue). 
+4. Suggest completely new developments in the issue list. (Please use the mailing list for this kind of suggestions. Use issue list to suggest bugs/features in the already implemented sections.)
 
 ### Best Practices
 1. Please use meaningful commit messages in PRs.
 2. Do not over commit (Use more than one commit for a small change).
+3. Please use separate PRs for separate issues/tasks
 
 ## Troubleshooting/Issues
 

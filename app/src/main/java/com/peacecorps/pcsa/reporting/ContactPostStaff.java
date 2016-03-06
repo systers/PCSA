@@ -11,21 +11,15 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.TypedValue;
-import android.view.ContextThemeWrapper;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
-import com.peacecorps.pcsa.reporting.LocationDetails;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,9 +40,8 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     Button contactSsm;
     Button contactSarl;
     TextView currentLocation;
-    TextView contactOtherStaff;
     private String numberToContact;
-
+    ImageView contactOtherStaff;
     LocationDetails selectedLocationDetails;
 
     private static final Map<String, LocationDetails> locationDetails;
@@ -71,7 +64,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         contactSsm = (Button) findViewById(R.id.post_staff_ssm);
         contactSarl = (Button) findViewById(R.id.post_staff_sarl);
         currentLocation = (TextView) findViewById(R.id.post_staff_current_location);
-        contactOtherStaff = (TextView) findViewById(R.id.link_to_other_staff);
+        contactOtherStaff = (ImageView) findViewById(R.id.link_to_other_staff);
 
         contactPcmo.setText(R.string.contact_pcmo);
         contactSsm.setText(R.string.contact_ssm);
