@@ -91,7 +91,7 @@ public class CustomAdapter extends BaseAdapter {
         textView.setText(title);
         textView.setTextColor(activity.getResources().getColor(R.color.primary_text_default_material_dark));
         textView.setTypeface(Typeface.DEFAULT_BOLD);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, R.dimen.dialog_header_textsize);
         textView.setGravity(Gravity.CENTER);
         list1.addHeaderView(textView);
 

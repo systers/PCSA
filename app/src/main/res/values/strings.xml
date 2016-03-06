@@ -46,7 +46,8 @@
     <string name="contact_pcmo_via">Contact PCMO Via</string>
     <string name="contact_ssm_via">Contact SSM Via</string>
     <string name="contact_sarl_via">Contact SARL Via</string>
-
+    <string name="contact">Contact </string>
+    <string name="via"> Via</string>
     <!-- Locations that are available on dropdown of Contact Staff-->
     <string-array name="locations_array">
         <item>Uganda</item>

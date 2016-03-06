@@ -66,6 +66,7 @@
     <dimen name="dialog_icon_marginleft">30dp</dimen>
     <dimen name="dialog_icon_marginright">15dp</dimen>
     <dimen name="dialog_divider_height">2dp</dimen>
+    <dimen name="dialog_header_textsize">20dp</dimen>
 
     <dimen name="button_margin_top">30dp</dimen>
     <dimen name="button_margin_right_otherstaff">5dp</dimen>

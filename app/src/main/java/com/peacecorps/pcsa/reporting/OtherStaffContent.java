@@ -37,7 +37,6 @@ public class OtherStaffContent extends Activity implements AdapterView.OnItemCli
     TextView contactDescription;
     Button contactNow;
     static String contactNumber;
-    private Dialog listDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +57,7 @@ public class OtherStaffContent extends Activity implements AdapterView.OnItemCli
         contactNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CustomAdapter.createDialog("Contact "+details.getString(CONTACT_NAME) + " via",OtherStaffContent.this).show();
+                CustomAdapter.createDialog(getString(R.string.contact)+details.getString(CONTACT_NAME)+getString(R.string.via),OtherStaffContent.this).show();
             }
         });
     }
