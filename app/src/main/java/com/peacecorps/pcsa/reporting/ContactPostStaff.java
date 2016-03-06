@@ -2,13 +2,15 @@ package com.peacecorps.pcsa.reporting;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,7 +20,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
-import com.peacecorps.pcsa.reporting.LocationDetails;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +30,7 @@ import java.util.Map;
  * Allows the user to call Post Staff in case of crime. The details for the
  * current location will be set by changing the location
  */
-public class ContactPostStaff extends Activity implements AdapterView.OnItemSelectedListener {
+public class ContactPostStaff extends Activity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
 
     private static final String PREF_LOCATION = "location" ;
 
@@ -39,8 +40,8 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     Button contactSsm;
     Button contactSarl;
     TextView currentLocation;
+    private String numberToContact;
     ImageView contactOtherStaff;
-
     LocationDetails selectedLocationDetails;
 
     private static final Map<String, LocationDetails> locationDetails;
@@ -72,21 +73,24 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         contactPcmo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getPcmoContact());
+                numberToContact = selectedLocationDetails.getPcmoContact();
+                CustomAdapter.createDialog(getString(R.string.contact_pcmo_via), ContactPostStaff.this).show();
             }
         });
 
         contactSsm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getSsmContact());
+                numberToContact = selectedLocationDetails.getSsmContact();
+                CustomAdapter.createDialog(getString(R.string.contact_ssm_via)+"via", ContactPostStaff.this).show();
             }
         });
 
         contactSarl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialog(v, selectedLocationDetails.getSarlContact());
+                numberToContact = selectedLocationDetails.getSarlContact();
+                CustomAdapter.createDialog(getString(R.string.contact_sarl_via), ContactPostStaff.this).show();
             }
         });
 
@@ -97,7 +101,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationList.setAdapter(adapter);
         //Load Last Location from Shared Preferences
-        locationList.setSelection(sharedPreferences.getInt(PREF_LOCATION,0));
+        locationList.setSelection(sharedPreferences.getInt(PREF_LOCATION, 0));
 
         contactOtherStaff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,44 +111,6 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
                 finish();
             }
         });
-    }
-
-    /**
-     * Creates a Dialog for the user to choose Dialer app or SMS app
-     * @param v the view clicked
-     * @param numberToContact contact number corresponding to the view
-     */
-    private void createDialog(View v, final String numberToContact){
-        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int optionSelected) {
-                contactStaff(optionSelected, numberToContact);
-            }
-        };
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(v.getContext(), R.style.pcsaAlertDialogStyle));
-        builder.setMessage("Contact Via").setPositiveButton("Voice Call", dialogClickListener)
-                .setNegativeButton("Send Message", dialogClickListener).show();
-    }
-
-    /**
-     * Opens Dialer or SMS
-     * @param action which app to open
-     * @param contactNumber the contact number of the selected person
-     */
-    private void contactStaff(int action, String contactNumber){
-        switch (action){
-            case DialogInterface.BUTTON_POSITIVE:
-                Intent callingIntent = new Intent(Intent.ACTION_CALL);
-                callingIntent.setData(Uri.parse("tel:"+contactNumber));
-                startActivity(callingIntent);
-                break;
-
-            case DialogInterface.BUTTON_NEGATIVE:
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                smsIntent.setData(Uri.parse("sms:"+contactNumber));
-                startActivity(smsIntent);
-        }
     }
 
     @Override
@@ -165,5 +131,23 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        //For Voice Call
+        if(position == 1)
+        {
+            Intent callingIntent = new Intent(Intent.ACTION_CALL);
+            callingIntent.setData(Uri.parse("tel:" + numberToContact));
+            startActivity(callingIntent);
+        }
+        //For Message
+        else if(position == 2) {
+            Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+            smsIntent.setData(Uri.parse("sms:" + numberToContact));
+            startActivity(smsIntent);
+        }
     }
 }

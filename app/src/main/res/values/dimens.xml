@@ -61,6 +61,13 @@
     <dimen name="contact_pick_padding_top_bottom">5dp</dimen>
 
 
+    <!-- Dialog Box -->
+    <dimen name="dialog_icon_size">55dp</dimen>
+    <dimen name="dialog_icon_marginleft">30dp</dimen>
+    <dimen name="dialog_icon_marginright">15dp</dimen>
+    <dimen name="dialog_divider_height">2dp</dimen>
+    <dimen name="dialog_header_textsize">20dp</dimen>
+
     <dimen name="button_margin_top">30dp</dimen>
     <dimen name="button_margin_right_otherstaff">5dp</dimen>
     <dimen name="button_width_poststaff">265dp</dimen>
