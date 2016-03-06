@@ -47,7 +47,6 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
     Button contactSarl;
     TextView currentLocation;
     TextView contactOtherStaff;
-    private Dialog listDialog;
     private String numberToContact;
 
     LocationDetails selectedLocationDetails;
@@ -82,7 +81,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getPcmoContact();
-                createDialog("Contact PCMO via");
+                CustomAdapter.createDialog("Contact PCMO via", ContactPostStaff.this).show();
             }
         });
 
@@ -90,7 +89,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getSsmContact();
-                createDialog("Contact SSM via");
+                CustomAdapter.createDialog("Contact SSM via", ContactPostStaff.this).show();
             }
         });
 
@@ -98,7 +97,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 numberToContact = selectedLocationDetails.getSarlContact();
-                createDialog("Contact SARL via");
+                CustomAdapter.createDialog("Contact SARL via", ContactPostStaff.this).show();
             }
         });
 
@@ -120,39 +119,6 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             }
         });
     }
-
-    /**
-     * Creates a Dialog for the user to choose Dialer app or SMS app
-     * @param title title of the dialog box
-     */
-    private void createDialog(final String title){
-        //Initialising the dialog box
-        listDialog = new Dialog(this);
-        listDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        listDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        LayoutInflater layoutInflater = LayoutInflater.from(this);
-
-        //Initialising the listview
-        View view = layoutInflater.inflate(R.layout.dialog_list, null);
-        listDialog.setContentView(view);
-        ListView list1 = (ListView) listDialog.findViewById(R.id.dialog_listview);
-        list1.setAdapter(new CustomAdapter(this));
-
-        //Adding the header(title) to the dialog box
-        TextView textView = new TextView(this);
-        textView.setText(title);
-        textView.setTextColor(getResources().getColor(R.color.primary_text_default_material_dark));
-        textView.setTypeface(Typeface.DEFAULT_BOLD);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        textView.setGravity(Gravity.CENTER);
-        list1.addHeaderView(textView);
-
-        //Providing functionality to the listitems (Call and Message)
-        list1.setOnItemClickListener(this);
-
-        listDialog.show();    }
-
-
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -185,12 +151,10 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
             startActivity(callingIntent);
         }
         //For Message
-        else if(position == 2)
-        {
+        else if(position == 2) {
             Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-            smsIntent.setData(Uri.parse("sms:"+numberToContact));
+            smsIntent.setData(Uri.parse("sms:" + numberToContact));
             startActivity(smsIntent);
         }
-        listDialog.cancel();
     }
 }
