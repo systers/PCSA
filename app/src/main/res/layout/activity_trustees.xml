@@ -1,132 +1,245 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#2FAA96">
+    android:background="@color/activity_trustee_background">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:gravity="center_horizontal"
         android:layout_height="wrap_content">
         <TextView
+            android:id="@+id/comradeTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="@dimen/text_normal"
-            android:textColor="#fffaf3f1"
-            android:text="Add the Comrade Numbers here"
-            />
+            android:layout_alignParentTop="true"
+            android:textColor="@color/activity_trustee_text_color"
+            android:text="Add the Comrade Numbers here"/>
 
         <EditText
             android:id="@+id/comrade1EditText"
+            android:layout_below="@id/comradeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/trustee_margin"
+            android:layout_marginLeft="@dimen/trustee_margin"
+            android:layout_marginTop="@dimen/trustee_margin"
             android:textCursorDrawable="@null"
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
-            android:textColor="#000"
+            android:textColor="@color/activity_trustee_edittext_color"
             android:inputType="number"
             android:hint="Comrade 1"
-            android:ems="10"
-            android:paddingTop="15px"/>
+            android:ems="@integer/ems"
+            android:paddingTop="@dimen/padding_top"/>
+
+        <ImageButton
+            android:layout_alignTop="@id/comrade1EditText"
+            android:layout_alignRight="@id/comrade1EditText"
+            android:layout_alignBottom="@+id/comrade1EditText"
+            android:paddingTop="@dimen/contact_pick_padding_top_bottom"
+            android:paddingBottom="@dimen/contact_pick_padding_top_bottom"
+            android:layout_marginRight="@dimen/contact_pick_button_margin"
+            android:layout_width="@dimen/contact_pick_button_width"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_pick"
+            android:id="@+id/comrade1Button"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:onClick="addContact"
+            android:tag="1"/>
+
         <EditText
             android:id="@+id/comrade2EditText"
+            android:layout_below="@id/comrade1EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/trustee_margin"
+            android:layout_marginLeft="@dimen/trustee_margin"
+            android:layout_marginTop="@dimen/trustee_margin"
             android:inputType="number"
             android:textCursorDrawable="@null"
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
-            android:textColor="#000"
+            android:textColor="@color/activity_trustee_edittext_color"
             android:hint="Comrade 2"
-            android:ems="10"
-            android:paddingTop="15px"/>
+            android:ems="@integer/ems"
+            android:paddingTop="@dimen/padding_top"/>
+
+        <ImageButton
+            android:layout_alignTop="@id/comrade2EditText"
+            android:layout_alignRight="@id/comrade2EditText"
+            android:layout_alignBottom="@+id/comrade2EditText"
+            android:paddingTop="@dimen/contact_pick_padding_top_bottom"
+            android:paddingBottom="@dimen/contact_pick_padding_top_bottom"
+            android:layout_marginRight="@dimen/contact_pick_button_margin"
+            android:layout_width="@dimen/contact_pick_button_width"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_pick"
+            android:id="@+id/comrade2Button"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:onClick="addContact"
+            android:tag="2"/>
 
         <EditText
             android:id="@+id/comrade3EditText"
+            android:layout_below="@id/comrade2EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/trustee_margin"
+            android:layout_marginLeft="@dimen/trustee_margin"
+            android:layout_marginTop="@dimen/trustee_margin"
             android:inputType="number"
             android:textCursorDrawable="@null"
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
-            android:textColor="#000"
+            android:textColor="@color/activity_trustee_edittext_color"
             android:hint="Comrade 3"
-            android:ems="10"
-            android:paddingTop="15px"/>
+            android:ems="@integer/ems"
+            android:paddingTop="@dimen/padding_top"/>
+
+        <ImageButton
+            android:layout_alignTop="@id/comrade3EditText"
+            android:layout_alignRight="@id/comrade3EditText"
+            android:layout_alignBottom="@+id/comrade3EditText"
+            android:layout_marginRight="@dimen/contact_pick_button_margin"
+            android:paddingTop="@dimen/contact_pick_padding_top_bottom"
+            android:paddingBottom="@dimen/contact_pick_padding_top_bottom"
+            android:layout_width="@dimen/contact_pick_button_width"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_pick"
+            android:id="@+id/comrade3Button"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:onClick="addContact"
+            android:tag="3"/>
 
         <EditText
             android:id="@+id/comrade4EditText"
+            android:layout_below="@id/comrade3EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/trustee_margin"
+            android:layout_marginLeft="@dimen/trustee_margin"
+            android:layout_marginTop="@dimen/trustee_margin"
             android:inputType="number"
             android:textCursorDrawable="@null"
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
-            android:textColor="#000"
+            android:textColor="@color/activity_trustee_edittext_color"
             android:hint="Comrade 4"
-            android:ems="10"
-            android:paddingTop="15px"/>
+            android:ems="@integer/ems"
+            android:paddingTop="@dimen/padding_top"/>
+
+        <ImageButton
+            android:layout_alignTop="@id/comrade4EditText"
+            android:layout_alignRight="@id/comrade4EditText"
+            android:layout_alignBottom="@+id/comrade4EditText"
+            android:layout_marginRight="@dimen/contact_pick_button_margin"
+            android:paddingTop="@dimen/contact_pick_padding_top_bottom"
+            android:paddingBottom="@dimen/contact_pick_padding_top_bottom"
+            android:layout_width="@dimen/contact_pick_button_width"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_pick"
+            android:id="@+id/comrade4Button"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:onClick="addContact"
+            android:tag="4"/>
 
         <EditText
             android:id="@+id/comrade5EditText"
+            android:layout_below="@id/comrade4EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/trustee_margin"
+            android:layout_marginLeft="@dimen/trustee_margin"
+            android:layout_marginTop="@dimen/trustee_margin"
             android:inputType="number"
             android:textCursorDrawable="@null"
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
-            android:textColor="#000"
+            android:textColor="@color/activity_trustee_edittext_color"
             android:hint="Comrade 5"
-            android:ems="10"
-            android:paddingTop="15px"/>
+            android:ems="@integer/ems"
+            android:paddingTop="@dimen/padding_top"/>
+
+        <ImageButton
+            android:layout_alignTop="@id/comrade5EditText"
+            android:layout_alignRight="@id/comrade5EditText"
+            android:layout_alignBottom="@+id/comrade5EditText"
+            android:layout_marginRight="@dimen/contact_pick_button_margin"
+            android:paddingTop="@dimen/contact_pick_padding_top_bottom"
+            android:paddingBottom="@dimen/contact_pick_padding_top_bottom"
+            android:layout_width="@dimen/contact_pick_button_width"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_pick"
+            android:id="@+id/comrade5Button"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:onClick="addContact"
+            android:tag="5"/>
 
         <EditText
             android:id="@+id/comrade6EditText"
+            android:layout_below="@id/comrade5EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/trustee_margin"
+            android:layout_marginLeft="@dimen/trustee_margin"
+            android:layout_marginTop="@dimen/trustee_margin"
             android:textCursorDrawable="@null"
             android:background="@drawable/edit_text_bg"
             android:layout_gravity="center"
             android:inputType="number"
-            android:textColor="#000"
+            android:textColor="@color/activity_trustee_edittext_color"
             android:hint="Comrade 6"
-            android:ems="10"
-            android:paddingTop="15px"/>
+            android:ems="@integer/ems"
+            android:paddingTop="@dimen/padding_top"/>
+
+        <ImageButton
+            android:layout_alignTop="@id/comrade6EditText"
+            android:layout_alignRight="@id/comrade6EditText"
+            android:layout_alignBottom="@+id/comrade6EditText"
+            android:layout_marginRight="@dimen/contact_pick_button_margin"
+            android:paddingTop="@dimen/contact_pick_padding_top_bottom"
+            android:paddingBottom="@dimen/contact_pick_padding_top_bottom"
+            android:layout_width="@dimen/contact_pick_button_width"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_pick"
+            android:id="@+id/comrade6Button"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:onClick="addContact"
+            android:tag="6"/>
+
         <Button
             android:id="@+id/okButton"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/comrade6EditText"
+            android:layout_width="@dimen/layout_width"
+            android:layout_height="@dimen/trustee_button_height"
             android:layout_gravity="center"
-            android:textColor="#fff"
+            android:textColor="@color/intro_text_color"
             android:background="@drawable/btn_rounded_rectangle"
             android:text="OK"
             android:textSize="@dimen/text_normal"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginTop="@dimen/trustee_margin_top"
+            android:layout_marginBottom="@dimen/trustee_margin_bottom"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>

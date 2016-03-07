@@ -4,13 +4,16 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -28,11 +31,15 @@ import java.util.Map;
  */
 public class ContactPostStaff extends Activity implements AdapterView.OnItemSelectedListener {
 
+    private static final String PREF_LOCATION = "location" ;
+
+    SharedPreferences sharedPreferences;
+
     Button contactPcmo;
     Button contactSsm;
     Button contactSarl;
     TextView currentLocation;
-    TextView contactOtherStaff;
+    ImageView contactOtherStaff;
 
     LocationDetails selectedLocationDetails;
 
@@ -46,6 +53,8 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_contact_post_staff);
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
         locationDetails.put(getResources().getString(R.string.loc1_name), new LocationDetails(getResources().getString(R.string.loc1_name), getResources().getString(R.string.loc1_pcmo), getResources().getString(R.string.loc1_ssm), getResources().getString(R.string.loc1_sarl)));
         locationDetails.put(getResources().getString(R.string.loc2_name), new LocationDetails(getResources().getString(R.string.loc2_name), getResources().getString(R.string.loc2_pcmo), getResources().getString(R.string.loc2_ssm), getResources().getString(R.string.loc2_sarl)));
         locationDetails.put(getResources().getString(R.string.loc3_name), new LocationDetails(getResources().getString(R.string.loc3_name), getResources().getString(R.string.loc3_pcmo), getResources().getString(R.string.loc3_ssm), getResources().getString(R.string.loc3_sarl)));
@@ -54,7 +63,7 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
         contactSsm = (Button) findViewById(R.id.post_staff_ssm);
         contactSarl = (Button) findViewById(R.id.post_staff_sarl);
         currentLocation = (TextView) findViewById(R.id.post_staff_current_location);
-        contactOtherStaff = (TextView) findViewById(R.id.link_to_other_staff);
+        contactOtherStaff = (ImageView) findViewById(R.id.link_to_other_staff);
 
         contactPcmo.setText(R.string.contact_pcmo);
         contactSsm.setText(R.string.contact_ssm);
@@ -87,6 +96,8 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
                 R.array.locations_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationList.setAdapter(adapter);
+        //Load Last Location from Shared Preferences
+        locationList.setSelection(sharedPreferences.getInt(PREF_LOCATION,0));
 
         contactOtherStaff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,6 +154,12 @@ public class ContactPostStaff extends Activity implements AdapterView.OnItemSele
 
         // selectedLocationDetails holds all details about the location selected by the user
         selectedLocationDetails = locationDetails.get(selectedItem);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        //PREF_LOCATION field stores the index of Location in the list
+        editor.putInt(PREF_LOCATION, position);
+        editor.commit();
+
     }
 
     @Override

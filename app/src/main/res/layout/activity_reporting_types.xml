@@ -7,7 +7,7 @@
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:weightSum="6">
+    android:weightSum="@integer/reporting_type_weight_sum">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
             android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:fadeScrollbars="false"
-            android:layout_weight="5">
+            android:layout_weight="@integer/intro4_linear_layout_weight">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -58,26 +58,26 @@
                 android:fadeScrollbars="false">
 
                 <TextView
-                    android:layout_width="250dp"
+                    android:layout_width="@dimen/reporting_types_width"
                     android:layout_height="match_parent"
                     android:textColor="@color/primary_text_default_material_dark"
                     android:id="@+id/reporting_both"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/bg_textview_rounded_rectangle"
-                    android:padding="10dp"
+                    android:padding="@dimen/reporting_types_padding"
                     android:scrollbars="vertical"
                     android:fadeScrollbars="false"
                     android:scrollbarStyle="insideInset"/>
 
                 <TextView
-                    android:layout_width="250dp"
+                    android:layout_width="@dimen/reporting_types_width"
                     android:layout_height="match_parent"
                     android:textColor="@color/primary_text_default_material_dark"
                     android:id="@+id/reporting_standard"
                     android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:background="@drawable/bg_textview_rounded_rectangle"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:padding="10dp"
+                    android:padding="@dimen/reporting_types_padding"
                     android:scrollbars="vertical"
                     android:fadeScrollbars="false"
                     android:scrollbarStyle="insideInset"/>
@@ -93,7 +93,7 @@
         android:layout_marginRight="@dimen/activity_vertical_margin"
         style="@style/AppButton"
         android:textSize="@dimen/text_extra_small"
-        android:layout_weight="1"
+        android:layout_weight="@integer/intro4_weight_sum"
         android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 
 </LinearLayout>

@@ -37,7 +37,7 @@ public class Types extends Activity {
 
         //TODO:Get values from the server
         descBoth.setText(R.string.reporting_desc_standard);
-        descStandard.setText(R.string.reporting_desc_standard);
+        descStandard.setText(R.string.reporting_desc_restricted);
 
         faq.setOnClickListener(new View.OnClickListener() {
             @Override

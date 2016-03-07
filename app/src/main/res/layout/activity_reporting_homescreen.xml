@@ -50,33 +50,33 @@
     <Button
         android:id="@+id/reporting_steps"
         android:text="@string/reporting_steps"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/homescreen_margin_first"
         android:layout_gravity="center_horizontal"
         style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_types"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/homescreen_margin"
         android:text="@string/reporting_types"
         style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_contact"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/homescreen_margin"
         android:text="@string/reporting_contact"
         style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_resources"
         android:text="@string/reporting_resources"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/homescreen_margin"
         style="@style/NavigateWrapButton" />
 
     <Button
         android:id="@+id/reporting_confidentiality"
         android:text="@string/reporting_confidentiality"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/homescreen_margin"
         style="@style/NavigateWrapButton" />
     </LinearLayout>
     </ScrollView>

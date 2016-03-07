@@ -2,36 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
-    android:layout_weight="10"
+    android:background="@color/intro2_background"
+    android:layout_weight="@integer/intro4_layout_weight"
     android:id="@+id/main">
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingLeft="32dp"
-        android:layout_weight="3"
+        android:paddingLeft="@dimen/intro_padding"
+        android:layout_weight="@integer/intro4_textView_weight"
         android:fontFamily="sans-serif-thin"
-        android:textColor="#ffffff"
-        android:paddingRight="32dp"
-        android:textSize="@dimen/text_normal"
-        android:text="When you are feeling insecure or needs a comrades attention.\nPrees the button"/>
+        android:textColor="@color/intro_text_color"
+        android:paddingRight="@dimen/intro_padding"
+        android:textSize="@dimen/text_large"
+        android:text="@string/circle_of_trust_slide_two"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_weight="5">
+        android:layout_weight="@integer/intro4_linear_layout_weight">
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/menu_icon_width"
+            android:layout_height="@dimen/menu_icon_width"
             android:layout_gravity="center"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
+            android:paddingLeft="@dimen/intro_padding_16"
+            android:paddingRight="@dimen/intro_padding_16"
             android:src="@mipmap/ic_help_me"/>
     </LinearLayout>
 

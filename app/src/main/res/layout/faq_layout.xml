@@ -13,11 +13,11 @@
         android:background="@drawable/bg_textview_rounded_rectangle">
     <TextView
         android:id="@+id/arrow"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/faq_width"
+        android:layout_height="@dimen/faq_height"
         android:background="@drawable/bg_btn_arrow"
-        android:rotation="90"
-        android:layout_margin="15dp"
+        android:rotation="@integer/rotation"
+        android:layout_margin="@dimen/padding_top_dp"
         android:layout_gravity="center"
         android:gravity="center"/>
 
@@ -29,7 +29,7 @@
 
         android:textSize="@dimen/abc_text_size_small_material"
         android:textColor="@color/primary_text_default_material_dark"
-        android:padding="10dp"
+        android:padding="@dimen/faq_padding"
         android:textStyle="bold|italic"/>
     </LinearLayout>
 

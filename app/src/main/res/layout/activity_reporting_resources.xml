@@ -7,7 +7,7 @@
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:weightSum="6">
+    android:weightSum="@integer/reporting_resource_weight_sum">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,11 +34,11 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:fadeScrollbars="false"
-        android:layout_weight="6">
+        android:layout_weight="@integer/reporting_resource_weight_sum">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -48,26 +48,26 @@
             android:fadeScrollbars="false">
 
             <TextView
-                android:layout_width="250dp"
+                android:layout_width="@dimen/layout_width"
                 android:layout_height="match_parent"
                 android:textColor="@color/primary_text_default_material_dark"
                 android:id="@+id/reporting_resources_1"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/bg_textview_rounded_rectangle"
-                android:padding="10dp"
+                android:padding="@dimen/reporting_resource_padding"
                 android:scrollbars="vertical"
                 android:fadeScrollbars="false"
                 android:scrollbarStyle="insideInset"/>
 
             <TextView
-                android:layout_width="250dp"
+                android:layout_width="@dimen/layout_width"
                 android:layout_height="match_parent"
                 android:textColor="@color/primary_text_default_material_dark"
                 android:id="@+id/reporting_resources_2"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:background="@drawable/bg_textview_rounded_rectangle"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:padding="10dp"
+                android:padding="@dimen/reporting_resource_padding"
                 android:scrollbars="vertical"
                 android:fadeScrollbars="false"
                 android:scrollbarStyle="insideInset"/>
