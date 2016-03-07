@@ -70,22 +70,32 @@ public class Trustees extends AppCompatActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editor.putString(comrade1, comrade1editText.getText().toString());
-                editor.putString(comrade2, comrade2editText.getText().toString());
-                editor.putString(comrade3, comrade3editText.getText().toString());
-                editor.putString(comrade4, comrade4editText.getText().toString());
-                editor.putString(comrade5, comrade5editText.getText().toString());
-                editor.putString(comrade6, comrade6editText.getText().toString());
+                
+                boolean check_duplicate_number= check_duplicate_number();
+                
+                if(check_duplicate_number)
+                {
+                    editor.putString(comrade1, comrade1editText.getText().toString());
+                    editor.putString(comrade2, comrade2editText.getText().toString());
+                    editor.putString(comrade3, comrade3editText.getText().toString());
+                    editor.putString(comrade4, comrade4editText.getText().toString());
+                    editor.putString(comrade5, comrade5editText.getText().toString());
+                    editor.putString(comrade6, comrade6editText.getText().toString());
 
-                boolean status = editor.commit();
-                if (status) {
-                    Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
-                    //close activity after save
-                    finish();
-                } else {
-                    Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers_fail), Toast.LENGTH_LONG).show();
+                    boolean status = editor.commit();
+                    if (status) {
+                        Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers), Toast.LENGTH_LONG).show();
+                        //close activity after save
+                        finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(), getString(R.string.updated_phone_numbers_fail), Toast.LENGTH_LONG).show();
+                    }
+
                 }
-            }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number), Toast.LENGTH_LONG).show();
+                }
         });
     }
 
