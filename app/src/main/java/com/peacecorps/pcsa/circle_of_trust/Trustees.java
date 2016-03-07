@@ -204,7 +204,6 @@ public class Trustees extends AppCompatActivity {
      private boolean check_duplicate_number() {
          //checks for duplicate comrade numbers as comrade 1 with 2,3,4,5,6. comrade 2 with 3,4,5,6 so on
          
-
         boolean check=true;
         if(!comrade1editText.getText().toString().equals("")) {
             if (comrade1editText.getText().toString().equals(comrade2editText.getText().toString())
