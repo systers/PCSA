@@ -83,9 +83,13 @@ public class Trustees extends AppCompatActivity {
                   }
                 }
                 else
+                {
                     Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number), Toast.LENGTH_LONG).show();
+                }
         });
     }
+    
+    
     private boolean check_duplicate_number() {
     
        //checks are performed as comrade 1 with 2,3,4,5,6. comrade 2 with 3,4,5,6..so on
