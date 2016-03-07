@@ -95,7 +95,8 @@ public class Trustees extends AppCompatActivity {
        //checks are performed as comrade 1 with 2,3,4,5,6. comrade 2 with 3,4,5,6..so on
        //no checking if comrade number is null
        
-        boolean check=true;
+        boolean check = true;
+        
         if(!comrade1editText.getText().toString().equals("")) {
             if (comrade1editText.getText().toString().equals(comrade2editText.getText().toString())
                     || comrade1editText.getText().toString().equals(comrade3editText.getText().toString())
