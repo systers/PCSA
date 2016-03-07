@@ -108,6 +108,7 @@
     <string name="str_cnt_mnu_delete">Delete</string>
     <string name="title_activity_trustees">Trustees</string>
     <string name="title_activity_get_help_now">GetHelpNow</string>
+    <string name="duplicate_number">Duplicate Number!Please enter again</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
