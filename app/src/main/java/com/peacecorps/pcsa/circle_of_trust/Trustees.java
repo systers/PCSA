@@ -190,4 +190,62 @@ public class Trustees extends AppCompatActivity {
     private void showNoPhoneNumberToast() {
         Toast.makeText(Trustees.this, R.string.no_phone_number, Toast.LENGTH_LONG).show();
     }
+    
+     private boolean check_duplicate_number() {
+         //checks for duplicate comrade numbers as comrade 1 with 2,3,4,5,6. comrade 2 with 3,4,5,6 so on
+         
+
+        boolean check=true;
+        if(!comrade1editText.getText().toString().equals("")) {
+            if (comrade1editText.getText().toString().equals(comrade2editText.getText().toString())
+                    || comrade1editText.getText().toString().equals(comrade3editText.getText().toString())
+                    || comrade1editText.getText().toString().equals(comrade4editText.getText().toString())
+                    || comrade1editText.getText().toString().equals(comrade5editText.getText().toString())
+                    || comrade1editText.getText().toString().equals(comrade6editText.getText().toString()))
+
+            {
+                check = false;
+            }
+        }
+        else if(!comrade2editText.getText().toString().equals("")) {
+
+            if (comrade2editText.getText().toString().equals(comrade3editText.getText().toString())
+                    || comrade2editText.getText().toString().equals(comrade4editText.getText().toString())
+                    || comrade2editText.getText().toString().equals(comrade5editText.getText().toString())
+                    || comrade2editText.getText().toString().equals(comrade6editText.getText().toString()))
+
+            {
+                check = false;
+            }
+        }
+        else if(!comrade3editText.getText().toString().equals("")) {
+            if (comrade3editText.getText().toString().equals(comrade4editText.getText().toString())
+                    || comrade3editText.getText().toString().equals(comrade5editText.getText().toString())
+                    || comrade3editText.getText().toString().equals(comrade6editText.getText().toString()))
+
+            {
+                check = false;
+            }
+        }
+        else if(!comrade4editText.getText().toString().equals("")) {
+            if (comrade4editText.getText().toString().equals(comrade5editText.getText().toString())
+                    || comrade4editText.getText().toString().equals(comrade6editText.getText().toString()))
+
+            {
+                check = false;
+            }
+        }
+        else if(!comrade5editText.getText().toString().equals("")) {
+            if (comrade5editText.getText().toString().equals(comrade6editText.getText().toString())) {
+                check = false;
+            }
+        }
+        else
+        {
+            check = true;
+        }
+        return check;
+        //returns true if no duplicate number else returns false
+    }
+
 }
