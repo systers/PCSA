@@ -62,7 +62,7 @@ public class Trustees extends AppCompatActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean check_duplicate_number= check_duplicate_number();
+                boolean check_duplicate_number = check_duplicate_number();
                 
                 if(check_duplicate_number)
                 {
