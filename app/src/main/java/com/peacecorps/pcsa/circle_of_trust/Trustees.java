@@ -71,7 +71,7 @@ public class Trustees extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 
-                boolean check_duplicate_number= check_duplicate_number();
+                boolean check_duplicate_number = check_duplicate_number();
                 if(check_duplicate_number)
                 {
                     editor.putString(comrade1, comrade1editText.getText().toString());
@@ -205,7 +205,7 @@ public class Trustees extends AppCompatActivity {
          
          //checks for duplicates like comrade1 with 2,3,4,5,6 . comrade2 with 3,4,5,6 so on.
 
-        boolean check=true;
+        boolean check = true;
         if(!comrade1editText.getText().toString().equals("")) {
             if (comrade1editText.getText().toString().equals(comrade2editText.getText().toString())
                     || comrade1editText.getText().toString().equals(comrade3editText.getText().toString())
