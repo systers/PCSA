@@ -94,7 +94,7 @@ public class Trustees extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
                 }
         });
     }
