@@ -108,6 +108,7 @@
     <string name="title_activity_trustees">Trustees</string>
     <string name="add_comrades_text">Add the Comrade Numbers here</string>
     <string name="title_activity_get_help_now">GetHelpNow</string>
+    <string name="duplicate_number_errormessage">Duplicate Number!Please enter again</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_circle_intro">CircleIntro</string>
