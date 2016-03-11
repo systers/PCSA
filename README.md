@@ -24,13 +24,14 @@ Go to your terminal and execute this command
 
 Or download the ZIP file from above
 
-###Opening and Running 
+###Opening and Running
+1.Launch android studio
+2.Click on File, then New and then Import Project Or from the welcome screen of android studio click on Import project. (If you wish to contribute, you can directly link to GitHub)
+3.Browse to the directory where you cloned (extracted the zip) PCSA-Android App and take OK
+4.Let Android studio import the project, sync, run and build the Gradle. 
+5.If Gradle finishes to build without error run the project by clicking on the play button on the tool bar.
+6.Wait for a few seconds and the app should start on your device(android phone or emulator)
 
-Open Android Studio and choose the option to open an existing project. 
-
-Navigate to the project and select the folder named 'PCSA-Android'.
-
-Press the play button inside Android Studio, choose the emulator, and the PCSA app should now be running. 
 
 ## Documentation
 Latest documentation for PCSA can be found [here](https://github.com/systers/PCSA-Android/tree/develop/docs)
