@@ -221,7 +221,14 @@ public class Trustees extends AppCompatActivity {
                 } else {
                     String selectedNumber = phoneNumber.toString();
                     selectedNumber = selectedNumber.replace("-", "");
-                    phoneInput.setText(selectedNumber);
+                     if(check_duplicate_contact_number(selectedNumber)) {
+                        phoneInput.setText(selectedNumber);
+                    }
+                    else
+                    {
+                      Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
+                    }
+
                 }
 
                 if (phoneNumber.length() == 0) {
@@ -235,6 +242,23 @@ public class Trustees extends AppCompatActivity {
 
     private void showNoPhoneNumberToast() {
         Toast.makeText(Trustees.this, R.string.no_phone_number, Toast.LENGTH_LONG).show();
+    }
+    
+    private boolean check_duplicate_contact_number(String selectedNumber)
+    {
+       if(selectedNumber.equals(comrade1editText.getText().toString())
+                ||selectedNumber.equals(comrade2editText.getText().toString())
+                ||selectedNumber.equals(comrade3editText.getText().toString())
+                ||selectedNumber.equals(comrade4editText.getText().toString())
+                ||selectedNumber.equals(comrade5editText.getText().toString())
+                ||selectedNumber.equals(comrade6editText.getText().toString()))
+        {
+           return false;
+        }
+        else
+        {
+           return true;
+        }
     }
     
       private boolean check_duplicate_number() {
