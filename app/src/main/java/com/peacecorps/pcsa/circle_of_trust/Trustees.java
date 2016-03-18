@@ -21,30 +21,29 @@ import com.peacecorps.pcsa.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Activity to add comrade phone numbers and save to sharedpreferences
+ */
 public class Trustees extends AppCompatActivity {
-//    EditText comrade1editText;
-//    EditText comrade2editText;
-//    EditText comrade3editText;
-//    EditText comrade4editText;
-//    EditText comrade5editText;
-//    EditText comrade6editText;
     Button okButton;
 
     public static final String MyPREFERENCES = "MyPrefs" ;
-//    public static final String comrade1 = "comrade1Key";
-//    public static final String comrade2 = "comrade2Key";
-//    public static final String comrade3 = "comrade3Key";
-//    public static final String comrade4 = "comrade4Key";
-//    public static final String comrade5 = "comrade5Key";
-//    public static final String comrade6 = "comrade6Key";
+    public static final String comrade1 = "comrade1Key";
+    public static final String comrade2 = "comrade2Key";
+    public static final String comrade3 = "comrade3Key";
+    public static final String comrade4 = "comrade4Key";
+    public static final String comrade5 = "comrade5Key";
+    public static final String comrade6 = "comrade6Key";
 
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
 
     LinearLayout trustees;
+    //the max number of comrade numbers possible
     private static final int MAX_COMRADES = 6;
     //maps INDEX NUMBERS to CURRENT WRITE STATUS (false = empty, true = hastext)
     Map<Integer, Boolean> current = new HashMap<>();
@@ -59,13 +58,18 @@ public class Trustees extends AppCompatActivity {
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
 
-        //add the first layout
+        //add the first (default) layout
         addLayout();
 
+        /**
+         * Upon clicking, iterate through the current index numbers.
+         * IF the EditText is displayed, save the index with the current information into sharedprefs
+         * ELSE if the EditText is NOT displayed, save the index with an empty string
+         */
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //for each value inside the current array
+                //check each value inside the currently displayed edittexts, up to a max of six
                 for (int i = 1; i <= MAX_COMRADES; i++) {
                     if (current.keySet().contains(i)) {
                         int editId = getResources().getIdentifier("comrade" + i + "EditText", "id", getPackageName());
@@ -108,7 +112,6 @@ public class Trustees extends AppCompatActivity {
             int editId = getResources().getIdentifier("comrade" + num + "EditText", "id", getPackageName());
             int layoutId = getResources().getIdentifier("comradelayout" + num, "id", getPackageName());
 
-
             if (editId != 0) {
                 //set the new edittext & linear layout ids
                 edit.setId(editId);
@@ -120,31 +123,28 @@ public class Trustees extends AppCompatActivity {
                 //save the index number as a tag for future reference
                 edit.setTag(num);
 
+                //add an TextWatcher to keep track of future events that can add or subtract EditTexts
                 edit.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
                     }
 
                     @Override
                     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        //check to see if there is at least one current edittext without data in it
-                        //iterate through current, check for the true/false tag
-                        for (Map.Entry<Integer, Boolean> entry : current.entrySet()) {
-                            //if there is a false one, that means there is currently one entry without anything in it
-                            //which means we don't need to add a new one
-                            if (!entry.getValue()) {
-                                break;
-                            }
-                            // add a new edittext since all are currently full
-                            addLayout();
-                        }
                     }
 
+                    /**
+                     * IF the text is changed to blank, check to see if we need to remove an EditText
+                     * ELSE IF text is added, check to see if we need to ADD an EditText
+                     *
+                     * Status is based on the boolean value in the map, with false = empty and true = hasText
+                     * @param editable
+                     */
                     @Override
                     public void afterTextChanged(Editable editable) {
-                        //update with current read/write status
+
                         if (editable.toString().equals("")) {
+                            //edit the status value in the map
                             boolean remove = false;
                             int num = (int) edit.getTag();
                             current.put(num, false);
@@ -176,7 +176,27 @@ public class Trustees extends AppCompatActivity {
 
                         } else {
                             //if there is text inside, we update the write status to TRUE
+                            boolean add = true;
                             current.put((int) edit.getTag(), true);
+
+                            //check to see if there is at least one current edittext without data in it
+                            //iterate through current, check for the true/false tag
+                            Iterator it = current.entrySet().iterator();
+                            while (it.hasNext()) {
+                                Map.Entry<Integer, Boolean> entry = (Map.Entry<Integer, Boolean>) it.next();
+                                //if there is a false one, that means there is currently one entry without anything in it
+                                //which means we don't need to add a new one and we set the add marker to false
+                                if (!entry.getValue()) {
+                                    add = false;
+                                    break;
+                                }
+
+                            }
+                            //if the flag is true
+                            if (add) {
+                                // add a new edittext since all are currently full
+                                addLayout();
+                            }
                         }
                     }
                 });
@@ -191,7 +211,7 @@ public class Trustees extends AppCompatActivity {
     }
 
     /**
-     * Given an index number, remove the layout and all corresponding information
+     * Given an index number, remove the layout and all corresponding information in the map.
      * @param num
      */
     private void removeLayout(int num) {

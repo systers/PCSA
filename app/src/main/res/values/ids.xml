@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--ids for comrade edit texts-->
     <item name="comrade1EditText" type="id"/>
     <item name="comrade2EditText" type="id"/>
     <item name="comrade3EditText" type="id"/>
