@@ -10,14 +10,16 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/comrades_box">
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="@dimen/text_normal"
             android:textColor="#fffaf3f1"
-            android:text="Add the Comrade Numbers here"
+            android:scrollHorizontally="false"
+            android:text="Add the Comrade Numbers here (max 6)"
             />
 
         <EditText

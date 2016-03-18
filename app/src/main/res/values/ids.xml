@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="comrade1EditText" type="id"/>
+    <item name="comrade2EditText" type="id"/>
+    <item name="comrade3EditText" type="id"/>
+    <item name="comrade4EditText" type="id"/>
+    <item name="comrade5EditText" type="id"/>
+    <item name="comrade6EditText" type="id"/>
+
+    <item name="comradelayout1" type="id"/>
+    <item name="comradelayout2" type="id"/>
+    <item name="comradelayout3" type="id"/>
+    <item name="comradelayout4" type="id"/>
+    <item name="comradelayout5" type="id"/>
+    <item name="comradelayout6" type="id"/>
+</resources>
