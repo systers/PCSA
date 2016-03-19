@@ -70,7 +70,7 @@ public class Trustees extends AppCompatActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean check_duplicate_number= check_duplicate_number();
+                boolean noDuplicateNumber = noDuplicateNumber();
 
                 //To store previous values (numbers) of comrades
                 String old_comrade1,old_comrade2,old_comrade3,old_comrade4,old_comrade5,old_comrade6;
@@ -95,7 +95,7 @@ public class Trustees extends AppCompatActivity {
                 new_comrade5 = comrade5editText.getText().toString();
                 new_comrade6 = comrade6editText.getText().toString();
 
-                if(check_duplicate_number)
+                if(noDuplicateNumber)
                 {
                     editor.putString(comrade1, new_comrade1);
                     editor.putString(comrade2, new_comrade2);
@@ -221,7 +221,14 @@ public class Trustees extends AppCompatActivity {
                 } else {
                     String selectedNumber = phoneNumber.toString();
                     selectedNumber = selectedNumber.replace("-", "");
-                    phoneInput.setText(selectedNumber);
+                     if(check_duplicate_contact_number(selectedNumber)) {
+                        phoneInput.setText(selectedNumber);
+                    }
+                    else
+                    {
+                      Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
+                    }
+
                 }
 
                 if (phoneNumber.length() == 0) {
@@ -237,59 +244,37 @@ public class Trustees extends AppCompatActivity {
         Toast.makeText(Trustees.this, R.string.no_phone_number, Toast.LENGTH_LONG).show();
     }
     
-      private boolean check_duplicate_number() {
+    private boolean noDuplicateNumber() {
+          boolean noDuplicate = true;
+          List<String> comradeNumbers = nonEmptyComradeNumbers();
+          Set<String> uniqueNumbersSet = new HashSet<>();
 
-        boolean check=true;
-        if(!comrade1editText.getText().toString().equals("")) {
-            if (comrade1editText.getText().toString().equals(comrade2editText.getText().toString())
-                    || comrade1editText.getText().toString().equals(comrade3editText.getText().toString())
-                    || comrade1editText.getText().toString().equals(comrade4editText.getText().toString())
-                    || comrade1editText.getText().toString().equals(comrade5editText.getText().toString())
-                    || comrade1editText.getText().toString().equals(comrade6editText.getText().toString()))
-
-            {
-                check = false;
-            }
+          for (String str : comradeNumbers) {
+              
+              if (uniqueNumbersSet.add(str) == false) {
+                  noDuplicate = false;
+              }
         }
-        else if(!comrade2editText.getText().toString().equals("")) {
+        return noDuplicate;
+          //returns true if no duplicate number else returns false
+      }
 
-            if (comrade2editText.getText().toString().equals(comrade3editText.getText().toString())
-                    || comrade2editText.getText().toString().equals(comrade4editText.getText().toString())
-                    || comrade2editText.getText().toString().equals(comrade5editText.getText().toString())
-                    || comrade2editText.getText().toString().equals(comrade6editText.getText().toString()))
-
-            {
-                check = false;
-            }
-        }
-        else if(!comrade3editText.getText().toString().equals("")) {
-            if (comrade3editText.getText().toString().equals(comrade4editText.getText().toString())
-                    || comrade3editText.getText().toString().equals(comrade5editText.getText().toString())
-                    || comrade3editText.getText().toString().equals(comrade6editText.getText().toString()))
-
-            {
-                check = false;
-            }
-        }
-        else if(!comrade4editText.getText().toString().equals("")) {
-            if (comrade4editText.getText().toString().equals(comrade5editText.getText().toString())
-                    || comrade4editText.getText().toString().equals(comrade6editText.getText().toString()))
-
-            {
-                check = false;
-            }
-        }
-        else if(!comrade5editText.getText().toString().equals("")) {
-            if (comrade5editText.getText().toString().equals(comrade6editText.getText().toString())) {
-                check = false;
-            }
-        }
-        else
+    private List<String> nonEmptyComradeNumbers() {
+        String[] comradeNumbers = {comrade1editText.getText().toString(), comrade2editText.getText().toString(),
+                comrade3editText.getText().toString(), comrade4editText.getText().toString(),
+                comrade5editText.getText().toString(), comrade6editText.getText().toString()};
+        List<String> nonEmptyComradeNumbers = new ArrayList<String>();
+        
+        for(String str : comradeNumbers)
         {
-            check = true;
+            if(!(str.length() == 0))
+            {
+                nonEmptyComradeNumbers.add(str);
+            }
         }
-        return check;
-        //returns true if no duplicate number else returns false
+        return nonEmptyComradeNumbers;
+        //returns a list of nonempty comrade numbers
     }
+
 
 }
