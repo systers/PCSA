@@ -195,9 +195,9 @@ public class CircleOfTrustFragment extends Fragment {
     private boolean loadPhoneNumbers() {
         sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
         try {
-            phoneNumbers = new String[]{sharedPreferences.getString(Trustees.comrade1, ""), sharedPreferences.getString(Trustees.comrade2, ""),
-                    sharedPreferences.getString(Trustees.comrade3, ""), sharedPreferences.getString(Trustees.comrade4, ""),
-                    sharedPreferences.getString(Trustees.comrade5, ""), sharedPreferences.getString(Trustees.comrade6, ""),};
+            phoneNumbers = new String[]{sharedPreferences.getString(Trustees.KEYS_COMRADE[0], ""), sharedPreferences.getString(Trustees.KEYS_COMRADE[1], ""),
+                    sharedPreferences.getString(Trustees.KEYS_COMRADE[2], ""), sharedPreferences.getString(Trustees.KEYS_COMRADE[3], ""),
+                    sharedPreferences.getString(Trustees.KEYS_COMRADE[4], ""), sharedPreferences.getString(Trustees.KEYS_COMRADE[5], "")};
             return true;
         } catch (Exception e) {
             Log.e(TAG, "Unable to load comrades numbers from shared preferences", e);
