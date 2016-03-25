@@ -8,12 +8,15 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.Constants;
@@ -57,8 +60,16 @@ public class CircleOfTrustFragment extends Fragment {
         requestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
-                messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
+                if(!isMobileAvailable(getActivity())) {
+                    Toast toast = Toast.makeText(getActivity(), R.string.unavailable_network, Toast.LENGTH_LONG);
+                    TextView toast_text = (TextView) toast.getView().findViewById(android.R.id.message);
+                    if( toast_text != null) toast_text.setGravity(Gravity.CENTER);
+                    toast.show();
+                }
+                else {
+                    MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
+                    messageDialogBox.show(getActivity().getSupportFragmentManager(), getString(R.string.message_options));
+                }
             }
         });
         comradesViews = new ImageView[]{(ImageView) rootView.findViewById(R.id.com1Button),(ImageView) rootView.findViewById(R.id.com2Button),
@@ -108,6 +119,10 @@ public class CircleOfTrustFragment extends Fragment {
                 }
             }
         }
+    }
+    public static Boolean isMobileAvailable(Context appcontext) {
+        TelephonyManager tel = (TelephonyManager) appcontext.getSystemService(Context.TELEPHONY_SERVICE);
+        return ((tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("")) ? false : true);
     }
 
     public void sendMessage(String optionSelected)
