@@ -5,6 +5,7 @@
     <string name="unavailable_function">This functionality is currently unavailable.</string>
     <string name="dialog_call">Voice Call</string>
     <string name="dialog_message">Send Message</string>
+    <string name="unavailable_network">Please check your network connectivity to get help.</string>
 
     <!--Activity Titles-->
     <string name="title_activity_steps">Steps</string>
