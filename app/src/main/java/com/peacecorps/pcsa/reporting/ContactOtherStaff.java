@@ -17,17 +17,23 @@ import com.peacecorps.pcsa.R;
  */
 public class ContactOtherStaff extends Activity {
 
+    ImageView contactPostStaff;
+    Button contactPcSaves;  //Button to access PC Saves Anonymous HelpLine
+    Button contactOva;      //Button to access Office of Victim Advocacy
+    Button contactOig;      //Button to access Office of Inspector General
+    Button contactOcrd;     //Button to access Office of Civil Rights and diversity
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_contact_other_staff);
 
-        Button contactPcSaves = (Button) findViewById(R.id.pcsaves); //Button to access PC Saves Anonymous HelpLine
-        Button contactOva = (Button) findViewById(R.id.ova); //Button to access Office of Victim Advocacy
-        Button contactOig = (Button) findViewById(R.id.oig); //Button to access Office of Inspector General
-        Button contactOcrd = (Button) findViewById(R.id.ocrd); //Button to access Office of Civil Rights and diversity
+        contactPcSaves = (Button) findViewById(R.id.pcsaves);
+        contactOva = (Button) findViewById(R.id.ova);
+        contactOig = (Button) findViewById(R.id.oig);
+        contactOcrd = (Button) findViewById(R.id.ocrd);
 
-        ImageView contactPostStaff = (ImageView) findViewById(R.id.link_to_post_staff);
+        contactPostStaff = (ImageView) findViewById(R.id.link_to_post_staff);
 
         contactPcSaves.setText(R.string.contact_pcsaves);
         contactOva.setText(R.string.contact_ova);

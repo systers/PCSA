@@ -26,6 +26,9 @@ public class OtherStaffContent extends FragmentActivity implements AdapterView.O
     public static final String CONTACT_NUMBER = "contactNumber";
     public static final String CONTACT_NAME = "contactName";
     public static final String CONTACT_DESC = "contatDesc";
+    TextView contactName;
+    TextView contactDescription;
+    Button contactNow;
     static String contactNumber;
 
     @Override
@@ -33,9 +36,9 @@ public class OtherStaffContent extends FragmentActivity implements AdapterView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_other_staff_content);
 
-        TextView contactName = (TextView) findViewById(R.id.reporting_contact_other_content);
-        TextView contactDescription = (TextView) findViewById(R.id.reporting_contact_description);
-        Button contactNow = (Button) findViewById(R.id.contact_now);
+        contactName = (TextView) findViewById(R.id.reporting_contact_other_content);
+        contactDescription = (TextView) findViewById(R.id.reporting_contact_description);
+        contactNow = (Button) findViewById(R.id.contact_now);
 
         final Bundle details = getIntent().getExtras();
         contactNumber = details.getString(CONTACT_NUMBER);

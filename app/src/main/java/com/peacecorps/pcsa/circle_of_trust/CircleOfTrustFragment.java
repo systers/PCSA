@@ -29,6 +29,8 @@ public class CircleOfTrustFragment extends Fragment {
     private static final String TAG = CircleOfTrustFragment.class.getSimpleName();
     private static int REQUEST_CODE_TRUSTEES = 1001;
 
+    ImageButton requestButton;
+    ImageButton editButton;
     ImageView[] comradesViews;
     SharedPreferences sharedPreferences;
 
@@ -43,8 +45,8 @@ public class CircleOfTrustFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_circle_of_trust, container, false);
-        ImageButton requestButton = (ImageButton) rootView.findViewById(R.id.requestButton);
-        ImageButton editButton = (ImageButton) rootView.findViewById(R.id.editButton);
+        requestButton = (ImageButton) rootView.findViewById(R.id.requestButton);
+        editButton = (ImageButton) rootView.findViewById(R.id.editButton);
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

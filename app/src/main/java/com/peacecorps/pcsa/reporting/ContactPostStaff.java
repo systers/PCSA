@@ -36,7 +36,11 @@ public class ContactPostStaff extends FragmentActivity implements AdapterView.On
 
     SharedPreferences sharedPreferences;
 
+    Button contactPcmo;
+    Button contactSsm;
+    Button contactSarl;
     TextView currentLocation;
+    ImageView contactOtherStaff;
 
     LocationDetails selectedLocationDetails;
     private String numberToContact;
@@ -57,11 +61,11 @@ public class ContactPostStaff extends FragmentActivity implements AdapterView.On
         locationDetails.put(getResources().getString(R.string.loc2_name), new LocationDetails(getResources().getString(R.string.loc2_name), getResources().getString(R.string.loc2_pcmo), getResources().getString(R.string.loc2_ssm), getResources().getString(R.string.loc2_sarl)));
         locationDetails.put(getResources().getString(R.string.loc3_name), new LocationDetails(getResources().getString(R.string.loc3_name), getResources().getString(R.string.loc3_pcmo), getResources().getString(R.string.loc3_ssm), getResources().getString(R.string.loc3_sarl)));
 
-        Button contactPcmo = (Button) findViewById(R.id.post_staff_pcmo);
-        Button contactSsm = (Button) findViewById(R.id.post_staff_ssm);
-        Button contactSarl = (Button) findViewById(R.id.post_staff_sarl);
+        contactPcmo = (Button) findViewById(R.id.post_staff_pcmo);
+        contactSsm = (Button) findViewById(R.id.post_staff_ssm);
+        contactSarl = (Button) findViewById(R.id.post_staff_sarl);
         currentLocation = (TextView) findViewById(R.id.post_staff_current_location);
-        ImageView contactOtherStaff = (ImageView) findViewById(R.id.link_to_other_staff);
+        contactOtherStaff = (ImageView) findViewById(R.id.link_to_other_staff);
 
         contactPcmo.setText(R.string.contact_pcmo);
         contactSsm.setText(R.string.contact_ssm);
