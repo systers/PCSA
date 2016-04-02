@@ -11,10 +11,12 @@ import android.widget.ArrayAdapter;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 
-/**
- * Created by Rohan on 11-03-2016.
+/*
  * Dialog Box implementation to handle configuration change (recreation of dialogs)
  * Shows a list of options to the user which serves as a text message template.
+ *
+ * @author Rohan
+ * @since 2016-03-11
  */
 public class MessageDialogBox extends DialogFragment {
 

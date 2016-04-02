@@ -23,7 +23,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
+/*
+ * Activity for adding comrades' numbers (Trustees)
+ *
+ * @author calistus
+ * @since 2015-08-18
+ */
 public class Trustees extends AppCompatActivity {
 
     public static final int REQUEST_SELECT_CONTACT = 100;
@@ -141,6 +146,10 @@ public class Trustees extends AppCompatActivity {
 
     }
 
+    /**
+     * Start for selecting contacts from standard contract picker
+     * @param v
+     */
     public void addContact(View v) {
         try {
             selectedButton = v;
@@ -247,7 +256,12 @@ public class Trustees extends AppCompatActivity {
     private void showNoPhoneNumberToast() {
         Toast.makeText(Trustees.this, R.string.no_phone_number, Toast.LENGTH_LONG).show();
     }
-    
+
+    /**
+     * Checks for the selected number exist in other contacts
+     * @param selectedNumber
+     * @return true if duplicate exist
+     */
     private boolean noDuplicateContactNumber(String selectedNumber)
     {
        if(selectedNumber.equals(comrade1editText.getText().toString())
@@ -263,6 +277,10 @@ public class Trustees extends AppCompatActivity {
        }
     }
 
+    /**
+     * Check for duplicate numbers
+     * @return true if no duplicate number else returns false
+     */
     private boolean noDuplicateNumber() {
         boolean noDuplicate = true;
         List<String> comradeNumbers = nonEmptyComradeNumbers();
@@ -274,9 +292,12 @@ public class Trustees extends AppCompatActivity {
             }
         }
         return noDuplicate;
-        //returns true if no duplicate number else returns false
     }
 
+    /**
+     * Lists the comrades' numbers which are not empty
+     * @return List of numbers which are not empty
+     */
     private List<String> nonEmptyComradeNumbers() {
         String[] comradeNumbers = {comrade1editText.getText().toString(), comrade2editText.getText().toString(),
                 comrade3editText.getText().toString(), comrade4editText.getText().toString(),
