@@ -18,19 +18,15 @@ import com.peacecorps.pcsa.R;
  */
 public class Types extends Activity {
 
-    TextView descBoth;
-    TextView descStandard;
-
-    Button faq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_types);
 
-        descBoth = (TextView) findViewById(R.id.reporting_both);
-        descStandard = (TextView) findViewById(R.id.reporting_standard);
-        faq = (Button) findViewById(R.id.reporting_faq);
+        TextView descBoth = (TextView) findViewById(R.id.reporting_both);
+        TextView descStandard = (TextView) findViewById(R.id.reporting_standard);
+        Button faq = (Button) findViewById(R.id.reporting_faq);
 
         descBoth.setMovementMethod(new ScrollingMovementMethod());
         descStandard.setMovementMethod(new ScrollingMovementMethod());

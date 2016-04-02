@@ -38,7 +38,6 @@ public class Trustees extends AppCompatActivity {
     EditText comrade4editText;
     EditText comrade5editText;
     EditText comrade6editText;
-    Button okButton;
     private View selectedButton;
 
     public static final String MyPREFERENCES = "MyPrefs" ;
@@ -62,7 +61,7 @@ public class Trustees extends AppCompatActivity {
         comrade4editText = (EditText) findViewById(R.id.comrade4EditText);
         comrade5editText = (EditText) findViewById(R.id.comrade5EditText);
         comrade6editText = (EditText) findViewById(R.id.comrade6EditText);
-        okButton = (Button) findViewById(R.id.okButton);
+        Button okButton = (Button) findViewById(R.id.okButton);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
