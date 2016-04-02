@@ -12,9 +12,11 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.widget.ImageView;
 
-/**
+/*
  * Loads thumbnail from the phone number
- * Created by chamika on 2/15/16.
+ *
+ * @author chamika
+ * @since 2016-02-15
  */
 public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
 

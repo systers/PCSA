@@ -4,9 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,8 +26,11 @@ import com.peacecorps.pcsa.R;
 import java.util.ArrayList;
 
 
-/**
- * A placeholder fragment containing a simple view.
+/*
+ * Circle of Trust main fragment
+ *
+ * @author calistus
+ * @since 2015-08-18
  */
 public class CircleOfTrustFragment extends Fragment {
     private static final String TAG = CircleOfTrustFragment.class.getSimpleName();
@@ -37,7 +44,6 @@ public class CircleOfTrustFragment extends Fragment {
     private String[] phoneNumbers;
     LocationHelper locationHelper;
 
-    private String optionSelected;
     public CircleOfTrustFragment() {
     }
 
@@ -56,8 +62,16 @@ public class CircleOfTrustFragment extends Fragment {
         requestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
-                messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
+                if(checkMobileNetworkAvailable(getActivity()))
+                {
+                    MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
+                    messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
+                }
+                else
+                {
+                    Toast.makeText(getActivity(),R.string.network_unavailable,Toast.LENGTH_LONG).show();
+                }
+
             }
         });
         comradesViews = new ImageView[]{(ImageView) rootView.findViewById(R.id.com1Button),(ImageView) rootView.findViewById(R.id.com2Button),
@@ -66,6 +80,16 @@ public class CircleOfTrustFragment extends Fragment {
         loadContactPhotos();
         locationHelper = new LocationHelper(getActivity());
         return rootView;
+    }
+
+    /**
+     * Checks whether the device is connected to a mobile network or not
+     * @param appcontext
+     * @return true if the device is connected
+     */
+    public static boolean checkMobileNetworkAvailable(Context appcontext) {
+        TelephonyManager tel = (TelephonyManager) appcontext.getSystemService(Context.TELEPHONY_SERVICE);
+        return (tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("") ? false : true);
     }
 
     @Override
@@ -80,6 +104,9 @@ public class CircleOfTrustFragment extends Fragment {
         locationHelper.stopAcquiringLocation();
     }
 
+    /**
+     * Loads contact photos from the device saved contacts for comrades' numbers
+     */
     private void loadContactPhotos() {
 
         if (phoneNumbers == null) {
@@ -109,6 +136,10 @@ public class CircleOfTrustFragment extends Fragment {
         }
     }
 
+    /**
+     * Sends a message to the comrades' phone numbers
+     * @param optionSelected selected option
+     */
     public void sendMessage(String optionSelected)
     {
         SmsManager sms = SmsManager.getDefault();
@@ -179,6 +210,10 @@ public class CircleOfTrustFragment extends Fragment {
 
     }
 
+    /**
+     * Retrieve phone numbers saved in Trustees
+     * @return true if the number retrieval is success
+     */
     private boolean loadPhoneNumbers() {
         sharedPreferences = this.getActivity().getSharedPreferences(Trustees.MyPREFERENCES, Context.MODE_PRIVATE);
         try {
@@ -202,6 +237,9 @@ public class CircleOfTrustFragment extends Fragment {
 
     }
 
+    /**
+     * Invalidate current phone numbers and load again with contact photos
+     */
     private void refreshPhotos() {
         phoneNumbers = null;
         loadContactPhotos();

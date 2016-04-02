@@ -11,7 +11,12 @@ import com.peacecorps.pcsa.circle_of_trust.slides.FourthSlide;
 import com.peacecorps.pcsa.circle_of_trust.slides.SecondSlide;
 import com.peacecorps.pcsa.circle_of_trust.slides.ThirdSlide;
 
-
+/*
+ * Activity of loading Circle of Trusts' introductory views
+ *
+ * @author calistus
+ * @since 2015-08-18
+ */
 public class CircleIntro extends AppIntro {
     public SharedPreferences settings;
     public boolean firstRun;
@@ -32,6 +37,9 @@ public class CircleIntro extends AppIntro {
         } else{ loadMainActivity();}
     }
 
+    /**
+     * Loads the regular activity if the first run is skipped or finished.
+     */
     private void loadMainActivity(){
 
         settings = getSharedPreferences("prefs", 0);

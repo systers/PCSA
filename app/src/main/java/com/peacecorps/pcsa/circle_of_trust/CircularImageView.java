@@ -34,7 +34,12 @@ import android.widget.ImageView;
 
 import com.peacecorps.pcsa.R;
 
-
+/*
+ * ImageView with circle border
+ *
+ * @author chamika
+ * @since 2016-02-24
+ */
 public class CircularImageView extends ImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
@@ -184,6 +189,11 @@ public class CircularImageView extends ImageView {
         setup();
     }
 
+    /**
+     * Get the Bitmap from the given drawable
+     * @param drawable drawable to be used
+     * @return bitmap object created using the drawable
+     */
     private Bitmap getBitmapFromDrawable(Drawable drawable) {
         if (drawable == null) {
             return null;
@@ -211,6 +221,9 @@ public class CircularImageView extends ImageView {
         }
     }
 
+    /**
+     * Refresh view
+     */
     private void setup() {
         if (!mReady) {
             mSetupPending = true;

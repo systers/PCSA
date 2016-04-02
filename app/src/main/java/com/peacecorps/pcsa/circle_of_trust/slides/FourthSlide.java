@@ -8,7 +8,12 @@ import android.view.ViewGroup;
 
 import com.peacecorps.pcsa.R;
 
-
+/*
+ * Forth Slide of circle of trust introduction
+ *
+ * @author calistus
+ * @since 2015-08-18
+ */
 public class FourthSlide extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

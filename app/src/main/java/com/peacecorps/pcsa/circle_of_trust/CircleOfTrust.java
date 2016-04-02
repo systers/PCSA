@@ -2,12 +2,15 @@ package com.peacecorps.pcsa.circle_of_trust;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.peacecorps.pcsa.R;
 
-
+/*
+ * Activity for Circle of Trust fragment container
+ *
+ * @author calistus
+ * @since 2015-08-18
+ */
 public class CircleOfTrust extends AppCompatActivity {
 
     @Override

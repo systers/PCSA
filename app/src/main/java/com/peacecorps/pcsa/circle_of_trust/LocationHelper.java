@@ -7,9 +7,11 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 
-/**
+/*
  * Helper Class for handling location listening and retrieving
- * Created by chamika on 2/29/16.
+ *
+ * @author chamika
+ * @since 2016-02-29
  */
 public class LocationHelper {
     public static final String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
