@@ -11,10 +11,11 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 
 /**
- * @author Buddhiprabha Erabadda
- *
  * Reporting Services available that are available
  * under the reporting types
+ *
+ * @author Buddhiprabha Erabadda
+ * @since 07-08-2015
  */
 public class Types extends Activity {
 
