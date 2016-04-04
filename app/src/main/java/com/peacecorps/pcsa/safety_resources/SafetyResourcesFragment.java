@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.peacecorps.pcsa.R;
 
 /*
- * Activity for Safety Resources fragment container
+ * Activity for Safety Resources fragment 
  *
  * @author calistus
  * @since 2015-08-18
