@@ -14,16 +14,14 @@ import com.peacecorps.pcsa.R;
  * @author calistus
  * @since 2015-08-18
  */
-
-
-/**
- * A placeholder fragment containing a simple view.
- */
 public class SafetyResourcesFragment extends Fragment {
 
     public SafetyResourcesFragment() {
     }
-
+    
+/**
+ * The Fragment's UI is just a simple view
+ */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
