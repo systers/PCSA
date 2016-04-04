@@ -7,7 +7,12 @@ import android.view.MenuItem;
 
 import com.peacecorps.pcsa.R;
 
-
+/*
+ * Activity for Safety Resources fragment container
+ *
+ * @author calistus
+ * @since 2015-08-18
+ */
 public class SafetyResources extends AppCompatActivity {
 
     @Override
