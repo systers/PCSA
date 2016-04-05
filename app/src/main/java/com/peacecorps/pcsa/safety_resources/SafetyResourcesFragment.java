@@ -8,16 +8,22 @@ import android.view.ViewGroup;
 
 import com.peacecorps.pcsa.R;
 
-
-/**
- * A placeholder fragment containing a simple view.
+/*
+ * Safety Resources main fragment 
+ *
+ * @author calistus
+ * @since 2015-08-18
  */
 public class SafetyResourcesFragment extends Fragment {
 
     public SafetyResourcesFragment() {
     }
-
-    @Override
+    /**
+     * A placeholder fragment containing a simple view 
+     * 
+     * onCreateView method is called when Fragment should create its View object hierarchy
+     */
+     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_safety_resources, container, false);
