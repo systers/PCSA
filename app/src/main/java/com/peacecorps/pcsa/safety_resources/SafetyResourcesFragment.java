@@ -8,15 +8,20 @@ import android.view.ViewGroup;
 
 import com.peacecorps.pcsa.R;
 
-
-/**
- * A placeholder fragment containing a simple view.
+/*
+ * Activity for Safety Resources fragment 
+ *
+ * @author calistus
+ * @since 2015-08-18
  */
 public class SafetyResourcesFragment extends Fragment {
 
     public SafetyResourcesFragment() {
     }
-
+    
+/**
+ * The Fragment's UI is just a simple view
+ */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
