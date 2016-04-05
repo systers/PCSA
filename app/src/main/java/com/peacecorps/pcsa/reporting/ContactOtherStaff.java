@@ -11,9 +11,11 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 
 /**
- * @author Buddhiprabha Erabadda
  * Allows user to select the Other Staff member to contact
  * Buttons in the screen correspond to various office members
+ *
+ * @author Buddhiprabha Erabadda
+ * @since 07-08-2015
  */
 public class ContactOtherStaff extends Activity {
 

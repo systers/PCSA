@@ -16,10 +16,11 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 
 /**
- * @author Buddhiprabha Erabadda
- *
  * Shows details of the Other Staff members to contact in case of crime
  * Allows user to call/send SMS to Other Staff members
+ *
+ * @author Buddhiprabha Erabadda
+ * @since 07-08-2015
  */
 public class OtherStaffContent extends FragmentActivity implements AdapterView.OnItemClickListener {
 
@@ -56,7 +57,14 @@ public class OtherStaffContent extends FragmentActivity implements AdapterView.O
         });
     }
 
-
+    /**
+     * Interface definition for a callback to be invoked when an item in this AdapterView has been clicked.
+     *
+     * @param parent The AdapterView where the click happened.
+     * @param view  The view within the AdapterView that was clicked (this will be a view provided by the adapter)
+     * @param position The position of the view in the adapter.
+     * @param id The row id of the item that was clicked.
+     */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 

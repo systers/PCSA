@@ -21,8 +21,10 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 
 /**
- * Created by Rohan on 25-02-2016.
  * This adapter is to initialise views of the customised dialog box.
+ *
+ * @author Rohan
+ * @since 25-02-2016
  */
 public class CustomAdapter extends BaseAdapter {
 
@@ -68,10 +70,11 @@ public class CustomAdapter extends BaseAdapter {
 
     /**
      * Creates a Dialog for the user to choose Dialer app or SMS app
-     * @param title title of the dialog box
-     * @param activity The activity in which the dialog box needs to be instantiated
      *
      * Any activity that needs a dialog box should call this function with the above parameters.
+     *
+     * @param title title of the dialog box
+     * @param activity The activity in which the dialog box needs to be instantiated
      */
     public static Dialog createDialog(final String title, Activity activity ){
 

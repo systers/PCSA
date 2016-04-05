@@ -12,9 +12,10 @@ import com.peacecorps.pcsa.R;
 
 
 /**
- * @author Buddhiprabha Erabadda
- *
  * The customized ArrayAdapter for the list used in FAQ page
+ *
+ * @author Buddhiprabha Erabadda
+ * @since 07-08-2015
  */
 public class FAQArrayAdapter extends ArrayAdapter<String> {
 

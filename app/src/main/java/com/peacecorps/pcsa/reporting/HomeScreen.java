@@ -10,9 +10,10 @@ import android.widget.Toast;
 import com.peacecorps.pcsa.R;
 
 /**
- * @author Buddhiprabha Erabadda
+ * Landing page of Reporting which has links for Reporting functionality
  *
- * Landing page of Reporting which has links for Reporting functinalities
+ * @author Buddhiprabha Erabadda
+ * @since 07-08-2015
  */
 public class HomeScreen extends Activity {
 

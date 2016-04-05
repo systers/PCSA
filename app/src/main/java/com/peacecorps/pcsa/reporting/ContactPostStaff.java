@@ -25,10 +25,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author Buddhiprabha Erabadda
- *
  * Allows the user to call Post Staff in case of crime. The details for the
  * current location will be set by changing the location
+ *
+ * @author Buddhiprabha Erabadda
+ * @since 07-08-2015
  */
 public class ContactPostStaff extends FragmentActivity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
 
@@ -121,6 +122,15 @@ public class ContactPostStaff extends FragmentActivity implements AdapterView.On
         });
     }
 
+    /**
+     * Interface definition for a callback to be invoked when an item in Change Location view has been selected
+     * and then currentLocation TextView is set according to the selected item.
+     *
+     * @param parent The AdapterView where the selection happened
+     * @param view The view within the AdapterView that was clicked
+     * @param position The position of the view in the adapter
+     * @param id The row id of the item that is selected
+     */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String selectedItem = (String) parent.getItemAtPosition(position);
@@ -136,11 +146,24 @@ public class ContactPostStaff extends FragmentActivity implements AdapterView.On
 
     }
 
+    /**
+     * Interface definition for a callback to be invoked when no item in Change Location view has been selected
+     *
+     *  @param parent The AdapterView where the selection happened
+     */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
 
+    /**
+     * Interface definition for a callback to be invoked when an item in this AdapterView has been clicked.
+     *
+     * @param parent The AdapterView where the click happened.
+     * @param view  The view within the AdapterView that was clicked (this will be a view provided by the adapter)
+     * @param position The position of the view in the adapter.
+     * @param id The row id of the item that was clicked.
+     */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
