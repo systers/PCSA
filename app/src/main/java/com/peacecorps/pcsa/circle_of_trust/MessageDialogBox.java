@@ -41,7 +41,7 @@ public class MessageDialogBox extends DialogFragment {
     }
 
     /**
-     * Checks whether the device is connected to a mobile network or not
+     * Sets up the dialogbox
      * @param objCircleOfTrustFragment an object of CircleofTrustFragment
      * @param activity Activity which holds the fragment, required for context
      * @return Dialog object
