@@ -9,4 +9,5 @@
     <integer name="reporting_confidentiality_weight_sum">6</integer>
     <integer name="reporting_resource_weight_sum">6</integer>
     <integer name="reporting_type_weight_sum">6</integer>
+    <integer name="circle_of_trust_dialog_header_size">18</integer>
 </resources>

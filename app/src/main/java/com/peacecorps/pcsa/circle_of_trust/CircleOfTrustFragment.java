@@ -64,7 +64,7 @@ public class CircleOfTrustFragment extends Fragment {
             public void onClick(View v) {
                 if(checkMobileNetworkAvailable(getActivity()))
                 {
-                    MessageDialogBox messageDialogBox = new MessageDialogBox(CircleOfTrustFragment.this);
+                    MessageDialogBox messageDialogBox = MessageDialogBox.newInstance(CircleOfTrustFragment.this,getActivity());
                     messageDialogBox.show(getActivity().getSupportFragmentManager(),getString(R.string.message_options));
                 }
                 else
