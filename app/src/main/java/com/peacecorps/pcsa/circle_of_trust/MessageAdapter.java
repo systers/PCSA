@@ -1,4 +1,4 @@
-package com.peacecorps.pcsa.reporting;
+package com.peacecorps.pcsa.circle_of_trust;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -12,48 +12,45 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 
 /**
- * This adapter is to initialise views of the customised dialog box.
+ * This adapter is to initialise views of the customised dialog box which gets invoked on pressing Help me button.
  *
  * @author Rohan
  * @since 25-02-2016
  */
-public class CustomAdapter extends BaseAdapter {
+public class MessageAdapter extends BaseAdapter {
 
-    public static int[] caption = {R.string.dialog_call, R.string.dialog_message};
+    public static int[] messages = {R.string.come_get_me, R.string.need_interruption,R.string.need_to_talk};
     Context context;
-    public static int[] icons = {R.mipmap.ic_call, R.mipmap.ic_message};
     private static LayoutInflater inflater;
+    private static Dialog listDialog;
 
-    public CustomAdapter(Object object)
+    public MessageAdapter(Object object)
     {
         context = (Context)object;
         inflater = ( LayoutInflater )context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
     @Override
     public int getCount() {
-        return caption.length;
+        return messages.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return position;
+        return messages[position];
     }
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return 0;
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
         View rowView;
-        rowView = inflater.inflate(R.layout.reporting_dialog_listitem, null);
-        TextView textView = (TextView)rowView.findViewById(R.id.dialog_txt);
-        ImageView imageView = (ImageView)rowView.findViewById(R.id.dialog_img);
-        textView.setText(caption[position]);
-        imageView.setImageResource(icons[position]);
+        rowView = inflater.inflate(R.layout.circle_of_trust_dialog_listitem, null);
+        TextView textView = (TextView)rowView.findViewById(R.id.messagedialog_txt);
+        textView.setText(messages[position]);
         return rowView;
     }
 }

@@ -68,6 +68,7 @@
     <dimen name="dialog_icon_size">60dp</dimen>
     <dimen name="dialog_icon_marginleft">30dp</dimen>
     <dimen name="dialog_icon_marginright">15dp</dimen>
-    <dimen name="dialog_text_size">25sp</dimen>
+    <dimen name="reporting_dialog_text_size">25sp</dimen>
+    <dimen name="circle_of_trust_dialog_text_size">20sp</dimen>
 
 </resources>
