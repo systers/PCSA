@@ -81,6 +81,7 @@
     <string name="contact_sarl">Contact SARL</string>
     <string name="reporting_change_location">Change Location</string>
     <string name="reporting_current_location">This is information for</string>
+    <string name="reporting_current_post">(current post)</string>
 
     <!-- Locations that are available on dropdown of Contact Staff-->
     <string-array name="locations_array">
