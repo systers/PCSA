@@ -15,7 +15,12 @@
     <dimen name="trustee_margin_bottom">20dp</dimen>
     <dimen name="reporting_types_width">250dp</dimen>
     <dimen name="homescreen_margin_first">50dp</dimen>
-    <dimen name="contacting_post_staff_margin">20dp</dimen>
+    <dimen name="contacting_post_staff_marginTop">50dp</dimen>
+    <dimen name="contacting_post_staff_marginLeft">5dp</dimen>
+    <dimen name="contacting_post_staff_marginRight">30dp</dimen>
+    <dimen name="contacting_post_staff_spinner_marginTop">3dp</dimen>
+    <dimen name="contacting_post_staff_spinner_width">110dp</dimen>
+    <dimen name="contacting_post_staff_spinner_height">35dp</dimen>
     <dimen name="faq_width">20dp</dimen>
     <dimen name="faq_padding">10dp</dimen>
     <dimen name="faq_height">20dp</dimen>
