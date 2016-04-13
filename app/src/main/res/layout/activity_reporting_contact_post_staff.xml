@@ -122,10 +122,10 @@
                     android:layout_alignParentBottom="true"
                     />
                 <View
-                    android:layout_width="1.5dp"
+                    android:layout_width="@dimen/contacting_post_staff_view_width"
                     android:layout_height="fill_parent"
                     android:layout_toLeftOf="@+id/spinner_arrow"
-                    android:background="@android:color/black" />
+                    android:background="@android:color/white" />
 
             </RelativeLayout>
 

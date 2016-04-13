@@ -21,6 +21,7 @@
     <dimen name="contacting_post_staff_spinner_marginTop">3dp</dimen>
     <dimen name="contacting_post_staff_spinner_width">110dp</dimen>
     <dimen name="contacting_post_staff_spinner_height">35dp</dimen>
+    <dimen name="contacting_post_staff_view_width">2dp</dimen>
     <dimen name="faq_width">20dp</dimen>
     <dimen name="faq_padding">10dp</dimen>
     <dimen name="faq_height">20dp</dimen>
