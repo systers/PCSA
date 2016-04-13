@@ -102,7 +102,7 @@ public class ContactPostStaff extends FragmentActivity implements AdapterView.On
         Spinner locationList = (Spinner) findViewById(R.id.reporting_locationlist);
         locationList.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.locations_array, android.R.layout.simple_spinner_item);
+                R.array.locations_array, R.layout.spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationList.setAdapter(adapter);
         //Load Last Location from Shared Preferences
