@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -43,21 +44,34 @@ public class Trustees extends AppCompatActivity {
 
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
+    private Button okButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trustees);
 
-        System.out.println(comradeEditText.size());
-        comradeEditText.add((EditText) findViewById(R.id.comrade1EditText));
-        comradeEditText.add((EditText) findViewById(R.id.comrade2EditText));
-        comradeEditText.add((EditText) findViewById(R.id.comrade3EditText));
-        comradeEditText.add((EditText) findViewById(R.id.comrade4EditText));
-        comradeEditText.add((EditText) findViewById(R.id.comrade5EditText));
-        comradeEditText.add((EditText) findViewById(R.id.comrade6EditText));
+        EditText comrade1EditText,comrade2EditText,comrade3EditText,comrade4EditText,comrade5EditText,comrade6EditText;
+        comrade1EditText = (EditText) findViewById(R.id.comrade1EditText);
+        comrade2EditText = (EditText) findViewById(R.id.comrade2EditText);
+        comrade3EditText = (EditText) findViewById(R.id.comrade3EditText);
+        comrade4EditText = (EditText) findViewById(R.id.comrade4EditText);
+        comrade5EditText = (EditText) findViewById(R.id.comrade5EditText);
+        comrade6EditText = (EditText) findViewById(R.id.comrade6EditText);
 
-        Button okButton = (Button) findViewById(R.id.okButton);
+        comradeEditText.add(comrade1EditText);
+        comradeEditText.add(comrade2EditText);
+        comradeEditText.add(comrade3EditText);
+        comradeEditText.add(comrade4EditText);
+        comradeEditText.add(comrade5EditText);
+        comradeEditText.add(comrade6EditText);
+
+
+
+
+        okButton = (Button) findViewById(R.id.okButton);
+        okButton.setFocusable(true);
+        okButton.setFocusableInTouchMode(true);
 
         sharedpreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
@@ -167,7 +181,9 @@ public class Trustees extends AppCompatActivity {
             }
 
             if(index != -1)
+            {
                 return comradeEditText.get(index);
+            }
             else
                 return null;
         }
@@ -220,6 +236,7 @@ public class Trustees extends AppCompatActivity {
                                     selectedNumber = selectedNumber.replace("-", "");
                                     if (noDuplicateContactNumber(selectedNumber)) {
                                         phoneInput.setText(selectedNumber);
+                                        setFocusOnNextView();
                                     } else {
                                         Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
                                     }
@@ -235,6 +252,7 @@ public class Trustees extends AppCompatActivity {
                     selectedNumber = selectedNumber.replace("-", "");
                     if(noDuplicateContactNumber(selectedNumber)) {
                         phoneInput.setText(selectedNumber);
+                        setFocusOnNextView();
                     }
                     else {
                         Toast.makeText(getApplicationContext(), getString(R.string.duplicate_number_errormessage), Toast.LENGTH_LONG).show();
@@ -304,6 +322,44 @@ public class Trustees extends AppCompatActivity {
             }
         }
         return noDuplicate;
+    }
+
+    /**
+     * Set focus to the next EditText after picking contact
+     */
+    public void setFocusOnNextView() {
+
+        int index = -1;
+        View currentFocus = selectedButton;
+        String tag = (String)currentFocus.getTag();
+        try
+        {
+            index = Integer.parseInt(tag);
+            Log.d("index",String.valueOf(index));
+        }catch (NumberFormatException e)
+        {
+            e.printStackTrace();
+        }
+
+        if(index >= 0 && index < comradeEditText.size())
+        {
+            EditText nextFocus = comradeEditText.get(index);
+            if(nextFocus.getText().toString().equals(""))
+                nextFocus.requestFocus();
+            else
+                okButton.requestFocus();
+        }
+        else
+        {
+            for( EditText e : comradeEditText)
+            {
+                if(e.getText().toString().equals(""))
+                {
+                    Log.d("tag", (String) e.getTag());
+                    e.requestFocus();
+                }
+            }
+        }
     }
 }
 

@@ -37,7 +37,8 @@
             android:inputType="number"
             android:hint="@string/comrade1"
             android:ems="@integer/ems"
-            android:paddingTop="@dimen/padding_top"/>
+            android:paddingTop="@dimen/padding_top"
+            android:tag="1"/>
 
         <ImageButton
             android:layout_alignTop="@id/comrade1EditText"
@@ -71,7 +72,8 @@
             android:textColor="@color/activity_trustee_edittext_color"
             android:hint="@string/comrade2"
             android:ems="@integer/ems"
-            android:paddingTop="@dimen/padding_top"/>
+            android:paddingTop="@dimen/padding_top"
+            android:tag="2"/>
 
         <ImageButton
             android:layout_alignTop="@id/comrade2EditText"
@@ -105,7 +107,8 @@
             android:textColor="@color/activity_trustee_edittext_color"
             android:hint="@string/comrade3"
             android:ems="@integer/ems"
-            android:paddingTop="@dimen/padding_top"/>
+            android:paddingTop="@dimen/padding_top"
+            android:tag="3"/>
 
         <ImageButton
             android:layout_alignTop="@id/comrade3EditText"
@@ -139,7 +142,8 @@
             android:textColor="@color/activity_trustee_edittext_color"
             android:hint="@string/comrade4"
             android:ems="@integer/ems"
-            android:paddingTop="@dimen/padding_top"/>
+            android:paddingTop="@dimen/padding_top"
+            android:tag="4"/>
 
         <ImageButton
             android:layout_alignTop="@id/comrade4EditText"
@@ -173,7 +177,8 @@
             android:textColor="@color/activity_trustee_edittext_color"
             android:hint="@string/comrade5"
             android:ems="@integer/ems"
-            android:paddingTop="@dimen/padding_top"/>
+            android:paddingTop="@dimen/padding_top"
+            android:tag="5"/>
 
         <ImageButton
             android:layout_alignTop="@id/comrade5EditText"
@@ -207,7 +212,8 @@
             android:textColor="@color/activity_trustee_edittext_color"
             android:hint="@string/comrade6"
             android:ems="@integer/ems"
-            android:paddingTop="@dimen/padding_top"/>
+            android:paddingTop="@dimen/padding_top"
+            android:tag="6"/>
 
         <ImageButton
             android:layout_alignTop="@id/comrade6EditText"
@@ -236,7 +242,7 @@
             android:text="@string/add_comrades_save"
             android:layout_below="@id/comrade6EditText"
             android:layout_marginTop="@dimen/trustee_margin_top"
-            android:layout_marginBottom="@dimen/trustee_margin_bottom"/>
+            android:layout_marginBottom="@dimen/trustee_margin_bottom" />
 
     </RelativeLayout>
 
