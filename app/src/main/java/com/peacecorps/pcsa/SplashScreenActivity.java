@@ -18,7 +18,7 @@ public class SplashScreenActivity extends Activity {
     private ProgressBar progressBar;
 
     /**
-     * Instance of Handler class is used to go to load the main screen after 2500 ms
+     * Instance of Handler class is used to load the main screen after 2500 ms
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

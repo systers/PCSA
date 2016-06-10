@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/dark_yellow"
+    android:padding="@dimen/navbar_listitem_padding"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/navbar_item_textsize"
+        android:id="@+id/list_text"
+        android:textColor="@color/photo_border"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/navbar_item_icon"
+        android:layout_width="@dimen/navbar_icon_size"
+        android:layout_height="@dimen/navbar_icon_size"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

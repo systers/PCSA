@@ -1,5 +1,49 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/fragment"
-    android:name="com.peacecorps.pcsa.MainActivityFragment"
-    tools:layout="@layout/fragment_main"
-    android:layout_width="match_parent" android:layout_height="match_parent" />
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/toolbar"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:id="@+id/drawer_layout"
+        android:layout_height="match_parent">
+
+        <fragment android:id="@+id/fragment"
+            android:name="com.peacecorps.pcsa.MainActivityFragment"
+            tools:layout="@layout/fragment_main"
+            android:layout_width="match_parent" android:layout_height="match_parent" />
+
+        <android.support.design.widget.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/navigation_view"
+            android:background="@color/main_yellow"
+            android:layout_gravity="start">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <include
+                    layout="@layout/navbar_listview_header"/>
+                <ExpandableListView
+                    android:layout_width="match_parent"
+                    android:id="@+id/navbar_expandable_listview"
+                    android:divider="@color/photo_border"
+                    android:dividerHeight="@dimen/navbar_header_divider_height"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
+
+
