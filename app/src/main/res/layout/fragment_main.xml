@@ -50,22 +50,32 @@
             android:id="@+id/circleButton"
             style="@style/NavigateButton"
             android:text="@string/circle"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:layout_marginTop="@dimen/fragment_main_marginTop_15"/>
         <Button
-            android:id="@+id/reportButton"
+            android:id="@+id/safetyButton"
             style="@style/NavigateButton"
-            android:text="@string/reporting"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:text="@string/safety_tools"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_15"/>
         <Button
-            android:id="@+id/safetyResourceButton"
+            android:id="@+id/supportButton"
             style="@style/NavigateButton"
-            android:text="@string/safety"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:text="@string/support_services"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_15"/>
+
         <Button
-            android:id="@+id/getHelpButton"
             style="@style/NavigateButton"
-            android:text="@string/helping_others"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:id="@+id/sexualButton"
+            android:text="@string/sexual_assault_awareness"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/policyButton"
+            style="@style/NavigateButton"
+            android:text="@string/policies_glossary"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_15"/>
 
     </LinearLayout>
 

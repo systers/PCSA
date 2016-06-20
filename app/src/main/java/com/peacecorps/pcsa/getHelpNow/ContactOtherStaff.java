@@ -1,4 +1,4 @@
-package com.peacecorps.pcsa.reporting;
+package com.peacecorps.pcsa.getHelpNow;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
+import com.peacecorps.pcsa.reporting.OtherStaffContent;
 
 /**
  * Allows user to select the Other Staff member to contact

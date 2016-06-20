@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
-import com.peacecorps.pcsa.reporting.ContactPostStaff;
-import com.peacecorps.pcsa.safety_resources.SafetyResources;
+import com.peacecorps.pcsa.getHelpNow.ContactPostStaff;
 import com.peacecorps.pcsa.reporting.HomeScreen;
+import com.peacecorps.pcsa.safety_tools.SafetyTools;
 
 
 /**
@@ -29,16 +29,11 @@ public class MainActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         Button circleButton = (Button) rootView.findViewById(R.id.circleButton);
         Button getHelpNowButton = (Button) rootView.findViewById(R.id.getButton);
-        Button reportingProcessButton = (Button) rootView.findViewById(R.id.reportButton);
-        Button safetyResourceButton = (Button) rootView.findViewById(R.id.safetyResourceButton);
-        Button getHelpButton = (Button) rootView.findViewById(R.id.getHelpButton);
+        Button safetyButton = (Button) rootView.findViewById(R.id.safetyButton);
+        Button supportButton = (Button) rootView.findViewById(R.id.supportButton);
+        Button sexualButton = (Button) rootView.findViewById(R.id.sexualButton);
+        Button policyButton = (Button) rootView.findViewById(R.id.policyButton);
 
-        reportingProcessButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), HomeScreen.class));
-            }
-        });
         getHelpNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,27 +44,43 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        safetyResourceButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Temporarily commented out until the functionality is implemented.
-                //startActivity(new Intent(getActivity(), SafetyResources.class));
-                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        getHelpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //getHelpButton does not have any functioanlity yet.
-                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
-            }
-        });
-
         circleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), CircleIntro.class));
+            }
+        });
+
+        safetyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //safetyTools does not have any functionality yet.
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        supportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Temporarily commented out until the functionality is implemented.
+                //startActivity(new Intent(getActivity(), SupportServices.class));
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        sexualButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //sexualButton does not have any functionality yet.
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        policyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //policyButton does not have any functionality yet.
+                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
             }
         });
 

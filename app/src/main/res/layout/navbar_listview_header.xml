@@ -13,7 +13,7 @@
             android:layout_width="@dimen/navbar_icon_header_size"
             android:paddingLeft="@dimen/navbar_listview_header_padding"
             android:layout_height="@dimen/navbar_icon_header_size"
-            android:src="@drawable/ic_logo_custom"
+            android:src="@drawable/ic_logo"
             android:id="@+id/logo_custom"/>
 
         <TextView

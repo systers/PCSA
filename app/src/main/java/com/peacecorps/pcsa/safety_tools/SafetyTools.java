@@ -1,9 +1,7 @@
-package com.peacecorps.pcsa.safety_resources;
+package com.peacecorps.pcsa.safety_tools;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.peacecorps.pcsa.R;
 
@@ -13,12 +11,12 @@ import com.peacecorps.pcsa.R;
  * @author calistus
  * @since 2015-08-18
  */
-public class SafetyResources extends AppCompatActivity {
+public class SafetyTools extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_safety_resources);
+        setContentView(R.layout.activity_safety_tools);
     }
 
 }
