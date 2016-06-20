@@ -33,8 +33,8 @@
     <dimen name="circle_of_trust_marginLeft">70dp</dimen>
     <dimen name="circle_of_trust_marginLeft_com1">0dp</dimen>
     <dimen name="circle_of_trust_marginRight">10dp</dimen>
-    <dimen name="fragment_main_marginTop">30dp</dimen>
-    <dimen name="fragment_main_marginTop_20">20dp</dimen>
+    <dimen name="fragment_main_marginTop">25dp</dimen>
+    <dimen name="fragment_main_marginTop_15">15dp</dimen>
     <dimen name="safety_resource_marginTop_50">50dp</dimen>
     <dimen name="safety_resource_marginTop_70">70dp</dimen>
     <dimen name="safety_resource_height">80dp</dimen>
@@ -50,7 +50,7 @@
     <dimen name="margin_top">30px</dimen>
 
     <!-- Title and sub-title font sizes-->
-    <dimen name="title_font">28sp</dimen>
+    <dimen name="title_font">25sp</dimen>
     <dimen name="sub_title_font">20sp</dimen>
     <dimen name="menu_icon_width">200dp</dimen>
     <dimen name="text_extra_small">12sp</dimen>
@@ -76,7 +76,7 @@
     <dimen name="dialog_icon_marginright">15dp</dimen>
     <dimen name="reporting_dialog_text_size">25sp</dimen>
     <dimen name="circle_of_trust_dialog_text_size">20sp</dimen>
-    <dimen name="header_font">36sp</dimen>
+    <dimen name="header_font">32sp</dimen>
     <dimen name="view_height">2dp</dimen>
     <dimen name="view_margin">5dp</dimen>
     <dimen name="splash_screen_imgsize">240dp</dimen>
@@ -91,7 +91,7 @@
     <dimen name="navbar_listitem_padding">5dp</dimen>
     <dimen name="navbar_header_divider_height">2dp</dimen>
     <dimen name="navbar_listview_header_padding">10dp</dimen>
-    <dimen name="navbar_icon_header_size">64dp</dimen>
+    <dimen name="navbar_icon_header_size">80dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>

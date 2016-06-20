@@ -1,14 +1,16 @@
-package com.peacecorps.pcsa.reporting;
+package com.peacecorps.pcsa.getHelpNow;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 
+import com.peacecorps.pcsa.reporting.ListDialogBox;
+
 /**
  * Created by Rohan on 13-03-2016.
  */
-public class ContactOptionsDialogBox extends  ListDialogBox {
+public class ContactOptionsDialogBox extends ListDialogBox {
 
     public static ContactOptionsDialogBox newInstance(String title, Activity activity)
     {
