@@ -157,6 +157,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-
+    <string name="reporting_current_post_html_text">If you are in a country not listed, contact your country of service or the US Embassy ( http://travel.state.gov/content/passports/english/emergencies.html )</string>
 
 </resources>

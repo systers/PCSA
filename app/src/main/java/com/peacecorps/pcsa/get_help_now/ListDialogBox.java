@@ -1,4 +1,4 @@
-package com.peacecorps.pcsa.reporting;
+package com.peacecorps.pcsa.get_help_now;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -27,6 +27,7 @@ public abstract class ListDialogBox extends DialogFragment {
 
     protected Context context;
     protected Dialog listDialog;
+    protected AdapterView.OnItemClickListener clickListener;
 
     @NonNull
     @Override

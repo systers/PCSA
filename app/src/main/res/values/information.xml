@@ -75,27 +75,27 @@
         people that have experienced a sexual assault. SARLs help Volunteers with issues not handled by the PCMO or SSM. For example,
         a SARL might accompany a Volunteer when traveling to an appointment with a local lawyer.
     </string>
-    
+
     <!-- Details of Other Staff to be contacted in case of crime and the contact number-->
     <string name="reporting_desc_pcsaves">
         The PC SAVES Helpline provides anonymous confidential crisis intervention, support and information to Peace Corps Volunteers
         and trainees who have been affected by sexual assault via a variety of different platforms. All options are staffed by
         trained professionals not affiliated with Peace Corps, available 24/7.  No personally identifying information will be
         collected.\n\n
-        Learn More: pcsaveshelpline.org
+        Online Chat: pcsaveshelpline.org
     </string>
     <string name="reporting_contact_pcsaves">001 408 844 4357</string>
-    
+
     <string name="reporting_desc_ova">
-        Centralized resource to Volunteers who are victims of sexual assault and violent crime regarding the services they are
-        entitled to receive, and ensuring their voices are heard and considered in all decisions affecting their service and care.\n\n
+        CVictim Advocates are available for Volunteers who are victims of crimes. They can provide information regarding available response services,
+        address questions/concerns, and ensure their voices are heard and considered in all decisions affecting service and care.\n\n
         e-mail: victimadvocate@peacecorps.gov
     </string>
     <string name="reporting_contact_ova">202 409 2701</string>
 
     <string name="reporting_desc_oig">
-        Resource for those who have been harmed by misconduct or criminal wrongdoing by a fellow Volunteer or Peace Corps Staff.
-        Independent from Peace Corps with law enforcement officers  who have the unique authorities to help seek a fair resolution and,
+        OIG is a resource for those who have been harmed by misconduct or criminal wrongdoing by a fellow Volunteer or Peace Corps Staff.
+        They are independent from Peace Corps with law enforcement officers who have the unique authorities to help seek a fair resolution and,
         in appropriate cases, to seek prosecution in the United States or host country.\n\n
         e-mail: victimadvocate@peacecorps.gov\n\n
         Learn more: peacecorps.gov/OIG

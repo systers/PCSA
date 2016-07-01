@@ -16,6 +16,7 @@
     <dimen name="reporting_types_width">250dp</dimen>
     <dimen name="homescreen_margin_first">50dp</dimen>
     <dimen name="contacting_post_staff_marginTop">50dp</dimen>
+    <dimen name="contacting_post_staff_marginTop_25">25dp</dimen>
     <dimen name="contacting_post_staff_marginLeft">5dp</dimen>
     <dimen name="contacting_post_staff_marginRight">30dp</dimen>
     <dimen name="contacting_post_staff_spinner_marginTop">3dp</dimen>

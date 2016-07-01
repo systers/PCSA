@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 
-import com.peacecorps.pcsa.reporting.ListDialogBox;
+import com.peacecorps.pcsa.get_help_now.ListDialogBox;
 
 /*
  * Dialog for showing multiple contact selection dialog

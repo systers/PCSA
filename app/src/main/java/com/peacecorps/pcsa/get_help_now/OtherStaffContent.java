@@ -1,14 +1,14 @@
-package com.peacecorps.pcsa.reporting;
+package com.peacecorps.pcsa.get_help_now;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,23 +22,24 @@ import com.peacecorps.pcsa.R;
  * @author Buddhiprabha Erabadda
  * @since 07-08-2015
  */
-public class OtherStaffContent extends FragmentActivity implements AdapterView.OnItemClickListener {
+public class OtherStaffContent extends Fragment implements AdapterView.OnItemClickListener {
 
     public static final String CONTACT_NUMBER = "contactNumber";
     public static final String CONTACT_NAME = "contactName";
     public static final String CONTACT_DESC = "contatDesc";
+    public static final String TAG = "OtherStaffContent" ;
     static String contactNumber;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reporting_other_staff_content);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_reporting_other_staff_content,container,false);
 
-        TextView contactName = (TextView) findViewById(R.id.reporting_contact_other_content);
-        TextView contactDescription = (TextView) findViewById(R.id.reporting_contact_description);
-        Button contactNow = (Button) findViewById(R.id.contact_now);
+        TextView contactName = (TextView) rootView.findViewById(R.id.reporting_contact_other_content);
+        TextView contactDescription = (TextView) rootView.findViewById(R.id.reporting_contact_description);
+        Button contactNow = (Button) rootView.findViewById(R.id.contact_now);
 
-        final Bundle details = getIntent().getExtras();
+        final Bundle details = getArguments();
         contactNumber = details.getString(CONTACT_NUMBER);
 
         contactName.setText(details.getString(CONTACT_NAME));
@@ -48,10 +49,11 @@ public class OtherStaffContent extends FragmentActivity implements AdapterView.O
             @Override
             public void onClick(View v) {
                 ContactOptionsDialogBox contactOptionsDialogBox = ContactOptionsDialogBox.newInstance(getString(R.string.contact)+" "+details.getString(CONTACT_NAME)+" "+getString(R.string.via),
-                        OtherStaffContent.this);
-                contactOptionsDialogBox.show(getSupportFragmentManager(), getString(R.string.dialog_tag));
+                        getActivity(),OtherStaffContent.this);
+                contactOptionsDialogBox.show(getActivity().getSupportFragmentManager(), getString(R.string.dialog_tag));
             }
         });
+        return rootView;
     }
 
     /**

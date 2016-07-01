@@ -1,4 +1,4 @@
-package com.peacecorps.pcsa.reporting;
+package com.peacecorps.pcsa.get_help_now;
 
 import android.app.Activity;
 import android.app.Dialog;

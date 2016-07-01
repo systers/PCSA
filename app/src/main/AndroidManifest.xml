@@ -47,15 +47,15 @@
             android:label="@string/title_activity_resources" >
         </activity>
         <activity
-            android:name="com.peacecorps.pcsa.reporting.ContactPostStaff"
+            android:name=".get_help_now.ContactPostStaff"
             android:label="@string/title_activity_contact_post_staff" >
         </activity>
         <activity
-            android:name="com.peacecorps.pcsa.reporting.ContactOtherStaff"
+            android:name=".get_help_now.ContactOtherStaff"
             android:label="@string/title_activity_contact_other_staff" >
         </activity>
         <activity
-            android:name="com.peacecorps.pcsa.reporting.OtherStaffContent"
+            android:name=".get_help_now.OtherStaffContent"
             android:label="@string/title_activity_other_staff_content" >
         </activity>
         <activity

@@ -16,10 +16,11 @@
         android:id="@+id/drawer_layout"
         android:layout_height="match_parent">
 
-        <fragment android:id="@+id/fragment"
-            android:name="com.peacecorps.pcsa.MainActivityFragment"
-            tools:layout="@layout/fragment_main"
-            android:layout_width="match_parent" android:layout_height="match_parent" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/fragment_container"/>
 
         <android.support.design.widget.NavigationView
             android:layout_width="match_parent"

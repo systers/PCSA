@@ -3,6 +3,7 @@ package com.peacecorps.pcsa;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
-import com.peacecorps.pcsa.reporting.ContactPostStaff;
-import com.peacecorps.pcsa.safety_resources.SafetyResources;
+import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
 import com.peacecorps.pcsa.reporting.HomeScreen;
 
 
@@ -20,7 +20,9 @@ import com.peacecorps.pcsa.reporting.HomeScreen;
  */
 public class MainActivityFragment extends Fragment {
 
-        public MainActivityFragment() {
+    public final static String TAG = "MainActivityFragment";
+
+    public MainActivityFragment() {
     }
 
     @Override
@@ -43,9 +45,9 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                //Starting ContactPostStaff Activity
-                Intent intent = new Intent(getActivity(), ContactPostStaff.class);
-                startActivity(intent);
+                //Swapping ContactPostStaff into the fragment container dynamically
+                Fragment contactPostStaffFragment = new ContactPostStaff();
+                MainActivity.swapFragmentIn(getActivity(),contactPostStaffFragment,ContactPostStaff.TAG);
             }
         });
 
@@ -75,5 +77,6 @@ public class MainActivityFragment extends Fragment {
 
         return rootView;
     }
+
 
 }

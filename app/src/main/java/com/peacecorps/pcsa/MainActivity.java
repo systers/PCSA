@@ -1,6 +1,9 @@
 package com.peacecorps.pcsa;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -25,10 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private ExpandableListView expListView;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Fragment mainActivityFragment = new MainActivityFragment();
+        swapFragmentIn(this,mainActivityFragment,MainActivityFragment.TAG);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mDrawer = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -42,11 +48,23 @@ public class MainActivity extends AppCompatActivity {
         expListView.setAdapter(listAdapter);
     }
 
+    public static void swapFragmentIn(FragmentActivity activity, Fragment fragment, String TAG)
+    {
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = activity.getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .setCustomAnimations(R.anim.fade_in,R.anim.fade_out,R.anim.fade_in,R.anim.fade_out)
+                .add(R.id.fragment_container
+                        , fragment)
+                .addToBackStack(TAG)
+                .commit();
+    }
+
     /**
      * Populating the expandable list of the Navigation Drawer
      */
     private void prepareListData() {
-        
+
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
         listDataHeader.add(getString(R.string.get_help));
@@ -108,5 +126,11 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
     }
 }

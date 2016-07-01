@@ -1,4 +1,4 @@
-package com.peacecorps.pcsa.reporting;
+package com.peacecorps.pcsa.get_help_now;
 
 /**
  * Holds contact information for a particular location
