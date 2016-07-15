@@ -22,6 +22,7 @@
         android:id="@+id/splash_screen_progress"
         android:layout_marginTop="@dimen/progressbar_margin_top"
         android:layout_below="@+id/imageView"
+        android:indeterminate="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

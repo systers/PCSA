@@ -91,7 +91,7 @@
     <string name="slide_three_bottom">Select the message you want to send from here!</string>
     <string name="slide_four_head">The message will be sent to 6 Comrades for immediate intervention</string>
     <string name="slide_four_bottom">Done</string>
-    <string name="add_comrades_text">Add the Comrade Numbers here</string>
+    <string name="add_comrades_text">Add the Emergency Contacts here</string>
     <string name="duplicate_number_errormessage">Duplicate Number!Please enter again</string>
 
     <string name="select_request">Select a request</string>
