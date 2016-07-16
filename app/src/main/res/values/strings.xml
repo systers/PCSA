@@ -89,7 +89,7 @@
     <string name="slide_one_button">Circle Of Trust</string>
     <string name="slide_three_head">Circle Of Trust</string>
     <string name="slide_three_bottom">Select the message you want to send from here!</string>
-    <string name="slide_four_head">The message will be sent to 6 Comrades for immediate intervention</string>
+    <string name="slide_four_head">The message will be sent to 6 Contacts for immediate intervention</string>
     <string name="slide_four_bottom">Done</string>
     <string name="add_comrades_text">Add the Emergency Contacts here</string>
     <string name="duplicate_number_errormessage">Duplicate Number!Please enter again</string>
@@ -105,22 +105,22 @@
     <string name="need_to_talk_message">I need to talk. Message sent through First Aide\'s Circle of Trust</string>
     <string name="msg_sent">Message sent</string>
     <string name="ok">OK</string>
-    <string name="message_failed">Message Sending Failed for Comrade </string>
+    <string name="message_failed">Message Sending Failed for Contact </string>
     <string name="no_phone_number">No phone number found</string>
     <string name="choose_number">Choose a number</string>
-    <string name="circle_of_trust_slide_two">When you are feeling insecure or need comrades\' attention.\nPress the button</string>
+    <string name="circle_of_trust_slide_two">When you are feeling insecure or need your emergenct contacts\' attention.\nPress the button</string>
     <string name="confirmation_message1">This message is being sent to</string>
-    <string name="confirmation_message2">registered Comrades.</string>
-    <string name="confirmation_message3">registered Comrade.</string>
-    <string name="no_comrade_title">No Comrades Registered</string>
-    <string name="no_comrade_msg">Failed to send message since no Comrades have been registered</string>
+    <string name="confirmation_message2">registered Contacts.</string>
+    <string name="confirmation_message3">registered Contact.</string>
+    <string name="no_comrade_title">No Contacts Registered</string>
+    <string name="no_comrade_msg">Failed to send message since no Contacts have been registered</string>
     <string name="add_comrades_save">Save</string>
     <string name="message_options">Message Template</string>
 
     <!--Trustees-->
-    <string name="updated_phone_numbers">"Comrades' phone numbers have been updated"</string>
+    <string name="updated_phone_numbers">"Your Emergency Contacts' phone numbers have been updated"</string>
     <string name="not_updated_phone_numbers">No changes detected</string>
-    <string name="updated_phone_numbers_fail">"Unable to update Comrades' phone numbers"</string>
+    <string name="updated_phone_numbers_fail">"Unable to update your Contacts' phone numbers"</string>
     <string name="dialog_tag">Alert_Dialog</string>
     <string name="network_unavailable">Please check your network connection and try again</string>
     <string name="first_aide">First Aide</string>
