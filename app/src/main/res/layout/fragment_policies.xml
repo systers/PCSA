@@ -7,7 +7,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@color/background_app"
-    tools:context=".MainActivityFragment">
+    tools:context="com.peacecorps.pcsa.policies_glossary.PoliciesFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,38 +21,23 @@
             android:textColor="@color/primary_text_default_material_dark"
             android:textSize="@dimen/sub_title_font"
             android:textStyle="bold"
-            android:text="@string/home_title"
+            android:text="@string/policies_subtitle"
             />
 
         <Button
-            android:id="@+id/getButton"
+            android:id="@+id/policiesButton"
             style="@style/NavigateButton"
-            android:text="@string/get_help"
-            android:layout_marginTop="@dimen/fragment_main_marginTop"/>
+            android:text="@string/summary_sheet"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_35"/>
         <Button
-            android:id="@+id/circleButton"
+            android:id="@+id/glossaryButton"
             style="@style/NavigateButton"
-            android:text="@string/circle"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
-        <Button
-            android:id="@+id/safetyToolsButton"
-            style="@style/NavigateButton"
-            android:text="@string/safety_tools"
+            android:text="@string/glossary"
             android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
         <Button
-            android:id="@+id/supportServicesButton"
+            android:id="@+id/furtherButton"
             style="@style/NavigateButton"
-            android:text="@string/support_services"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
-
-        <Button android:id="@+id/assaultAwarenessButton"
-            style="@style/NavigateButton"
-            android:text="@string/sexual_assault_awareness"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
-
-        <Button android:id="@+id/policiesButton"
-            style="@style/NavigateButton"
-            android:text="@string/policies_glossary"
+            android:text="@string/further_resources"
             android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
 
     </LinearLayout>

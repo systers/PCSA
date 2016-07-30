@@ -202,7 +202,7 @@
     <!-- TacticsFragment -->
     <string name="tactics_1">
         &lt;b>Characteristics of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often plan sexual assaults&lt;/b>&lt;br/>
+        &lt;b>•\t\t\t&lt;/b>\t\t\t&lt;b>Sexual predators often plan sexual assaults&lt;/b>&lt;br/>
             ·\t\t\tSexual assault is not an accident.  Sexual predators know what they want to do, even if they have not already identified a specific target.  Most of them have a plan in mind for how they will select and control someone, or they will seek out an area where a potential victim might be isolated and unable to get help. When we say planned to some extent it may not mean days or weeks in advance but also planned in the particular moment.&lt;br/>&lt;br/>
         &lt;b>•&lt;/b>\t\t\t&lt;b>Sexual predators often watch for vulnerabilities and opportunities&lt;/b>&lt;br/>
             ·\t\t\tSexual predators look for cues to indicate they can dominate and control a potential victim. They look for signs indicating that someone would be unlikely or unable to resist.  For instance, people who are unaware of their surroundings, alone or lost; someone who is intoxicated or in some way incapacitated.&lt;br/>&lt;br/>
@@ -654,4 +654,161 @@ assist you with your legal options. Peace Corps will be with you every step of t
     can rely on when they need it.  &lt;br/>
     •\t\t\tCreating this culture of openness with a friend can be comforting to a
     survivor who may need space to begin healing on their own terms.&lt;br/> </string>
+    <string name="policies_all">&lt;b>MS 243 Responding to Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+    Provides overall policy and procedures on Peace Corps response to a sexual assault, including a
+    system of Restricted and Standard Reporting of sexual assault as required by the Kate Puzey Act.
+    &lt;br/>&lt;br/>
+    &lt;b>IPS 1-12 Volunteer/Trainee Sexual Misconduct&lt;/b>&lt;br/>&lt;br/>
+    Defines and prohibits sexual misconduct by Volunteers and creates an administrative process for
+    resolving complaints of Volunteer on Volunteer sexual misconduct.&lt;br/>&lt;br/>
+    &lt;b>MS 284 Early Termination of Service, Section 5.1(i)&lt;/b>&lt;br/>&lt;br/>
+    Gives CDs authority to grant interrupted service for a Volunteer who is the victim of sexual
+    assault, stalking, or other serious crime.&lt;br/>&lt;br/>
+    &lt;b>IPS 1-13 Stalking&lt;/b>&lt;br/>&lt;br/>
+    &lt;b>IPS 1-11 Immunity from Peace Corps Disciplinary Action for Victims of Sexual Assault&lt;/b>&lt;br/>&lt;br/>
+    Provides definition of stalking and clear responsibility of the Peace Corps to mitigate risks.&lt;br/>&lt;br/>
+    &lt;b>MS 774 Retention of Counsel&lt;/b>&lt;br/>&lt;br/>
+    Requires CD to maintain list of local counsel who handle sexual assault cases; allows for
+    retention of counsel to provide information about the legal process; requires retention of
+    counsel for Volunteer victims, et al.&lt;br/>&lt;br/></string>
+
+    <!-- Glossary -->
+    <string name="asexual_assault">
+        Another person, without the consent of the Volunteer, intentionally or knowingly: &lt;br/>&lt;br/>
+•\t\t\t	touches or contacts, either directly or through clothing, the Volunteer’s genitalia, anus, groin, breast, inner thigh, or buttocks; OR &lt;br/>&lt;br/>
+•\t\t\t	kisses the Volunteer; OR &lt;br/>&lt;br/>
+•\t\t\t	disrobes the Volunteer; OR &lt;br/>&lt;br/>
+•\t\t\t	causes the Volunteer to touch or contact, either directly or through clothing, another person’s genitalia, anus, groin, breast, inner thigh, or buttocks, OR &lt;br/>&lt;br/>
+•\t\t\t	attempts to carry out any of those acts,   &lt;br/>&lt;br/>
+•\t\t\t	AND:&lt;br/>&lt;br/>
+•\t\t\t	The offender uses, or threatens to use, a weapon, OR&lt;br/>&lt;br/>
+•\t\t\t	The offender uses, or threatens to use, force or other intimidating actions, OR &lt;br/>&lt;br/>
+•\t\t\t	The Volunteer is incapacitated or otherwise incapable of giving consent.
+    </string>
+    
+    <string name="assailant_info">
+        A person who attacks another or a person who commits a crime
+    </string>
+
+    <string name="burglary_info">
+        Unlawful or forcible entry of a residence. This incident type usually, but not always, involves theft. The illegal entry may be forcible,
+        such as breaking a window or slashing a screen, or may be without force by entering through an unlocked door or an open window. As long as the person entering has no legal right to be present in the residence, a burglary has occurred. Also includes illegal entry of a hotel room.
+    </string>
+
+    <string name="intervention_info">
+        The process of safely interrupting a situation in which others may be at risk for becoming the victim of sexual or physical violence
+    </string>
+
+    <string name="phenomenon_info">
+       A social-psychological phenomenon in which individuals do not offer help to someone in danger when other people are present
+    </string>
+
+    <string name="cyber_info">
+       The repeated use of electronic communications to harass or frighten someone, for example by sending threatening e-mails
+    </string>
+
+      <string name="danger_info">
+       A condition with the potential to cause illness, injury, death, property damage or loss
+    </string>
+
+    <string name="mitigation_info">
+      Steps taken to reduce risk by reducing the likelihood that a dangerous event will occur or the impact if it does occur
+    </string>
+
+     <string name="pii_info">
+      “Personally Identifying Information” or “PII” means individually identifying
+         information for or about a Volunteer who is a victim of sexual assault, including first and last name,
+         home or physical address (including site location), contact information (such as postal address, email, IP address,
+         telephone or fax number), social security number, date of birth, ethnicity, race, religious affiliation, the location of the incident, the victim’s sector,
+         entry on service date, close of service date or time since swearing-in and any other information that, either individually or in combination with other information,
+         would serve to identify the Volunteer or is likely to disclose the location of the Volunteer.
+    </string>
+
+    <string name="rape_info">
+      The penetration, no matter how slight, of the vagina or anus with any body part or object, or oral penetration by a sex organ of
+        another person, without the consent of the Volunteer
+    </string>
+
+    <string name="risk_info">
+      The probability that a dangerous event will actually occur and the impact if it does
+    </string>
+
+    <string name="robbery_info">
+      The taking or attempting to take anything of value under confrontational circumstances from the control,
+        custody or care of the victim by force or threat of force or violence and/or by putting the victim in fear of immediate harm.
+        Also includes when a robber displays/uses a weapon or transports the victim to obtain his/her money or possessions &lt;br/>&lt;br/>
+         &lt;b>What is a robbery?  &lt;/b> &lt;br/>&lt;br/>
+        A robbery always involves taking or attempting to take property through the use of force or the threat of force.
+        A robbery can involve the use of a weapon or just the use of the suspect’s hands or feet. If a suspect threatens to harm you unless you surrenders your property,
+        that is also robbery. If you are injured while someone is taking your property by force, the incident is reported as a robbery
+    </string>
+
+    <string name="safety_info">
+      Steps taken to protect against accidents and natural dangers (as opposed to man-made dangers)
+    </string>
+
+    <string name="security_info">
+        Protection against man-made dangers
+    </string>
+
+    <string name="sexual_assault_info1">
+         Another person, without the consent of the Volunteer, intentionally or knowingly:&lt;br/>&lt;br/>
+    •\t\t\t	touches or contacts, either directly or through clothing, the Volunteer’s genitalia, anus, groin, breast, inner thigh, or buttocks; OR &lt;br/>&lt;br/>
+    •\t\t\t	kisses the Volunteer on the mouth;&lt;br/>&lt;br/>
+    •\t\t\t	OR attempts to carry out any of those acts
+    </string>
+
+    <string name="exploitation_info">
+        Sexual exploitation means taking sexual advantage of another person without consent, including, but not limited to, &lt;br/>&lt;br/>
+        (i)\t\t\t causing someone to become incapacitated to gain sexual advantage, &lt;br/>&lt;br/>
+        (ii)\t\t\t causing the prostitution of another person,&lt;br/>&lt;br/>
+        (iii)\t\t\t recording, photographing or transmitting images of sexual activity or the intimate parts of another person,&lt;br/>&lt;br/>
+        (iv)\t\t\t allowing third parties to observe private sexual acts,&lt;br/>&lt;br/>
+        (v)\t\t\t engaging in voyeurism, or &lt;br/>&lt;br/>
+        (vi)\t\t\t knowingly or recklessly exposing another person to a significant risk of sexually transmitted infection, including HIV
+    </string>
+
+    <string name="misconduct_info">
+        Non-consensual sexual activity, non-consensual sexual contact, sexual exploitation, sexual harassment or stalking of
+        a Volunteer/ Trainee against another Volunteer/ Trainee.
+        Sexual Misconduct in the context of this session relates to the handling of complaints of sexual misconduct of a Volunteer/ Trainee against another Volunteer/ Trainee under
+        Peace Corps’ Sexual Misconduct Policy which allows for handling of such cases through an internal administrative process.
+    </string>
+
+    <string name="harassment_info">
+       Offensive conduct of a sexual nature that relates to sex, sexual orientation,
+        gender identity or gender expression of a Volunteer/ Trainee by a Peace Corps staff member or another Volunteer/ Trainee
+    </string>
+
+    <string name="predator_info">
+    A person who commits a sexually violent offense and especially one who is likely to commit more sexual offenses.
+    </string>
+
+    <string name="threat_info">
+        A dangerous event, person or thing
+    </string>
+
+    <string name="stalking_info">
+        Repeated threatening behavior from a single person that causes a Volunteer to fear for his or her safety or suffer substantial emotional distress
+    </string>
+
+    <string name="theft_info">
+        The taking away of or attempt to take away property or cash without involving force or illegal entry. Includes pick pocketing, stolen purses,
+    and theft from a residence that does not involve an illegal entry.
+        &lt;b>What is a theft? &lt;/b> &lt;br/>&lt;br/>
+    A theft occurs when property is stolen without a direct confrontation with the suspect and when there has not been illegal entry
+    into the residence (including hotel room). For example, if you give someone permission to enter your house and that person steals your property, it is a theft.
+    It is also a theft if your purse, cell phone, backpack or similar property is “snatched” away by a suspect or are not assaulted in any other way
+    </string>
+
+    <string name="vulnerability_info">
+        The susceptibility of a person, object or place to a danger or dangers.
+    </string>
+
+
+
+
+
+
+>>>>>>> Policies and Glossary, till Glossary updated
 </resources>

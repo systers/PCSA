@@ -2,6 +2,7 @@
 <android.support.v4.widget.DrawerLayout android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent">
 
     <LinearLayout
