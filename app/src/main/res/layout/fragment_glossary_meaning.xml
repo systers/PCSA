@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin">
+    <!-- Words Meaning -->
+    <TextView
+        android:background="@drawable/bg_textview_rounded_rectangle"
+        android:padding="@dimen/textview_padding"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_meaning"
+        android:layout_width="match_parent"
+        android:id="@+id/word_meaning"/>
+
+</LinearLayout>

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
+import com.peacecorps.pcsa.policies_glossary.PoliciesFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyToolsFragment;
 import com.peacecorps.pcsa.support_services.SupportServicesFragment;
 
@@ -36,7 +37,7 @@ public class MainActivityFragment extends Fragment {
         Button getHelpNowButton = (Button) rootView.findViewById(R.id.getButton);
         Button safetyToolsButton = (Button) rootView.findViewById(R.id.safetyToolsButton);
         Button supportServicesButton = (Button) rootView.findViewById(R.id.supportServicesButton);
-        Button getHelpButton = (Button) rootView.findViewById(R.id.getHelpButton);
+        Button policiesButton = (Button) rootView.findViewById(R.id.policiesButton);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.first_aide);
 
         safetyToolsButton.setOnClickListener(new View.OnClickListener() {
@@ -66,11 +67,12 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        getHelpButton.setOnClickListener(new View.OnClickListener() {
+        policiesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //getHelpButton does not have any functioanlity yet.
-                Toast.makeText(getActivity(), getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+                //Swapping PoliciesFragment into the fragment container dynamically
+                Fragment policiesFragment = new PoliciesFragment();
+                MainActivity.swapFragmentIn(getActivity(),policiesFragment,PoliciesFragment.TAG,true);
             }
         });
 
