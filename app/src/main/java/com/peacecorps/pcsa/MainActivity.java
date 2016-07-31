@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            Fragment mainActivityFragment = new GlossaryFragment();
+            Fragment mainActivityFragment = new MainActivityFragment();
             swapFragmentIn(this,mainActivityFragment,MainActivityFragment.TAG,false);
         }
         toolbar = (Toolbar)findViewById(R.id.toolbar);

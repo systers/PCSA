@@ -49,6 +49,14 @@ public class PoliciesFragment extends Fragment {
             }
         });
 
+        furtherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping GlossaryFragment into the container
+                FurtherResourcesFragment furtherResourcesFragment = new FurtherResourcesFragment();
+                MainActivity.swapFragmentIn(getActivity(),furtherResourcesFragment,FurtherResourcesFragment.TAG,true);
+            }
+        });
 
         return rootView;
     }
