@@ -123,5 +123,8 @@
     <dimen name="hint_size">19sp</dimen>
     <dimen name="center_font">16sp</dimen>
     <dimen name="status_bar_size">24dp</dimen>
+    <dimen name="font_size_meaning">16sp</dimen>
+    <dimen name="fragment_main_marginTop_30">30dp</dimen>
+    <dimen name="textsize_links">18sp</dimen>
 
 </resources>

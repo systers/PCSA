@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.peacecorps.pcsa.circle_of_trust.CircleIntro;
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
+import com.peacecorps.pcsa.policies_glossary.PoliciesFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyToolsFragment;
 import com.peacecorps.pcsa.sexual_assault_awareness.MainFragment;
 import com.peacecorps.pcsa.support_services.SupportServicesFragment;
@@ -38,6 +39,7 @@ public class MainActivityFragment extends Fragment {
         Button safetyToolsButton = (Button) rootView.findViewById(R.id.safetyToolsButton);
         Button supportServicesButton = (Button) rootView.findViewById(R.id.supportServicesButton);
         Button assaultAwarenessButton = (Button) rootView.findViewById(R.id.assaultAwarenessButton);
+        Button policiesButton = (Button) rootView.findViewById(R.id.policiesButton);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.first_aide);
 
         safetyToolsButton.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +74,16 @@ public class MainActivityFragment extends Fragment {
             public void onClick(View v) {
                 //Swapping Sexual Assault MainScreen into the fragment container dynamically
                 Fragment assaultAwarenessFragment = new MainFragment();
-                MainActivity.swapFragmentIn(getActivity(),assaultAwarenessFragment,MainFragment.TAG,true);
+                MainActivity.swapFragmentIn(getActivity(), assaultAwarenessFragment, MainFragment.TAG, true);
+            }
+        });
+
+        policiesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Swapping PoliciesFragment into the fragment container dynamically
+                Fragment policiesFragment = new PoliciesFragment();
+                MainActivity.swapFragmentIn(getActivity(),policiesFragment,PoliciesFragment.TAG,true);
             }
         });
 

@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
+import com.peacecorps.pcsa.policies_glossary.GlossaryFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;

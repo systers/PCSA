@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_app"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:textSize="@dimen/sub_title_font"
+        android:textStyle="bold"
+        android:text="@string/lookup_important_words"
+        android:id="@+id/textView" />
+
+    <!-- EditText for Search -->
+    <EditText android:id="@+id/inputSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/search_words"
+        android:textColor="@color/activity_trustee_edittext_color"
+        android:inputType="textVisiblePassword"/>
+
+    <!-- List View -->
+    <ExpandableListView
+        android:id="@+id/list_words"
+        android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
+        android:layout_width="match_parent"
+        android:divider="@color/photo_border"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
