@@ -212,6 +212,7 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         security.add(context.getString(R.string.security_info));
 
         List<String> sexual_assault = new ArrayList<String>();
+
         sexual_assault.add(context.getString(R.string.sexual_assault_info1));
 
         List<String> exploit = new ArrayList<String>();

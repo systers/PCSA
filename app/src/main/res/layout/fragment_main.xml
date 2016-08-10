@@ -50,7 +50,8 @@
             android:text="@string/sexual_assault_awareness"
             android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
 
-        <Button android:id="@+id/policiesButton"
+        <Button
+            android:id="@+id/policiesButton"
             style="@style/NavigateButton"
             android:text="@string/policies_glossary"
             android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
