@@ -21,6 +21,7 @@ import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
+import com.peacecorps.pcsa.get_help_now.ContactOtherStaff;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
 import com.peacecorps.pcsa.policies_glossary.FurtherResourcesFragment;
 import com.peacecorps.pcsa.policies_glossary.GlossaryFragment;
@@ -244,12 +245,24 @@ public class MainActivity extends AppCompatActivity {
         // Insert the fragment by replacing any existing fragment
         FRAGMENT_TAG = TAG;
         if(addToBackStack){
-            fragmentManager.beginTransaction()
-                    .setCustomAnimations(R.anim.push_down_in,R.anim.push_down_out,R.anim.fade_in,R.anim.fade_out)
-                    .replace(R.id.fragment_container
-                            , fragment,TAG)
-                    .addToBackStack(TAG)
-                    .commit();
+            if(TAG.equals(ContactOtherStaff.TAG))
+            {
+                fragmentManager.beginTransaction()
+                        .setCustomAnimations(R.anim.fade_in,R.anim.fade_out,R.anim.fade_in,R.anim.fade_out)
+                        .replace(R.id.fragment_container
+                                , fragment,TAG)
+                        .addToBackStack(TAG)
+                        .commit();
+            }
+            else
+            {
+                fragmentManager.beginTransaction()
+                        .setCustomAnimations(R.anim.push_down_in,R.anim.push_down_out,R.anim.fade_in,R.anim.fade_out)
+                        .replace(R.id.fragment_container
+                                , fragment,TAG)
+                        .addToBackStack(TAG)
+                        .commit();
+            }
         }
         else
         {
