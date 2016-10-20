@@ -46,7 +46,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
-
+/**
+ * This class shows the first aide section (home screen) of the application.
+ * @author chizoba
+ * @since 2016-10-20.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -262,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Populating the expandable list of the Navigation Drawer
+     * Populates the expandable list view of the Navigation Drawer
      */
     private void prepareListData() {
 
