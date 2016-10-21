@@ -1,21 +1,12 @@
 package com.peacecorps.pcsa.get_help_now;
 
-import android.app.Activity;
-import android.app.Dialog;
+
 import android.content.Context;
-import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;

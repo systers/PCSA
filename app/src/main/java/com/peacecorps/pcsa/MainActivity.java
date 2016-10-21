@@ -39,13 +39,20 @@ import com.peacecorps.pcsa.support_services.AvailableFragment;
 import com.peacecorps.pcsa.support_services.ConfidentialityFragment;
 import com.peacecorps.pcsa.support_services.MythbustersFragment;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Activity used to load the right placeholder fragment based on availability of instance from
+ * previous runs.
+ * Also adds components of navigation drawer and sets different functionality to each of them.
+ *
+ * @author calistus
+ * @since 2015-01-15
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         {
             /*
             * Check if instance of the required fragment is available
-            * in the backstack and swap it into the container
+            * in the back stack and swap it into the container
             */
             Fragment unknownFragment = fragmentManager.findFragmentByTag(FRAGMENT_TAG);
             MainActivity.swapFragmentIn(this,unknownFragment,FRAGMENT_TAG,false);
@@ -91,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
         prepareListData();
         listAdapter = new NavDrawerListAdapter(this, listDataHeader, listDataChild);
         expListView.setAdapter(listAdapter);
+
+        //Setting functionality to each element in the navigation drawer
         expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
             public void onGroupExpand(int groupPosition) {
@@ -238,6 +247,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Defines function to swap fragment based on saved instance in back stack.
+     * @param activity Takes activity that needs to be added to back stack or just to begin transaction required.
+     * @param fragment Fragment to replace any existing fragment.
+     * @param TAG Updating TAG variables from respective classes.
+     * @param addToBackStack To check if the activity is to be added to back stack or not.
+     */
+
     public static void swapFragmentIn(FragmentActivity activity, Fragment fragment, String TAG, boolean addToBackStack)
     {
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
@@ -262,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Populating the expandable list of the Navigation Drawer
+     * Populating the expandable list of the Navigation Drawer.
      */
     private void prepareListData() {
 

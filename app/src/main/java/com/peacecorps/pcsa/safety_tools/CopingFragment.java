@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.support_services.FAQArrayAdapter;
 
-/*
+/**
  * Coping with unwanted attention strategies fragment
  *
  * @author rohan

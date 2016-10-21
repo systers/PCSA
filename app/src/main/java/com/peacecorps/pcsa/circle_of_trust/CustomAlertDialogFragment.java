@@ -8,7 +8,7 @@ import android.support.v4.app.DialogFragment;
 
 import com.peacecorps.pcsa.R;
 
-/*
+/**
  * A template for alert dialogs which display the user about confirmation of message being sent to the comrades
  *
  * @author Rohan

@@ -1,9 +1,6 @@
 package com.peacecorps.pcsa.safety_tools;
 
-import android.annotation.TargetApi;
-import android.app.ActivityOptions;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,9 +12,8 @@ import android.widget.Button;
 
 import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
-import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 
-/*
+/**
  * Safety Tools, main fragment
  *
  * @author rohan

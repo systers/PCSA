@@ -34,7 +34,7 @@ import android.widget.ImageView;
 
 import com.peacecorps.pcsa.R;
 
-/*
+/**
  * ImageView with circle border
  *
  * @author chamika

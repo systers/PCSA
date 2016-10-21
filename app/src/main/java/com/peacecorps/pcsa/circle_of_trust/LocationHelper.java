@@ -7,7 +7,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 
-/*
+/**
  * Helper Class for handling location listening and retrieving
  *
  * @author chamika

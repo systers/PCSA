@@ -5,14 +5,10 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.location.Location;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
@@ -30,7 +26,6 @@ import com.peacecorps.pcsa.Constants;
 import com.peacecorps.pcsa.Constants.SmsConstants;
 import com.peacecorps.pcsa.R;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -38,7 +33,7 @@ import java.util.List;
 import java.util.Map;
 
 
-/*
+/**
  * Circle of Trust main fragment
  *
  * @author calistus

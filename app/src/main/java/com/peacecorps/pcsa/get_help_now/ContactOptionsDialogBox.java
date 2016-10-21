@@ -7,7 +7,10 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 
 /**
- * Created by Rohan on 13-03-2016.
+ * Dialog box for contact options with functionality for list items.
+ *
+ * @author Rohan
+ * @since 13-03-2016.
  */
 public class ContactOptionsDialogBox extends  ListDialogBox {
 

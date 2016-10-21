@@ -13,7 +13,7 @@ import android.widget.Button;
 
 import com.peacecorps.pcsa.R;
 
-/*
+/**
  * Home fragment, a member of the Tabbed Layout
  *
  * @author rohan

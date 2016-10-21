@@ -14,7 +14,7 @@ import com.peacecorps.pcsa.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
+/**
  * Safety Plan Activity, handles all fragment transactions of the TabLayout
  *
  * @author rohan

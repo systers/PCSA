@@ -3,7 +3,6 @@ package com.peacecorps.pcsa.policies_glossary;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/*
+/**
  * Custom Adapter for Expandable List View in GlossaryFragment
  * @author rohan
  * @since 2016-07-30
