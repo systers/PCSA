@@ -7,7 +7,7 @@ import android.widget.ListAdapter;
 
 import com.peacecorps.pcsa.get_help_now.ListDialogBox;
 
-/**
+/*
  * Dialog for showing multiple contact selection dialog
  *
  * @author chamika

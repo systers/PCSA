@@ -1,6 +1,7 @@
 package com.peacecorps.pcsa.safety_tools;
 
-
+import android.app.Activity;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,10 +15,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.SingleTextViewFragment;
 
-/**
+/*
  * Bystander Intervention main fragment
  *
  * @author rohan

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * Safety Resources main fragment 
  *
  * @author calistus

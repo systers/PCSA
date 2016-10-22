@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * Helping Friends and community members
  * @author rohan
  * @since 2016-07-24

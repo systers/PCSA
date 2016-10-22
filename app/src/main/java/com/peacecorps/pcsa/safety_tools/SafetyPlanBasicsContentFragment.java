@@ -1,5 +1,6 @@
 package com.peacecorps.pcsa.safety_tools;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * One Fragment which acts like a placeholder for every different screens of Safety Plan Basics
  *
  * @author rohan

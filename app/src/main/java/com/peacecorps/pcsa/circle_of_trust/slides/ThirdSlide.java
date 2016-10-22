@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * Third Slide of circle of trust introduction
  *
  * @author calistus

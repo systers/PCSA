@@ -2,10 +2,12 @@ package com.peacecorps.pcsa.safety_resources;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * Activity of Safety Resources fragment container 
  *
  * @author calistus

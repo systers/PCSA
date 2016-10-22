@@ -13,7 +13,7 @@ import android.widget.Button;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * Physical Safety fragment, a member of the Tabbed Layout
  *
  * @author rohan

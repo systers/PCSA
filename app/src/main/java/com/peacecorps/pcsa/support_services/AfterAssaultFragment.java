@@ -13,7 +13,7 @@ import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.SingleTextViewFragment;
 
-/**
+/*
  * What to do after an assault?
  *
  * @author rohan

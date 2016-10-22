@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * Dialog Box implementation to handle configuration change (recreation of dialogs)
  * Shows a list of options to the user which serves as a text message template.
  *

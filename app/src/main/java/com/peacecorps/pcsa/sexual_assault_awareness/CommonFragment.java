@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.support_services.FAQArrayAdapter;
 
-/**
+/*
  * Sexual Assault Common Questions
  * @author rohan
  * @since 2016-07-24

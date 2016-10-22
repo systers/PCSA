@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.SingleTextViewFragment;
 
-/**
+/*
  * Sexual Harassment
  * @author rohan
  * @since 2016-07-24

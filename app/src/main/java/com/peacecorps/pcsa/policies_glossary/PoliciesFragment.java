@@ -13,7 +13,7 @@ import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.SingleTextViewFragment;
 
-/**
+/*
  * Policies and Glossary, Main Screen
  * @author rohan
  * @since 2016-07-24

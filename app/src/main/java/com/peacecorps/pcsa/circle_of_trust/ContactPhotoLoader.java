@@ -12,7 +12,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.widget.ImageView;
 
-/**
+/*
  * Loads thumbnail from the phone number
  *
  * @author chamika

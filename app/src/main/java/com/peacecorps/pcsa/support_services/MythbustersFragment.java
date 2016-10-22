@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 
 import com.peacecorps.pcsa.R;
 
-/**
- * Myth busters and Assumptions
+/*
+ * Mythbusters and Assumptions
  *
  * @author rohan
  * @since 2016-07-18

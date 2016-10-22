@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
 
-/**
+/*
  * List Adapter for showing multiple contact selection dialog
  *
  * @author chamika

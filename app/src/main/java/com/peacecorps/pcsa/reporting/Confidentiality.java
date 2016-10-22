@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.peacecorps.pcsa.R;
 
 /**
- * Reporting Confidentiality related information
+ * Reporing Confidentiality related information
  *
  * @author Buddhiprabha Erabadda
  * @since 07-08-2015
