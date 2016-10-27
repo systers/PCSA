@@ -110,6 +110,7 @@
     <orderEntry type="library" exported="" name="espresso-idling-resource-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="rules-0.5" level="project" />
     <orderEntry type="library" exported="" name="hamcrest-library-1.3" level="project" />
+    <orderEntry type="library" exported="" name="javax.annotation-api-1.2" level="project" />
     <orderEntry type="library" exported="" name="appintro-1.4.0" level="project" />
     <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
     <orderEntry type="library" exported="" name="hamcrest-integration-1.3" level="project" />
