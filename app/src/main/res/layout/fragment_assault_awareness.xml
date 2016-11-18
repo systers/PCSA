@@ -7,7 +7,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_horizontal_margin"
     android:background="@color/background_app"
-    tools:context="com.peacecorps.pcsa.support_services.MainFragment">
+    tools:context="com.peacecorps.pcsa.sexual_assault_awareness.MainFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

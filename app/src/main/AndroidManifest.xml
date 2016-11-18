@@ -25,9 +25,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
-        <activity
-            android:name=".support_services.FAQFragment"
-            android:label="@string/title_activity_faq" />
+
         <activity
             android:name=".reporting.Confidentiality"
             android:label="@string/title_activity_confidentiality" />
