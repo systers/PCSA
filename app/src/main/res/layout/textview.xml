@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--This is the common layout used for TextViews-->
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/abc_text_size_medium_material"

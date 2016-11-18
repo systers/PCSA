@@ -43,8 +43,6 @@
         android:layout_marginBottom="@dimen/bystander_margin_below_text" />
 
     <include android:id="@+id/bystander_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         layout="@layout/textview"
          />
 </LinearLayout>
