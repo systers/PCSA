@@ -268,7 +268,8 @@ public class MainActivity extends AppCompatActivity {
 
         listDataChild = new HashMap<String, List<String>>();
         listDataHeader = new LinkedList<>(Arrays.asList(getResources().getStringArray(R.array.headers)));
-        String lastElement = listDataHeader.get(listDataHeader.size()-1) + " " + sharedPreferences.getString(getString(R.string.key_name),"");
+        String userName = sharedPreferences.getString(getString(R.string.key_name),"");
+        String lastElement = listDataHeader.get(listDataHeader.size()-1) + " " + userName.trim();
         listDataHeader.remove(listDataHeader.size()-1);
         listDataHeader.add(lastElement);
 

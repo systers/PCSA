@@ -4,6 +4,7 @@
     <EditTextPreference
         android:title="@string/title_name"
         android:summary="@string/enter_name"
+        android:singleLine="true"
         android:key="@string/key_name" />
 
     <ListPreference

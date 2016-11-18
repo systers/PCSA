@@ -215,6 +215,7 @@
     <string name="title_activity_login">Sign Up</string>
     <string name="login">Login</string>
     <string name="first_time">first_time</string>
+    <string name="prompt_please_valid">Please enter a valid name</string>
     <string name="prompt_please">Please enter your name to continue</string>
     <string name="country_default">Uganda</string>
     <string name="ongoing_title">Peace Corps Ongoing Support</string>

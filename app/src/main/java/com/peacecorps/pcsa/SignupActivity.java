@@ -61,10 +61,12 @@ public class SignupActivity extends AppCompatActivity  implements AdapterView.On
             public void onClick(View v) {
                 if(name.getText().toString().equals(""))
                     Toast.makeText(SignupActivity.this, R.string.prompt_please,Toast.LENGTH_SHORT).show();
+                else if(name.getText().toString().trim().equals(""))
+                    Toast.makeText(SignupActivity.this, R.string.prompt_please_valid,Toast.LENGTH_SHORT).show();
                 else {
                     editor.putBoolean(getString(R.string.first_aide), false);
                     editor.putString(getString(R.string.key_country), selected_country);
-                    editor.putString(getString(R.string.key_name), name.getText().toString());
+                    editor.putString(getString(R.string.key_name), name.getText().toString().trim());
                     editor.commit();
                     startActivity(new Intent(SignupActivity.this, MainActivity.class));
                     finish();
@@ -76,7 +78,7 @@ public class SignupActivity extends AppCompatActivity  implements AdapterView.On
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            selected_country = parent.getItemAtPosition(position).toString();
+        selected_country = parent.getItemAtPosition(position).toString();
     }
 
     @Override
