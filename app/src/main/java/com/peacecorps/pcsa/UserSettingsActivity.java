@@ -80,10 +80,14 @@ public class UserSettingsActivity extends AppCompatActivity {
                 Toast.makeText(getActivity(),R.string.valid_name, Toast.LENGTH_SHORT).show();
                 return;
             }
-            if(key.equals(getString(R.string.key_name)) || key.equals(getString(R.string.key_country)))
+            else if(!sharedPreferences.getString(key,"").matches("^[a-zA-Z ]*$")){
+                Toast.makeText(getActivity(),R.string.prompt_please_valid, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            else
             {
                 Preference preference = findPreference(key);
-                preference.setSummary(sharedPreferences.getString(key.trim(),""));
+                preference.setSummary(sharedPreferences.getString(key,"").trim().replaceAll("[ ]+", " "));
                 MainActivity.refreshList = true;
             }
 
@@ -99,9 +103,11 @@ public class UserSettingsActivity extends AppCompatActivity {
         @Override
         public void onPause() {
             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            if(sharedPreferences.getString("NAME","").trim().equals("")){
+            if(sharedPreferences.getString("NAME","").trim().equals("")  || !sharedPreferences.getString("NAME","").matches("^[a-zA-Z ]*$")){
                 sharedPreferences.edit().putString("NAME",currentName).apply();
             }
+            String new_name = sharedPreferences.getString("NAME","").replaceAll("[ ]+", " ").trim();
+            sharedPreferences.edit().putString("NAME",new_name).apply();
             sharedPreferences.unregisterOnSharedPreferenceChangeListener(this);
             super.onPause();
         }

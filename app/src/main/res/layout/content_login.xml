@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/edit_name"
             android:hint="@string/enter_name"
-            android:inputType="text"/>
+            android:inputType="textPersonName|textCapWords" />
 
         <Spinner
             android:id="@+id/spinner_country"
