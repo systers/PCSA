@@ -2,6 +2,9 @@ package com.peacecorps.pcsa;
 
 /**
  * Stores all the constants used in the project.
+ *
+ * @author hkasera
+ * @since 30-01-2016.
  */
 public class Constants {
     public static final class SmsConstants {

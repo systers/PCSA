@@ -28,37 +28,66 @@ public class NavDrawerListAdapter extends BaseExpandableListAdapter {
         this.dataChild = dataChild;
     }
 
+    /**
+     * @return  Size of the dataheader list passed in the constructor
+     */
     @Override
     public int getGroupCount() {
         return this.dataHeader.size();
     }
 
+    /**
+     * @param groupPosition Position of the group in the list
+     * @return Size of the group whose position was mentioned as the parameter
+     */
     @Override
     public int getChildrenCount(int groupPosition) {
         return this.dataChild.get(this.dataHeader.get(groupPosition))
                 .size();
     }
 
+    /**
+     * @param groupPosition Position of group in the list
+     * @return Object related to the position received as parameter
+     */
     @Override
     public Object getGroup(int groupPosition) {
         return this.dataHeader.get(groupPosition);
     }
 
-    @Override
+    /**
+     * @param groupPosition Position of group in the list
+     * @param childPosition Position of child in the group
+     * @return Object related to the child in the group whose positions are received as parameters
+    */
+     @Override
     public Object getChild(int groupPosition, int childPosition) {
         return this.dataChild.get(this.dataHeader.get(groupPosition)).get(childPosition);
     }
 
+    /**
+     * @param groupPosition Position of group in the list
+     * @return Group id related to the group position received as parameter
+     */
     @Override
     public long getGroupId(int groupPosition) {
         return groupPosition;
     }
 
+    /**
+     *
+     * @param groupPosition Position of group in the list
+     * @param childPosition Position of child in the group
+     * @return Child id related to group and child positions received as parameter
+     */
     @Override
     public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
 
+    /**
+     * @return false when called to indicate id may or may not refer to same object every time
+     */
     @Override
     public boolean hasStableIds() {
         return false;
