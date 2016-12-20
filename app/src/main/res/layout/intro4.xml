@@ -48,7 +48,6 @@
         android:textSize="@dimen/text_large"
         android:textStyle="bold"
         android:fontFamily="sans-serif-thin"
-        android:onClick="getStarted"
         android:text="@string/slide_four_bottom"/>
     <TextView
         android:layout_width="fill_parent"
