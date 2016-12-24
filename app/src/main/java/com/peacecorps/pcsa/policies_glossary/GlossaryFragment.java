@@ -33,22 +33,33 @@ public class GlossaryFragment extends Fragment {
     GlossaryAdapter listAdapter;
     int currentExpanded = -1;
 
+    /**
+     * Create the view for this fragment, using the arguments given to it.
+     *
+     * @param inflater inflate any views in the fragment
+     * @param container if non-null, this is the parent view that the fragment's UI should be attached to. .
+     * @param savedInstanceState if non-null, this fragment is being re-constructed from a previous saved state
+     * @return the properly constructed view object
+     */
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootView =  inflater.inflate(R.layout.fragment_glossary,container,false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.policies_glossary);
+        //Get the listview
         final ExpandableListView expListView = (ExpandableListView) rootView.findViewById(R.id.list_words);
+        //Prepare list data
         GlossaryAdapter.prepareListData(getActivity(),listDataHeader,listDataChild);
         listAdapter = new GlossaryAdapter(getActivity(), listDataHeader, listDataChild,expListView);
+        //Setting list adapter
         expListView.setAdapter(listAdapter);
         searchBox = (EditText)rootView.findViewById(R.id.inputSearch);
         searchBox.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
-
+            //Instantiated when user changes the text present in edit text.
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 Log.e("INPUT",s.toString());
@@ -59,7 +70,7 @@ public class GlossaryFragment extends Fragment {
             public void afterTextChanged(Editable s) {
             }
         });
-
+        //Callback method to be invoked when a group in this expandable list been expanded
         expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
             public void onGroupExpand(int groupPosition) {

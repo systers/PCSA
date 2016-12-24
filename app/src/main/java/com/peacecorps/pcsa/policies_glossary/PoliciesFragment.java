@@ -14,7 +14,7 @@ import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.SingleTextViewFragment;
 
 /*
- * Policies and Glossary, Main Screen
+ * Policies and glossary, main screen
  * @author rohan
  * @since 2016-07-24
  */
@@ -22,6 +22,15 @@ public class PoliciesFragment extends Fragment {
 
     public static final String TAG = PoliciesFragment.class.getSimpleName();
     private Button policyButton, glossaryButton, furtherButton;
+
+    /**
+     * Create the view for this fragment, using the arguments given to it.
+     *
+     * @param inflater inflate any views in the fragment
+     * @param container if non-null, this is the parent view that the fragment's UI should be attached to. .
+     * @param savedInstanceState if non-null, this fragment is being re-constructed from a previous saved state
+     * @return the properly constructed view object
+     */
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,6 +44,7 @@ public class PoliciesFragment extends Fragment {
         policyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Swapping SingleTextViewFragment into the container
                 SingleTextViewFragment.showSingleTextLayout(getActivity(),getString(R.string.policies_title),getString(R.string.subtitle_policies)
                         ,getString(R.string.policies_all));
             }

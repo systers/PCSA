@@ -22,18 +22,27 @@ import java.util.List;
 import java.util.Map;
 
 /*
- * Custom Adapter for Expandable List View in GlossaryFragment
+ * Custom adapter for expandable list view in GlossaryFragment
  * @author rohan
  * @since 2016-07-30
  */
 public class GlossaryAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
-    private List<String> dataHeader; // header titles
-    // child data in format of header title, child title
+    // List to store header titles
+    private List<String> dataHeader;
+    // Store child data in format of header title, child title
     private HashMap<String, List<String>> dataChild;
     private ExpandableListView listView;
 
+    /**
+     * Counstructor of GlossaryAdapter class called upon to set different variables of the calling object.
+     *
+     * @param context
+     * @param listDataHeader sets the title of expandable list .
+     * @param listChildData sets the child data in format of header title, child title
+     * @param expandableListView a view that shows items in a vertically scrolling two-level list
+     */
     public GlossaryAdapter(Context context, List<String> listDataHeader,
                            HashMap<String, List<String>> listChildData, ExpandableListView expandableListView) {
         this._context = context;
@@ -48,11 +57,28 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
                 .get(childPosition);
     }
 
+    /**
+     * Called When child id row clicked.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param childPosition contains the selected child numeric id.
+     * @return the numeric id of the child
+     */
     @Override
     public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
 
+    /**
+     * To inflate child rows view
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param childPosition contains the selected child numeric id.
+     * @param isLastChild bool to determine wheather the child is last one or not.
+     * @param convertView to Inflate the child rows
+     * @param parent if non-null, this is the parent view that the fragment's UI should be attached to
+     * @return the inflated child rows.
+     */
     @Override
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
@@ -72,6 +98,12 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         return convertView;
     }
 
+    /**
+     * Returns total children count.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @return the total number of child rows present in the expendable list view
+     */
     @Override
     public int getChildrenCount(int groupPosition) {
         return this.dataChild.get(this.dataHeader.get(groupPosition))
@@ -83,16 +115,34 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         return this.dataHeader.get(groupPosition);
     }
 
+    /**
+     * Returns group count.
+     */
     @Override
     public int getGroupCount() {
         return this.dataHeader.size();
     }
 
+    /**
+     * Called when the parent row clicked.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @return the selected group position
+     */
     @Override
     public long getGroupId(int groupPosition) {
         return groupPosition;
     }
 
+    /**
+     * To inflate parent rows view
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param isExpanded bool to check if the parent is expended or not.
+     * @param convertView to Inflate the parent rows
+     * @param parent if non-null, this is the parent view that the fragment's UI should be attached to
+     * @return the inflated parent rows.
+     */
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
@@ -116,11 +166,24 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         return false;
     }
 
+    /**
+     * Returns true is the parent has a corresponding child attached to it.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param childPosition contains the selected child numeric id.
+     * @return true if child is selectable else false
+     */
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
 
+    /**
+     * Checks if the typed word is present in the glossary list
+     * and displays it accordingly
+     *
+     * @param textEntered take input from the edit text present in {@link GlossaryFragment}
+     */
     public void filter(String textEntered)
     {
         prepareListData(_context, dataHeader, dataChild);
@@ -142,6 +205,13 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         notifyDataSetChanged();
     }
 
+    /*
+     * Preparing the list data
+     *
+     * @param context
+     * @param listDataHeader
+     * @param listChildData
+     */
     public static void prepareListData(Context context,List<String> listDataHeader,HashMap<String, List<String>> listDataChild)
     {
         listDataChild.clear();
@@ -149,7 +219,7 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         for(int i =0; i<23;i++)
             listDataHeader.add("");
         Collections.copy(listDataHeader,Arrays.asList(context.getResources().getStringArray(R.array.dataheaders)));
-        // Adding child data
+        // adding child data
         List<String> assault = new ArrayList<String>();
         assault.add(context.getString(R.string.asexual_assault));
 

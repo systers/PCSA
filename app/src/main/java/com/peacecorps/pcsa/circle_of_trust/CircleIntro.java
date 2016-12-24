@@ -45,7 +45,7 @@ public class CircleIntro extends AppIntro {
         settings = getSharedPreferences("prefs", 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("firstRun", false);
-        editor.commit();
+        editor.apply();
         Intent intent = new Intent();
         setResult(2, intent);
         finish();//finishing activity
