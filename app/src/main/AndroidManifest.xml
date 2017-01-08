@@ -36,7 +36,7 @@
             android:name=".circle_of_trust.Trustees"
             android:label="@string/title_activity_trustees"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
             >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
