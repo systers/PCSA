@@ -36,7 +36,8 @@
             android:name=".circle_of_trust.Trustees"
             android:label="@string/title_activity_trustees"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="adjustPan"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.MainActivity" />
@@ -61,7 +62,7 @@
             android:name=".UserSettingsActivity"
             android:label="@string/user_settings_activity"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.MainActivity" />
@@ -70,6 +71,7 @@
             android:name=".SignupActivity"
             android:label="@string/title_activity_login"
             android:parentActivityName=".SplashScreenActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
             android:theme="@style/MyMaterialTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
