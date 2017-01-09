@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--This is the common layout used for TextViews-->
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textSize="@dimen/abc_text_size_medium_material"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/bg_textview_rounded_rectangle"
-        android:padding="@dimen/textview_padding"
-        android:scrollbars="vertical"
-        android:fadeScrollbars="false"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:autoLink="web|email"
-        android:textColorLink="@color/text_color_link"
-    />
+<?xml version="1.0" encoding="utf-8"?><!--This is the common layout used for TextViews-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|right"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:autoLink="web|email"
+    android:background="@drawable/bg_textview_rounded_rectangle"
+    android:fadeScrollbars="false"
+    android:hyphenationFrequency="none"
+    android:padding="@dimen/textview_padding"
+    android:scrollHorizontally="true"
+    android:scrollbars="vertical"
+    android:textColor="@color/primary_text_default_material_dark"
+    android:textColorLink="@color/text_color_link"
+    android:textSize="@dimen/abc_text_size_medium_material" />
