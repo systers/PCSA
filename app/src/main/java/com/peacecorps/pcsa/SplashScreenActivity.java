@@ -2,8 +2,10 @@ package com.peacecorps.pcsa;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -18,7 +20,7 @@ public class SplashScreenActivity extends Activity {
     private ProgressBar progressBar;
     private Handler handler;
     private Runnable runnable;
-
+    SharedPreferences sharedPreferences;
     /**
      * Instance of Handler class is used to load the main screen after 2500 ms
      */
@@ -29,6 +31,7 @@ public class SplashScreenActivity extends Activity {
         progressBar = (ProgressBar)findViewById(R.id.splash_screen_progress);
         progressBar.getIndeterminateDrawable().setColorFilter(getResources().getColor(R.color.background_textview),android.graphics.PorterDuff.Mode.MULTIPLY);
         progressBar.setVisibility(View.VISIBLE);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(SplashScreenActivity.this);
         runnable = new Runnable() {
 
             /*
@@ -39,8 +42,10 @@ public class SplashScreenActivity extends Activity {
             @Override
             public void run() {
                 progressBar.setVisibility(View.GONE);
-                Intent i = new Intent(SplashScreenActivity.this, SignupActivity.class);
-                startActivity(i);
+                if(!sharedPreferences.getString(getString(R.string.key_name),"").equals(""))
+                    startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
+                else
+                    startActivity(new Intent(SplashScreenActivity.this, SignupActivity.class));
                 finish();
             }
         };

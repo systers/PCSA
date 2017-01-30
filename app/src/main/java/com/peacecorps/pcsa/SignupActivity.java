@@ -39,12 +39,6 @@ public class SignupActivity extends AppCompatActivity  implements AdapterView.On
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(SignupActivity.this);
         editor = sharedPreferences.edit();
 
-        if(!sharedPreferences.getString(getString(R.string.key_name),"").equals(""))
-        {
-            startActivity(new Intent(SignupActivity.this,MainActivity.class));
-            finish();
-        }
-
         loginButton = (Button)findViewById(R.id.loginButton);
         name = (EditText)findViewById(R.id.edit_name);
 
