@@ -17,7 +17,6 @@ gradle
 /*/out
 /*/*/build
 build
-app/app.iml
 /*/*/production
 *.iml
 *.iws
