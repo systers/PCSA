@@ -73,7 +73,6 @@ public class ContactPostStaff extends Fragment implements AdapterView.OnItemClic
         View rootView = inflater.inflate(R.layout.fragment_reporting_contact_post_staff, container, false);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
         assetManager = getContext().getAssets();
 
         contactPcmo = (Button) rootView.findViewById(R.id.post_staff_pcmo);
