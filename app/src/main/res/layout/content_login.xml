@@ -51,24 +51,40 @@
         android:layout_marginTop="@dimen/fragment_main_marginTop_35"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         android:layout_below="@id/third"
         android:layout_height="wrap_content">
+
         <EditText
-            android:background="@drawable/edit_text_bg"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:id="@+id/edit_name"
             android:hint="@string/enter_name"
-            android:inputType="textPersonName|textCapWords" />
+            android:inputType="textPersonName|textCapWords"
+            android:background="@android:color/white"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country:"
+            android:textSize="@dimen/text_normal"/>
 
         <Spinner
             android:id="@+id/spinner_country"
-            android:layout_width="fill_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:dropDownWidth="@dimen/contacting_post_staff_spinner_width"
-            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15" />
+            android:dropDownWidth="wrap_content"
+            android:textSize="@dimen/text_normal"
+            android:layout_marginLeft="@dimen/margin_left"/>
+
+        </LinearLayout>
         <Button
             android:id="@+id/loginButton"
             style="@style/NavigateButton"
