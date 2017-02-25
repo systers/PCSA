@@ -50,6 +50,7 @@
     <dimen name="intro_layout_height">0dp</dimen>
     <dimen name="padding_top">15px</dimen>
     <dimen name="margin_top">30px</dimen>
+    <dimen name="margin_left">5dp</dimen>
 
     <!-- Title and sub-title font sizes-->
     <dimen name="title_font">32sp</dimen>
