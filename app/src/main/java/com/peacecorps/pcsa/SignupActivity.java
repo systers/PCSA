@@ -2,11 +2,14 @@ package com.peacecorps.pcsa;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -34,6 +37,11 @@ public class SignupActivity extends AppCompatActivity  implements AdapterView.On
         setContentView(R.layout.activity_login);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color));
+        }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(SignupActivity.this);

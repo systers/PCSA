@@ -3,6 +3,7 @@
     <!-- Background colors-->
     <color name="background_app">#05D197</color>
     <color name="background_textview">#02845F</color>
+    <color name="status_bar_color">#02845F</color>
     <color name="background_clicked">#FFC25C</color>
     <color name="background_fragment_circle_of_trust">#05D197</color>
     <color name="intro_background">#ffdfb68a</color>
