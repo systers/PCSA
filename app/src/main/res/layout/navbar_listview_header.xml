@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@color/colorPrimaryDark"
+android:padding="5dp"
+android:orientation="vertical">
+
+<ImageView
+    android:layout_width="@dimen/navbar_icon_header_size"
+    android:layout_height="@dimen/navbar_icon_header_height"
+    android:src="@drawable/ic_logo_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/logo_custom"/>
+
+<View
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/main_yellow"
-    android:padding="5dp"
-    android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="@dimen/navbar_icon_header_size"
-        android:layout_height="@dimen/navbar_icon_header_height"
-        android:src="@drawable/ic_logo_horizontal"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/logo_custom"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/navbar_header_divider_height"
-        android:background="@color/photo_border" />
+    android:layout_height="@dimen/navbar_header_divider_height"
+    android:background="@color/photo_border" />
 
 </LinearLayout>

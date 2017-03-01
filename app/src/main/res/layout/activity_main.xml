@@ -27,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/navigation_view"
-        android:background="@color/main_yellow"
         android:layout_gravity="start">
 
         <LinearLayout
@@ -42,8 +41,9 @@
                 android:id="@+id/navbar_expandable_listview"
                 android:divider="@color/photo_border"
                 android:childDivider="@color/photo_border"
+                android:background="@color/background_app"
                 android:dividerHeight="@dimen/navbar_header_divider_height"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

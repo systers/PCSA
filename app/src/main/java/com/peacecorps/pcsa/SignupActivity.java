@@ -46,8 +46,8 @@ public class SignupActivity extends AppCompatActivity  implements AdapterView.On
         String[] countries = getResources().getStringArray(R.array.countryArray);
 
         ArrayAdapter<String> adapter =
-                new ArrayAdapter<String>(this, R.layout.textview, countries);
-        adapter.setDropDownViewResource(R.layout.textview);
+                new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, countries);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         country.setAdapter(adapter);
         country.setOnItemSelectedListener(this);
         loginButton.setOnClickListener(new View.OnClickListener() {

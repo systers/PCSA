@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:background="@color/dark_yellow"
     android:padding="@dimen/navbar_listitem_padding"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/navbar_item_textsize"
+        android:textSize="13sp"
         android:id="@+id/list_text"
-        android:paddingBottom="@dimen/contacting_post_staff_marginLeft"
-        android:paddingTop="@dimen/contacting_post_staff_marginLeft"
-        android:textColor="@color/photo_border"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/white"
         android:layout_gravity="center" />
 </RelativeLayout>
