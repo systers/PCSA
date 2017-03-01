@@ -256,8 +256,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
         // Insert the fragment by replacing any existing fragment
         FRAGMENT_TAG = TAG;
-        int animEnter = R.anim.push_down_in;
-        int animExit = R.anim.push_down_out;
+        int animEnter = R.anim.push_right_enter;
+        int animExit = R.anim.push_right_exit;
         int animPopEnter = R.anim.fade_in;
         int animPopExit = R.anim.fade_out;
 
@@ -323,6 +323,7 @@ public class MainActivity extends AppCompatActivity {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+
         }
     }
 
