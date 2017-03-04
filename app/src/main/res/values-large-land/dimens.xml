@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_screen_imgsize">240dp</dimen>
+    <dimen name="button_width_poststaff">600dp</dimen>
+    <dimen name="cirle_imageview_width">250dp</dimen>
+    <dimen name="circle_imageview_height">250dp</dimen>
+    <dimen name="menu_icon_width">200dp</dimen>
+    <dimen name="viewpager">167dp</dimen>
+    <dimen name="safety_plan_marginTop">18dp</dimen>
+    <dimen name="sub_title_font_safety_plan">22sp</dimen>
+    <dimen name="circle_of_trust_width">56dp</dimen>
+    <dimen name="circle_of_trust_height">56dp</dimen>
+    <dimen name="circle_of_trust_image_height">80dp</dimen>
+    <dimen name="circle_of_trust_image_width">80dp</dimen>
+    <dimen name="circle_of_trust_image_name_size">15sp</dimen>
+    <dimen name="circle_of_trust_width_25">25dp</dimen>
+    <dimen name="circle_of_trust_title_paddingLeft">-65dp</dimen>
+    <dimen name="sub_title_font_trustee">28sp</dimen>
+    <dimen name="navgn_bar_marginRight">280dp</dimen>
+
+</resources>

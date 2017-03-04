@@ -17,7 +17,6 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/reporting_menu"
             android:background="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"/>
 
         <TextView
@@ -27,7 +26,6 @@
             android:textColor="@color/primary_text_default_material_dark"
             android:textStyle="bold"
             android:textSize="@dimen/title_font"
-            android:id="@+id/reporting_resources"
             android:layout_gravity="center"/>
 
     </LinearLayout>
@@ -51,7 +49,6 @@
                 android:layout_width="@dimen/layout_width"
                 android:layout_height="match_parent"
                 android:textColor="@color/primary_text_default_material_dark"
-                android:id="@+id/reporting_resources_1"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/bg_textview_rounded_rectangle"
                 android:padding="@dimen/reporting_resource_padding"
@@ -63,7 +60,6 @@
                 android:layout_width="@dimen/layout_width"
                 android:layout_height="match_parent"
                 android:textColor="@color/primary_text_default_material_dark"
-                android:id="@+id/reporting_resources_2"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:background="@drawable/bg_textview_rounded_rectangle"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"

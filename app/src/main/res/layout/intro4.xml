@@ -3,8 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/intro4_background"
-    android:layout_weight="@integer/intro4_layout_weight"
-    android:id="@+id/main">
+    android:layout_weight="@integer/intro4_layout_weight">
 
     <TextView
         android:layout_width="wrap_content"

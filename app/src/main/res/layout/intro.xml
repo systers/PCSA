@@ -3,8 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/intro_background"
-    android:layout_weight="@integer/intro4_layout_weight"
-    android:id="@+id/main">
+    android:layout_weight="@integer/intro4_layout_weight">
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,11 +23,11 @@
         android:layout_height="@dimen/intro_layout_height"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_weight="@integer/intro4_linear_layout_weight">
+        android:layout_weight="@integer/intro_linear_layout_weight">
 
         <ImageView
-            android:layout_width="@dimen/layout_width"
-            android:layout_height="@dimen/layout_height"
+            android:layout_width="@dimen/cirle_imageview_width"
+            android:layout_height="@dimen/circle_imageview_height"
             android:layout_gravity="center"
             android:paddingLeft="@dimen/intro_padding_16"
             android:paddingRight="@dimen/intro_padding_16"

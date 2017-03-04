@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="splash_logo_marginTop">75dp</dimen>
+    <dimen name="progressbar_margin_top">15dp</dimen>
+    <dimen name="circle_of_trust_comrade_marginTop">2dp</dimen>
+    <dimen name="circle_of_trust_title_paddingLeft">-65dp</dimen>
+
+    <dimen name="tactics_marginLeft">80dp</dimen>
+    <dimen name="reporting_types_paddingLeft">80dp</dimen>
+    <dimen name="radar_viewpager_height">180dp</dimen>
+    <dimen name="navgn_bar_marginRight">200dp</dimen>
+
+</resources>

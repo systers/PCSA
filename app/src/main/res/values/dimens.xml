@@ -14,14 +14,10 @@
     <dimen name="trustee_margin_top">40dp</dimen>
     <dimen name="trustee_margin_bottom">20dp</dimen>
     <dimen name="reporting_types_width">250dp</dimen>
-    <dimen name="homescreen_margin_first">50dp</dimen>
     <dimen name="contacting_post_staff_marginTop">30dp</dimen>
     <dimen name="contacting_post_staff_marginTop_15">15dp</dimen>
     <dimen name="contacting_post_staff_marginLeft">5dp</dimen>
-    <dimen name="contacting_post_staff_marginRight">30dp</dimen>
-    <dimen name="contacting_post_staff_spinner_marginTop">3dp</dimen>
     <dimen name="contacting_post_staff_spinner_width">110dp</dimen>
-    <dimen name="contacting_post_staff_spinner_height">35dp</dimen>
     <dimen name="contacting_post_staff_view_width">2dp</dimen>
     <dimen name="faq_width">20dp</dimen>
     <dimen name="faq_padding">10dp</dimen>
@@ -78,54 +74,47 @@
     <dimen name="dialog_icon_marginright">15dp</dimen>
     <dimen name="reporting_dialog_text_size">25sp</dimen>
     <dimen name="circle_of_trust_dialog_text_size">20sp</dimen>
-    <dimen name="header_font">32sp</dimen>
-    <dimen name="view_height">2dp</dimen>
-    <dimen name="view_margin">5dp</dimen>
     <dimen name="splash_screen_imgsize">240dp</dimen>
-    <dimen name="splash_screen_title_size">45sp</dimen>
 
     <!--Navigation Drawer-->
-    <dimen name="navbar_header_height">125dp</dimen>
-    <dimen name="navbar_header_textsize">35sp</dimen>
     <dimen name="navbar_item_header_textsize">16sp</dimen>
     <dimen name="navbar_item_textsize">15sp</dimen>
     <dimen name="navbar_icon_size">48dp</dimen>
     <dimen name="navbar_listitem_padding">10dp</dimen>
     <dimen name="navbar_header_divider_height">2dp</dimen>
-    <dimen name="navbar_listview_header_padding">10dp</dimen>
     <dimen name="navbar_icon_header_size">225dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="nav_header_vertical_spacing">16dp</dimen>
-    <dimen name="nav_header_height">160dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
     <dimen name="progressbar_margin_top">59dp</dimen>
     <dimen name="circle_of_trust_image_name_size">15sp</dimen>
     <dimen name="icon_size_radar">56dp</dimen>
     <dimen name="bystander_button_textsize">18sp</dimen>
     <dimen name="fragment_main_marginTop_35">35dp</dimen>
     <dimen name="bystander_margin_below">29dp</dimen>
-    <dimen name="bystander_margin_bottom">72dp</dimen>
     <dimen name="bystander_margin_below_text">91dp</dimen>
     <dimen name="sub_title_font_22">22sp</dimen>
     <dimen name="dialog_height">350dp</dimen>
-    <dimen name="appbar_padding_top">8dp</dimen>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="tab_max_width">264dp</dimen>
-    <dimen name="tab_padding_bottom">16dp</dimen>
-    <dimen name="tab_label">14sp</dimen>
-    <dimen name="custom_tab_layout_height">72dp</dimen>
     <dimen name="viewpager">320dp</dimen>
     <dimen name="sub_title_font_safety_plan">20sp</dimen>
-    <dimen name="header_font_safety_plan">28sp</dimen>
     <dimen name="navbar_icon_header_height">100dp</dimen>
     <dimen name="padding_10">10dp</dimen>
-    <dimen name="hint_size">19sp</dimen>
     <dimen name="center_font">16sp</dimen>
     <dimen name="status_bar_size">24dp</dimen>
 
     <dimen name="font_size_meaning">16sp</dimen>
     <dimen name="fragment_main_marginTop_30">30dp</dimen>
     <dimen name="textsize_links">18sp</dimen>
+    <dimen name="splash_logo_marginTop">106dp</dimen>
+    <dimen name="circle_of_trust_comrade_marginTop">26dp</dimen>
+    <dimen name="circle_of_trust_title_paddingLeft">-65dp</dimen>
+    <dimen name="tactics_marginLeft">0dp</dimen>
+    <dimen name="reporting_types_paddingLeft">0dp</dimen>
+    <dimen name="radar_viewpager_height">350dp</dimen>
+    <dimen name="cirle_imageview_width">250dp</dimen>
+    <dimen name="circle_imageview_height">250dp</dimen>
+    <dimen name="safety_plan_marginTop">20dp</dimen>
+    <dimen name="sub_title_font_trustee">28sp</dimen>
+    <dimen name="navgn_bar_marginRight">0dp</dimen>
 
 </resources>

@@ -66,5 +66,12 @@ public abstract class ListDialogBox extends DialogFragment {
     protected abstract ListAdapter getListAdapter();
 
     protected abstract AdapterView.OnItemClickListener getItemClickListener();
+    @Override
+    public void onDestroyView() {
+        if (getDialog() != null && getRetainInstance()) {
+            getDialog().setDismissMessage(null);
+        }
+        super.onDestroyView();
+    }
 }
 

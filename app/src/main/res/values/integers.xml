@@ -9,4 +9,7 @@
     <integer name="reporting_confidentiality_weight_sum">6</integer>
     <integer name="reporting_resource_weight_sum">6</integer>
     <integer name="reporting_type_weight_sum">6</integer>
+    <integer name="title_size">20</integer>
+    <integer name="intro_linear_layout_weight">5</integer>
+    <integer name="intro2_linear_layout_weight">5</integer>
 </resources>

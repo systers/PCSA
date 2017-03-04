@@ -39,7 +39,8 @@
                 android:scrollbars="vertical"
                 android:background="@drawable/bg_textview_rounded_rectangle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tactics_marginLeft">
             <TextView
                 android:layout_width="@dimen/reporting_types_width"
                 android:layout_height="match_parent"

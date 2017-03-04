@@ -57,6 +57,6 @@
         android:layout_below="@id/radar_controller"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/fragment_main_marginTop_20"
-        android:layout_height="350dp" />
+        android:layout_height="@dimen/radar_viewpager_height" />
 
 </RelativeLayout>

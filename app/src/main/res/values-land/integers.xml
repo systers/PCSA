@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="intro_linear_layout_weight">10</integer>
+    <integer name="intro2_linear_layout_weight">7</integer>
+</resources>

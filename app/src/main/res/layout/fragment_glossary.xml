@@ -17,8 +17,7 @@
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/sub_title_font"
         android:textStyle="bold"
-        android:text="@string/lookup_important_words"
-        android:id="@+id/textView" />
+        android:text="@string/lookup_important_words" />
 
     <!-- EditText for Search -->
     <EditText android:id="@+id/inputSearch"

@@ -26,9 +26,9 @@
     <android.support.design.widget.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/navigation_view"
         android:background="@color/main_yellow"
-        android:layout_gravity="start">
+        android:layout_gravity="start"
+        android:layout_marginRight="@dimen/navgn_bar_marginRight">
 
         <LinearLayout
             android:layout_width="match_parent"

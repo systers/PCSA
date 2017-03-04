@@ -10,8 +10,7 @@
         android:layout_width="@dimen/navbar_icon_header_size"
         android:layout_height="@dimen/navbar_icon_header_height"
         android:src="@drawable/ic_logo_horizontal"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/logo_custom"/>
+        android:layout_gravity="center_horizontal" />
 
     <View
         android:layout_width="match_parent"

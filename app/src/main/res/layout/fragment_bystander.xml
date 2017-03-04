@@ -21,8 +21,7 @@
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/sub_title_font"
         android:textStyle="bold"
-        android:text="@string/bystander_intervention_subtitle"
-        android:id="@+id/textView" />
+        android:text="@string/bystander_intervention_subtitle" />
 
     <Button
         android:id="@+id/potentialVictim"

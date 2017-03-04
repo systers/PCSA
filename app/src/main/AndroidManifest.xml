@@ -62,7 +62,8 @@
             android:name=".UserSettingsActivity"
             android:label="@string/user_settings_activity"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.MainActivity" />

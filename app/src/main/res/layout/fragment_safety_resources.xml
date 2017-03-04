@@ -32,7 +32,6 @@
                 />
 
             <Button
-                android:id="@+id/PCMOButton"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/safety_resource_height"
                 android:textSize="@dimen/text_normal"
@@ -40,7 +39,6 @@
                 android:layout_marginTop="@dimen/safety_resource_marginTop_50"
                 style="@style/AppButton"/>
             <Button
-                android:id="@+id/SSMButton"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/safety_resource_height"
                 android:textSize="@dimen/text_normal"
@@ -48,7 +46,6 @@
                 android:layout_marginTop="@dimen/safety_resource_marginTop_70"
                 style="@style/AppButton"/>
             <Button
-                android:id="@+id/SARLButton"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/safety_resource_height"
                 android:textSize="@dimen/text_normal"
