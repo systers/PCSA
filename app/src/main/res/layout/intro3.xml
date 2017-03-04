@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:paddingLeft="@dimen/intro_padding_16"
             android:paddingRight="@dimen/intro_padding_16"
-            android:src="@drawable/ic_message_option" />
+            android:src="@drawable/ic_intro_3" />
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
