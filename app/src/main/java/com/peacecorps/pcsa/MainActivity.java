@@ -266,10 +266,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
         // Insert the fragment by replacing any existing fragment
         FRAGMENT_TAG = TAG;
-        int animEnter = R.anim.push_down_in;
-        int animExit = R.anim.push_down_out;
-        int animPopEnter = R.anim.fade_in;
-        int animPopExit = R.anim.fade_out;
+        int animEnter = R.anim.fade_in;
+        int animExit = R.anim.fade_out;
+        int animPopEnter = R.anim.fade_in_back;
+        int animPopExit = R.anim.fade_out_back;
 
         if(addToBackStack){
             if (TAG.equals(ContactOtherStaff.TAG)) {
