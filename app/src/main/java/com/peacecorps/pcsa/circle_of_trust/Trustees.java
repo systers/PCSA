@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
+import com.peacecorps.pcsa.StatusBarColorUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -62,11 +63,8 @@ public class Trustees extends AppCompatActivity {
 
         toolbar = (Toolbar)findViewById(R.id.toolbar_trustees);
         setSupportActionBar(toolbar);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color));
-        }
+        //This method will change the status bar color by checking the android version
+        StatusBarColorUtil.changeStatusBarColor(this,getWindow());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle(R.string.title_activity_trustees);
