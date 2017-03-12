@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
 
     <android.support.v4.view.ViewPager
@@ -15,9 +12,9 @@
     <LinearLayout
         android:id="@+id/layoutDots"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/trustee_margin_top"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="@dimen/contacting_post_staff_marginTop_15"
         android:gravity="center"
         android:orientation="horizontal"></LinearLayout>
 
@@ -25,10 +22,9 @@
         android:id="@+id/horizontal_line"
         android:layout_width="match_parent"
         android:layout_height="0.75dp"
-        android:alpha=".5"
         android:layout_above="@id/layoutDots"
-        android:background="@android:color/white"
-        />
+        android:alpha="@integer/circle_intro_alpha"
+        android:background="@android:color/white" />
 
     <ImageButton
         android:id="@+id/btn_next"
@@ -36,10 +32,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/activity_circle_intro_margin_bottom"
+        android:layout_marginRight="@dimen/activity_circle_intro_margin_right"
         android:background="@null"
-        android:src="@drawable/ic_navigate_next_white_24dp"
-        android:layout_marginBottom="18dp"
-        android:layout_marginRight="28dp"/>
+        android:src="@drawable/ic_navigate_next_white_24dp" />
 
     <Button
         android:id="@+id/btn_skip"
@@ -47,23 +43,24 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:background="@null"
-        android:text="Skip"
-        android:textColor="@android:color/white"
         android:layout_marginBottom="7.5dp"
-        android:layout_marginLeft="20dp"/>
+        android:layout_marginLeft="@dimen/trustee_margin_bottom"
+        android:background="@null"
+        android:text="@string/skip"
+        android:textColor="@android:color/white" />
+
     <Button
         android:id="@+id/btn_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@null"
-        android:text="Done"
-        android:textColor="@android:color/white"
         android:layout_marginBottom="7.5dp"
-        android:layout_marginRight="20dp"
-        android:visibility="gone"/>
+        android:layout_marginRight="@dimen/trustee_margin_bottom"
+        android:background="@null"
+        android:text="@string/done"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
 
 
 </RelativeLayout>

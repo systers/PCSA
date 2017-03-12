@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="intro4_layout_weight" >10</integer>
-    <integer name="intro4_textView_weight" >3</integer>
-    <integer name="intro4_linear_layout_weight" >5</integer>
+    <integer name="intro4_layout_weight">10</integer>
+    <integer name="intro4_textView_weight">3</integer>
+    <integer name="intro4_linear_layout_weight">5</integer>
     <integer name="intro4_weight_sum">1</integer>
+    <integer name="reporting_contact_other_staff_weight_sum_two">2</integer>
+    <integer name="reporting_contact_other_staff_weight_sum_five">5</integer>
     <integer name="rotation">90</integer>
+    <item name="circle_intro_alpha" format="float" type="integer">0.5</item>
+    <item name="intro4_imageview_weight" format="float" type="integer">0.61</item>
     <integer name="ems">10</integer>
     <integer name="reporting_confidentiality_weight_sum">6</integer>
     <integer name="reporting_resource_weight_sum">6</integer>

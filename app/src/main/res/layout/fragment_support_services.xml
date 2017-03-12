@@ -2,12 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_app"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_horizontal_margin"
-    android:background="@color/background_app"
     tools:context="com.peacecorps.pcsa.support_services.SupportServicesFragment">
 
     <LinearLayout
@@ -20,57 +19,61 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="@string/support_services_subtitle"
             android:textColor="@color/primary_text_default_material_dark"
             android:textSize="@dimen/sub_title_font"
-            android:textStyle="bold"
-            android:text="@string/support_services_subtitle"
-            />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/benefitsButton"
             style="@style/NavigateButton"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"
             android:text="@string/benefits"
-            android:textSize="18sp"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:textSize="@dimen/text_size_normal" />
+
         <Button
             android:id="@+id/servicesButton"
             style="@style/NavigateButton"
-            android:textSize="18sp"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"
             android:text="@string/available_services"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:textSize="@dimen/text_size_normal" />
+
         <Button
             android:id="@+id/commitmentButton"
             style="@style/NavigateButton"
-            android:textSize="18sp"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"
             android:text="@string/commitment"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:textSize="@dimen/text_size_normal" />
+
         <Button
             android:id="@+id/afterButton"
             style="@style/NavigateButton"
-            android:textSize="18sp"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"
             android:text="@string/after_assault"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:textSize="@dimen/text_size_normal" />
+
         <Button
             android:id="@+id/confidentialityButton"
             style="@style/NavigateButton"
-            android:text="@string/title_activity_confidentiality"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"
+            android:text="@string/title_activity_confidentiality" />
+
         <Button
             android:id="@+id/mythButton"
-            android:textSize="18sp"
             style="@style/NavigateButton"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_20"
             android:text="@string/mythbusters"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_20"/>
+            android:textSize="@dimen/text_size_normal" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/supportHelpFabButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:scaleType="center"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/activity_horizontal_margin"
             android:clickable="true"
-            android:src="@drawable/ic_help"
-            android:layout_gravity="right" />
+            android:scaleType="center"
+            android:src="@drawable/ic_help" />
 
     </LinearLayout>
 

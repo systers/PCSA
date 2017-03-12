@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/main_yellow"
-    android:padding="5dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/app_button_side_padding">
 
     <ImageView
         android:layout_width="@dimen/navbar_icon_header_size"
         android:layout_height="@dimen/navbar_icon_header_height"
-        android:src="@drawable/ic_logo_horizontal"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_logo_horizontal" />
 
     <View
         android:layout_width="match_parent"

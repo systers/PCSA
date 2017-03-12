@@ -31,7 +31,8 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="5">
+                android:layout_weight="@integer/reporting_contact_other_staff_weight_sum_five">
+
                 <include
                     android:id="@+id/post_staff_pcmo"
                     layout="@layout/button"
@@ -43,7 +44,7 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/icon_size_poststaff"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="2"/>
+                android:layout_weight="@integer/reporting_contact_other_staff_weight_sum_two" />
 
         </LinearLayout>
 
@@ -56,7 +57,8 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="5">
+                android:layout_weight="@integer/reporting_contact_other_staff_weight_sum_five">
+
                 <include
                     android:id="@+id/post_staff_ssm"
                     layout="@layout/button"
@@ -69,8 +71,8 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/icon_size_poststaff"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_arrow_right"
-                android:layout_weight="2"/>
+                android:layout_weight="@integer/reporting_contact_other_staff_weight_sum_two"
+                android:src="@drawable/ic_arrow_right" />
 
         </LinearLayout>
 
@@ -80,9 +82,10 @@
             android:layout_marginTop="@dimen/button_margin_top">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/intro_layout_height"
                 android:layout_height="wrap_content"
-                android:layout_weight="5">
+                android:layout_weight="@integer/reporting_contact_other_staff_weight_sum_five">
+
                 <include
                     android:id="@+id/post_staff_sarl"
                     layout="@layout/button"
@@ -94,7 +97,7 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/icon_size_poststaff"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="2"/>
+                android:layout_weight="@integer/reporting_contact_other_staff_weight_sum_two" />
         </LinearLayout>
 
         <LinearLayout

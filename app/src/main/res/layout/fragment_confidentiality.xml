@@ -2,11 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_horizontal_margin"
-    android:background="@color/background_app"
     tools:context="com.peacecorps.pcsa.support_services.ConfidentialityFragment">
 
     <LinearLayout
@@ -19,44 +19,44 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="@string/confidentiality_subtitle"
             android:textColor="@color/primary_text_default_material_dark"
             android:textSize="@dimen/sub_title_font"
-            android:textStyle="bold"
-            android:text="@string/confidentiality_subtitle"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/confidentiaity_margin_bottom"
             android:gravity="center"
-            android:layout_marginTop="45dp"
+            android:text="@string/confidentiality_center_text"
             android:textColor="@color/primary_text_default_material_dark"
             android:textSize="@dimen/center_font"
-            android:textStyle="bold"
-            android:text="@string/confidentiality_center_text"
-            />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/staffButton"
             style="@style/NavigateButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_main_marginTop_35"
             android:gravity="center"
-            android:text="@string/role_staff"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_35"/>
+            android:text="@string/role_staff" />
+
         <Button
             android:id="@+id/communityButton"
             style="@style/NavigateButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/community_title"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_35"/>
+            android:layout_marginTop="@dimen/fragment_main_marginTop_35"
+            android:text="@string/community_title" />
+
         <Button
             android:id="@+id/assaultedButton"
             style="@style/NavigateButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/assaulted_title"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_35"/>
+            android:layout_marginTop="@dimen/fragment_main_marginTop_35"
+            android:text="@string/assaulted_title" />
     </LinearLayout>
 </ScrollView>

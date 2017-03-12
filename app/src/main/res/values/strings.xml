@@ -51,6 +51,8 @@
 
     <!--String related to Circle of Trust-->
     <string name="circle_title">Circle of Trust</string>
+    <string name="skip">Skip</string>
+    <string name="done">Done</string>
     <string name="home_title">A Safety Resource for Peace Corps Volunteers</string>
     <string name="helping">Helping</string>
     <string name="friends_and_community">Friends and community members</string>

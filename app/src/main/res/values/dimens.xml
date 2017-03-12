@@ -6,12 +6,17 @@
     <dimen name="reporting_resources_layout_height">0dp</dimen>
     <dimen name="reporting_confidentiality_textview_padding">10dp</dimen>
     <dimen name="reporting_resource_padding">10dp</dimen>
+
+
     <dimen name="homescreen_margin">10dp</dimen>
     <dimen name="textview_padding">10dp</dimen>
     <dimen name="reporting_types_padding">10dp</dimen>
+    <dimen name="activity_circle_intro_margin_bottom">18dp</dimen>
+    <dimen name="activity_circle_intro_margin_right">28dp</dimen>
     <dimen name="trustee_margin">10dp</dimen>
     <dimen name="trustee_button_height">50dp</dimen>
     <dimen name="trustee_margin_top">40dp</dimen>
+    <dimen name="trustee_textview_margin_top">21dp</dimen>
     <dimen name="trustee_margin_bottom">20dp</dimen>
     <dimen name="reporting_types_width">250dp</dimen>
     <dimen name="contacting_post_staff_marginTop">30dp</dimen>
@@ -26,6 +31,7 @@
     <dimen name="circle_of_trust_width_25">25dp</dimen>
     <dimen name="circle_of_trust_height">50dp</dimen>
     <dimen name="circle_of_trust_image_width">80dp</dimen>
+    <dimen name="confidentiaity_margin_bottom">45dp</dimen>
     <dimen name="circle_of_trust_image_height">80dp</dimen>
     <dimen name="circle_of_trust_marginLeft_request_button">40dp</dimen>
     <dimen name="circle_of_trust_marginLeft">70dp</dimen>
@@ -54,6 +60,7 @@
     <dimen name="text_extra_small">12sp</dimen>
     <dimen name="text_small">16sp</dimen>
     <dimen name="text_normal">20sp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
     <dimen name="text_large">28sp</dimen>
     <dimen name="safety_resource_text_size">40sp</dimen>
 
