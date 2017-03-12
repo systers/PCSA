@@ -1,6 +1,9 @@
 package com.peacecorps.pcsa.safety_tools;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,28 +26,36 @@ import java.util.List;
  */
 public class SafetyPlanActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
     public static final int PAGES = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_safety_plan);
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.appbar);
+        if (appBarLayout.getLayoutParams() != null) {
+            CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) appBarLayout.getLayoutParams();
+            AppBarLayout.Behavior behavior = new AppBarLayout.Behavior();
+            behavior.setDragCallback(new AppBarLayout.Behavior.DragCallback() {
+                @Override
+                public boolean canDrag(@NonNull AppBarLayout appBarLayout) {
+                    return false;
+                }
+            });
+            layoutParams.setBehavior(behavior);
+        }
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.safety_plan_title);
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 break;
@@ -67,14 +78,13 @@ public class SafetyPlanActivity extends AppCompatActivity {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager manager) {
+        ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
 
         @Override
         public Fragment getItem(int position) {
-            Fragment fragment = mFragmentList.get(position);
-            return fragment;
+            return mFragmentList.get(position);
         }
 
         @Override
@@ -82,7 +92,7 @@ public class SafetyPlanActivity extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-        public void addFragment(Fragment fragment, String title) {
+        void addFragment(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
