@@ -12,5 +12,5 @@
         android:fadeScrollbars="false"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:autoLink="web|email"
-        android:textColorLink="@color/text_color_link"
+        android:textColorLink="@color/colorAccent"
     />
