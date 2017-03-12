@@ -1,15 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="countryArray">
+        <item>Albania</item>
+        <item>Armenia</item>
+        <item>Azerbaijan</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Botswana</item>
+        <item>Burkina Faso</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Costa Rica</item>
+        <item>Dominican Republic</item>
+        <item>Eastern Caribbean</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Ethiopa</item>
+        <item>Fiji</item>
+        <item>FSM and Palau</item>
+        <item>Georgia</item>
+        <item>Ghana</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guyana</item>
+        <item>Honduras</item>
+        <item>Indonesia</item>
+        <item>Jamaica</item>
+        <item>Jordon</item>
+        <item>Kenya</item>
+        <item>Kosovo</item>
+        <item>Kyrgyz Republic</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Mali</item>
+        <item>Mexico</item>
+        <item>Moldova</item>
+        <item>Mongolia</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar</item>
+        <item>Namibia</item>
+        <item>Nepal</item>
+        <item>Nicaragua</item>
+        <item>Panama</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Rwanda</item>
+        <item>Samoa</item>
+        <item>Senegal</item>
+        <item>Sierra Leone</item>
+        <item>South Africa</item>
+        <item>Swaziland</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>The Gambia</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Uganda</item>
         <item>Uganda</item>
         <item>Syria</item>
         <item>Tunisia</item>
+        <item>Vanuatu</item>
+        <item>Zambia</item>
     </string-array>
 
     <string-array name="countryValues">
+        <item>Albania</item>
+        <item>Armenia</item>
+        <item>Azerbaijan</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Botswana</item>
+        <item>Burkina Faso</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Costa Rica</item>
+        <item>Dominican Republic</item>
+        <item>Eastern Caribbean</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Ethiopa</item>
+        <item>Fiji</item>
+        <item>FSM and Palau</item>
+        <item>Georgia</item>
+        <item>Ghana</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guyana</item>
+        <item>Honduras</item>
+        <item>Indonesia</item>
+        <item>Jamaica</item>
+        <item>Jordon</item>
+        <item>Kenya</item>
+        <item>Kosovo</item>
+        <item>Kyrgyz Republic</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Mali</item>
+        <item>Mexico</item>
+        <item>Moldova</item>
+        <item>Mongolia</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar</item>
+        <item>Namibia</item>
+        <item>Nepal</item>
+        <item>Nicaragua</item>
+        <item>Panama</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Rwanda</item>
+        <item>Samoa</item>
+        <item>Senegal</item>
+        <item>Sierra Leone</item>
+        <item>South Africa</item>
+        <item>Swaziland</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>The Gambia</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Uganda</item>
         <item>Uganda</item>
         <item>Syria</item>
         <item>Tunisia</item>
+        <item>Vanuatu</item>
+        <item>Zambia</item>
     </string-array>
 
     <string-array name="headers">
