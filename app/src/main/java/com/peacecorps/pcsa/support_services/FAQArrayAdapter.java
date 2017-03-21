@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.peacecorps.pcsa.R;
 
-import java.util.HashSet;
-
 
 /**
  * The customized ArrayAdapter for the list used in FAQ page
@@ -24,14 +22,12 @@ public class FAQArrayAdapter extends ArrayAdapter<String> {
     private final Context context;
     private final String[] faqTitles;
     private final String[] faqDescptions;
-    private HashSet<Integer> faqVisibilities;
 
     public FAQArrayAdapter(Context context, String[] faqTitles, String[] faqDesc) {
         super(context, R.layout.faq_layout, faqDesc);
         this.context = context;
         this.faqTitles = faqTitles;
         this.faqDescptions = faqDesc;
-        this.faqVisibilities = new HashSet<>();
     }
 
     @Override
@@ -48,49 +44,25 @@ public class FAQArrayAdapter extends ArrayAdapter<String> {
 
         faqTitle.setText(String.valueOf(faqTitles[position]));
         faqDesc.setText(String.valueOf(faqDescptions[position]));
-        if(faqVisibilities.contains(position)) {
-            setVisibility(faqDesc, faq_title_and_image, viewMoreArrow, true);
-        } else {
-            setVisibility(faqDesc, faq_title_and_image, viewMoreArrow, false);
-        }
 
         faq_title_and_image.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
                 if (faqDesc.getVisibility() == View.INVISIBLE) {
-                    setVisibility(faqDesc, faq_title_and_image, viewMoreArrow, true);
-                    faqVisibilities.add(position);
+                    faqDesc.setVisibility(View.VISIBLE);
+                    faqDesc.setMaxLines(Integer.MAX_VALUE);
+                    faq_title_and_image.setBackgroundResource(R.drawable.bg_textview_faq_rounded_upper);
+                    viewMoreArrow.setRotation(180);
                 } else {
-                    setVisibility(faqDesc, faq_title_and_image, viewMoreArrow, false);
-                    if(faqVisibilities.contains(position)) {
-                        faqVisibilities.remove(position);
-                    }
+                    faqDesc.setVisibility(View.INVISIBLE);
+                    faqDesc.setMaxLines(0);
+                    faq_title_and_image.setBackgroundResource(R.drawable.bg_textview_rounded_rectangle);
+                    viewMoreArrow.setRotation(90);
                 }
             }
         });
 
         return faq;
-    }
-
-    /**
-     * Sets the parameters of the View based on whether the description is visible or not
-     * @param faqDesc description of the row item
-     * @param faq_title_and_image rectangular box around the row item
-     * @param viewMoreArrow arrow head
-     * @param visibility the visibility of the description
-     */
-    private void setVisibility(TextView faqDesc, LinearLayout faq_title_and_image, TextView viewMoreArrow, boolean visibility) {
-        if(visibility) {
-            faqDesc.setVisibility(View.VISIBLE);
-            faqDesc.setMaxLines(Integer.MAX_VALUE);
-            faq_title_and_image.setBackgroundResource(R.drawable.bg_textview_faq_rounded_upper);
-            viewMoreArrow.setRotation(180);
-        } else {
-            faqDesc.setVisibility(View.INVISIBLE);
-            faqDesc.setMaxLines(0);
-            faq_title_and_image.setBackgroundResource(R.drawable.bg_textview_rounded_rectangle);
-            viewMoreArrow.setRotation(90);
-        }
     }
 }
