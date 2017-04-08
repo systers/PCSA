@@ -2,50 +2,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_horizontal_margin"
-    android:background="@color/background_app"
     tools:context="com.peacecorps.pcsa.safety_tools.BystanderInterventionFragment">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+      
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/bystander_intervention_subtitle"
+            android:textColor="@color/primary_text_default_material_dark"
+            android:textSize="@dimen/sub_title_font"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:textSize="@dimen/sub_title_font"
-        android:textStyle="bold"
-        android:text="@string/bystander_intervention_subtitle" />
+        <Button
+            android:id="@+id/potentialVictim"
+            style="@style/NavigateButton"
+            android:layout_marginBottom="@dimen/bystander_margin_below"
+            android:layout_marginTop="@dimen/bystander_margin_below"
+            android:text="@string/bystander_potential_victim"
+            android:textSize="@dimen/bystander_button_textsize" />
 
-    <Button
-        android:id="@+id/potentialVictim"
-        style="@style/NavigateButton"
-        android:textSize="@dimen/bystander_button_textsize"
-        android:text="@string/bystander_potential_victim"
-        android:layout_marginTop="@dimen/bystander_margin_below"
-        android:layout_marginBottom="@dimen/bystander_margin_below" />
-    <Button
-        android:id="@+id/potentialOffender"
-        style="@style/NavigateButton"
-        android:textSize="@dimen/bystander_button_textsize"
-        android:text="@string/bystander_potential_offender"
-        android:layout_marginBottom="@dimen/bystander_margin_below"
-        />
-    <Button
-        android:id="@+id/tacticsForBoth"
-        style="@style/NavigateButton"
-        android:textSize="@dimen/bystander_button_textsize"
-        android:text="@string/bystander_tactics_both"
-        android:layout_marginBottom="@dimen/bystander_margin_below_text" />
+        <Button
+            android:id="@+id/potentialOffender"
+            style="@style/NavigateButton"
+            android:layout_marginBottom="@dimen/bystander_margin_below"
+            android:text="@string/bystander_potential_offender"
+            android:textSize="@dimen/bystander_button_textsize" />
 
-    <include android:id="@+id/bystander_text"
-        layout="@layout/textview"
-         />
-</LinearLayout>
+        <Button
+            android:id="@+id/tacticsForBoth"
+            style="@style/NavigateButton"
+            android:layout_marginBottom="@dimen/bystander_margin_below_text"
+            android:text="@string/bystander_tactics_both"
+            android:textSize="@dimen/bystander_button_textsize" />
+
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/bystander_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:autoLink="web|email"
+            android:background="@drawable/bg_textview_rounded_rectangle"
+            android:fadeScrollbars="false"
+            android:padding="@dimen/textview_padding"
+            android:scrollbars="vertical"
+            android:textColor="@color/primary_text_default_material_dark"
+            android:textColorLink="@color/text_color_link"
+            android:textSize="@dimen/abc_text_size_medium_material" />
+
+    </LinearLayout>
 </ScrollView>

@@ -3,71 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_app"
     android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@color/background_app"
     tools:context="com.peacecorps.pcsa.safety_tools.TacticsFragment">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textStyle="bold"
+        android:text="@string/tactics_subtitle"
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/sub_title_font"
-        android:text="@string/tactics_subtitle"/>
+        android:textStyle="bold" />
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:fadeScrollbars="false"
-        android:layout_weight="@integer/intro4_linear_layout_weight">
+        android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material"
+        android:layout_weight="@integer/intro4_linear_layout_weight"
+        android:fadeScrollbars="false">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:fadeScrollbars="false"
             android:orientation="horizontal"
-            android:fadeScrollbars="false">
+            android:paddingBottom="@dimen/activity_vertical_margin">
 
             <ScrollView
-                android:scrollbars="vertical"
-                android:background="@drawable/bg_textview_rounded_rectangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/tactics_marginLeft">
-            <TextView
-                android:layout_width="@dimen/reporting_types_width"
-                android:layout_height="match_parent"
-                android:textColor="@color/primary_text_default_material_dark"
-                android:id="@+id/tactics_characteristics_assault"
-                android:layout_gravity="center_horizontal"
-                android:padding="@dimen/reporting_types_padding"
-                android:fadeScrollbars="false"
-                android:scrollbarStyle="insideInset"/>
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:scrollbars="vertical">
+
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    ext:documentView_textAlignment="justified"
+                    android:id="@+id/tactics_characteristics_assault"
+                    android:layout_width="@dimen/reporting_types_width"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:fadeScrollbars="false"
+                    ext:documentView_insetPadding="@dimen/reporting_types_padding"
+                    android:scrollbarStyle="insideInset"
+                    ext:documentView_antialias="true"
+                    ext:documentView_textColor="@color/primary_text_default_material_dark" />
+              
             </ScrollView>
 
             <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scrollbars="vertical"
-                android:background="@drawable/bg_textview_rounded_rectangle"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin">
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:scrollbars="vertical">
 
-                <TextView
-                android:layout_width="@dimen/reporting_types_width"
-                android:layout_height="match_parent"
-                android:textColor="@color/primary_text_default_material_dark"
-                android:id="@+id/tactics_tactics_assault"
-                    android:padding="@dimen/reporting_types_padding" android:fadeScrollbars="false"
-                android:scrollbarStyle="insideInset"/>
-           </ScrollView>
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    ext:documentView_textAlignment="justified"
+                    android:id="@+id/tactics_tactics_assault"
+                    android:layout_width="@dimen/reporting_types_width"
+                    android:layout_height="match_parent"
+                    android:fadeScrollbars="false"
+                    ext:documentView_insetPadding="@dimen/reporting_types_padding"
+                    android:scrollbarStyle="insideInset"
+                    ext:documentView_antialias="true"
+                    ext:documentView_textColor="@color/primary_text_default_material_dark" />
+            </ScrollView>
 
 
         </LinearLayout>

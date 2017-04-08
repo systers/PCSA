@@ -3,7 +3,6 @@ package com.peacecorps.pcsa.policies_glossary;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
+import com.bluejamesbond.text.DocumentView;
+import com.bluejamesbond.text.hyphen.DefaultHyphenator;
 import com.peacecorps.pcsa.R;
 
 import java.util.ArrayList;
@@ -39,8 +40,8 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
      * Counstructor of GlossaryAdapter class called upon to set different variables of the calling object.
      *
      * @param context
-     * @param listDataHeader sets the title of expandable list .
-     * @param listChildData sets the child data in format of header title, child title
+     * @param listDataHeader     sets the title of expandable list .
+     * @param listChildData      sets the child data in format of header title, child title
      * @param expandableListView a view that shows items in a vertically scrolling two-level list
      */
     public GlossaryAdapter(Context context, List<String> listDataHeader,
@@ -51,160 +52,6 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         this.listView = expandableListView;
     }
 
-    @Override
-    public Object getChild(int groupPosition, int childPosition) {
-        return this.dataChild.get(this.dataHeader.get(groupPosition))
-                .get(childPosition);
-    }
-
-    /**
-     * Called When child id row clicked.
-     *
-     * @param groupPosition contains the selected group numeric id.
-     * @param childPosition contains the selected child numeric id.
-     * @return the numeric id of the child
-     */
-    @Override
-    public long getChildId(int groupPosition, int childPosition) {
-        return childPosition;
-    }
-
-    /**
-     * To inflate child rows view
-     *
-     * @param groupPosition contains the selected group numeric id.
-     * @param childPosition contains the selected child numeric id.
-     * @param isLastChild bool to determine wheather the child is last one or not.
-     * @param convertView to Inflate the child rows
-     * @param parent if non-null, this is the parent view that the fragment's UI should be attached to
-     * @return the inflated child rows.
-     */
-    @Override
-    public View getChildView(int groupPosition, final int childPosition,
-                             boolean isLastChild, View convertView, ViewGroup parent) {
-
-        final String childText = (String) getChild(groupPosition, childPosition);
-
-        if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) this._context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.fragment_glossary_meaning, null);
-        }
-
-        TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.word_meaning);
-
-        txtListChild.setText(Html.fromHtml(childText));
-        return convertView;
-    }
-
-    /**
-     * Returns total children count.
-     *
-     * @param groupPosition contains the selected group numeric id.
-     * @return the total number of child rows present in the expendable list view
-     */
-    @Override
-    public int getChildrenCount(int groupPosition) {
-        return this.dataChild.get(this.dataHeader.get(groupPosition))
-                .size();
-    }
-
-    @Override
-    public Object getGroup(int groupPosition) {
-        return this.dataHeader.get(groupPosition);
-    }
-
-    /**
-     * Returns group count.
-     */
-    @Override
-    public int getGroupCount() {
-        return this.dataHeader.size();
-    }
-
-    /**
-     * Called when the parent row clicked.
-     *
-     * @param groupPosition contains the selected group numeric id.
-     * @return the selected group position
-     */
-    @Override
-    public long getGroupId(int groupPosition) {
-        return groupPosition;
-    }
-
-    /**
-     * To inflate parent rows view
-     *
-     * @param groupPosition contains the selected group numeric id.
-     * @param isExpanded bool to check if the parent is expended or not.
-     * @param convertView to Inflate the parent rows
-     * @param parent if non-null, this is the parent view that the fragment's UI should be attached to
-     * @return the inflated parent rows.
-     */
-    @Override
-    public View getGroupView(int groupPosition, boolean isExpanded,
-                             View convertView, ViewGroup parent) {
-        String headerTitle = (String) getGroup(groupPosition);
-        if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) this._context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.fragment_glossary_item, null);
-        }
-
-        TextView lblListHeader = (TextView) convertView
-                .findViewById(R.id.word_title);
-        lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setText(headerTitle);
-
-        return convertView;
-    }
-
-    @Override
-    public boolean hasStableIds() {
-        return false;
-    }
-
-    /**
-     * Returns true is the parent has a corresponding child attached to it.
-     *
-     * @param groupPosition contains the selected group numeric id.
-     * @param childPosition contains the selected child numeric id.
-     * @return true if child is selectable else false
-     */
-    @Override
-    public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return true;
-    }
-
-    /**
-     * Checks if the typed word is present in the glossary list
-     * and displays it accordingly
-     *
-     * @param textEntered take input from the edit text present in {@link GlossaryFragment}
-     */
-    public void filter(String textEntered)
-    {
-        prepareListData(_context, dataHeader, dataChild);
-        Iterator listIt = dataHeader.iterator();
-        while (listIt.hasNext())
-        {
-            String next = (String) listIt.next();
-            if(next.length() < textEntered.length() || !next.toUpperCase().startsWith(textEntered.toUpperCase())){
-                listIt.remove();
-            }
-        }
-
-        for(Iterator<Map.Entry<String, List<String>>> it = dataChild.entrySet().iterator(); it.hasNext(); ) {
-            Map.Entry<String, List<String>> entry = it.next();
-            if(!dataHeader.contains(entry.getKey())) {
-                it.remove();
-            }
-        }
-        notifyDataSetChanged();
-    }
-
     /*
      * Preparing the list data
      *
@@ -212,13 +59,12 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
      * @param listDataHeader
      * @param listChildData
      */
-    public static void prepareListData(Context context,List<String> listDataHeader,HashMap<String, List<String>> listDataChild)
-    {
+    public static void prepareListData(Context context, List<String> listDataHeader, HashMap<String, List<String>> listDataChild) {
         listDataChild.clear();
         listDataHeader.clear();
-        for(int i =0; i<23;i++)
+        for (int i = 0; i < 23; i++)
             listDataHeader.add("");
-        Collections.copy(listDataHeader,Arrays.asList(context.getResources().getStringArray(R.array.dataheaders)));
+        Collections.copy(listDataHeader, Arrays.asList(context.getResources().getStringArray(R.array.dataheaders)));
         // adding child data
         List<String> assault = new ArrayList<String>();
         assault.add(context.getString(R.string.asexual_assault));
@@ -313,5 +159,160 @@ public class GlossaryAdapter extends BaseExpandableListAdapter {
         listDataChild.put(listDataHeader.get(20), stalk);
         listDataChild.put(listDataHeader.get(21), theft);
         listDataChild.put(listDataHeader.get(22), vulnerability);
+    }
+
+    @Override
+    public Object getChild(int groupPosition, int childPosition) {
+        return this.dataChild.get(this.dataHeader.get(groupPosition))
+                .get(childPosition);
+    }
+
+    /**
+     * Called When child id row clicked.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param childPosition contains the selected child numeric id.
+     * @return the numeric id of the child
+     */
+    @Override
+    public long getChildId(int groupPosition, int childPosition) {
+        return childPosition;
+    }
+
+    /**
+     * To inflate child rows view
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param childPosition contains the selected child numeric id.
+     * @param isLastChild   bool to determine wheather the child is last one or not.
+     * @param convertView   to Inflate the child rows
+     * @param parent        if non-null, this is the parent view that the fragment's UI should be attached to
+     * @return the inflated child rows.
+     */
+    @Override
+    public View getChildView(int groupPosition, final int childPosition,
+                             boolean isLastChild, View convertView, ViewGroup parent) {
+
+        final String childText = (String) getChild(groupPosition, childPosition);
+
+        if (convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) this._context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.fragment_glossary_meaning, null);
+        }
+
+        DocumentView txtListChild = (DocumentView) convertView
+                .findViewById(R.id.word_meaning);
+        txtListChild.getDocumentLayoutParams().setHyphenator(DefaultHyphenator.
+                getInstance(DefaultHyphenator.HyphenPattern.PT));
+        txtListChild.getDocumentLayoutParams().setHyphenated(true);
+        txtListChild.setText(Html.fromHtml(childText));
+
+        return convertView;
+    }
+
+    /**
+     * Returns total children count.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @return the total number of child rows present in the expendable list view
+     */
+    @Override
+    public int getChildrenCount(int groupPosition) {
+        return this.dataChild.get(this.dataHeader.get(groupPosition))
+                .size();
+    }
+
+    @Override
+    public Object getGroup(int groupPosition) {
+        return this.dataHeader.get(groupPosition);
+    }
+
+    /**
+     * Returns group count.
+     */
+    @Override
+    public int getGroupCount() {
+        return this.dataHeader.size();
+    }
+
+    /**
+     * Called when the parent row clicked.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @return the selected group position
+     */
+    @Override
+    public long getGroupId(int groupPosition) {
+        return groupPosition;
+    }
+
+    /**
+     * To inflate parent rows view
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param isExpanded    bool to check if the parent is expended or not.
+     * @param convertView   to Inflate the parent rows
+     * @param parent        if non-null, this is the parent view that the fragment's UI should be attached to
+     * @return the inflated parent rows.
+     */
+    @Override
+    public View getGroupView(int groupPosition, boolean isExpanded,
+                             View convertView, ViewGroup parent) {
+        String headerTitle = (String) getGroup(groupPosition);
+        if (convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) this._context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.fragment_glossary_item, null);
+        }
+
+        TextView lblListHeader = (TextView) convertView
+                .findViewById(R.id.word_title);
+        lblListHeader.setTypeface(null, Typeface.BOLD);
+        lblListHeader.setText(headerTitle);
+
+        return convertView;
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return false;
+    }
+
+    /**
+     * Returns true is the parent has a corresponding child attached to it.
+     *
+     * @param groupPosition contains the selected group numeric id.
+     * @param childPosition contains the selected child numeric id.
+     * @return true if child is selectable else false
+     */
+    @Override
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return true;
+    }
+
+    /**
+     * Checks if the typed word is present in the glossary list
+     * and displays it accordingly
+     *
+     * @param textEntered take input from the edit text present in {@link GlossaryFragment}
+     */
+    public void filter(String textEntered) {
+        prepareListData(_context, dataHeader, dataChild);
+        Iterator listIt = dataHeader.iterator();
+        while (listIt.hasNext()) {
+            String next = (String) listIt.next();
+            if (next.length() < textEntered.length() || !next.toUpperCase().startsWith(textEntered.toUpperCase())) {
+                listIt.remove();
+            }
+        }
+
+        for (Iterator<Map.Entry<String, List<String>>> it = dataChild.entrySet().iterator(); it.hasNext(); ) {
+            Map.Entry<String, List<String>> entry = it.next();
+            if (!dataHeader.contains(entry.getKey())) {
+                it.remove();
+            }
+        }
+        notifyDataSetChanged();
     }
 }

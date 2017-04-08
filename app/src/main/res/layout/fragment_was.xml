@@ -43,31 +43,24 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
+                        android:background="@drawable/bg_textview_rounded_rectangle"
+                        android:fadeScrollbars="false"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:id="@+id/was_content"
+                        android:orientation="vertical" />
 
-                        <TextView
-                            android:id="@+id/wasContent"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
-                            android:background="@drawable/bg_textview_rounded_rectangle"
-                            android:fadeScrollbars="false"
-                            android:padding="@dimen/reporting_types_padding"
-                            android:scrollbarStyle="insideInset"
-                            android:scrollbars="vertical"
-                            android:textColor="@color/primary_text_default_material_dark"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
                 </ScrollView>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_gravity="bottom"
                 android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:layout_gravity="bottom">
+                android:layout_weight="1">
 
                 <include
                     android:id="@+id/knowButton"

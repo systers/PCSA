@@ -31,24 +31,53 @@
             android:orientation="vertical"
             android:layout_marginTop="@dimen/activity_vertical_margin">
 
-            <include android:id="@+id/reporting_step1"
-                layout="@layout/textview"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:orientation="vertical"
+                android:id="@+id/reporting_step1" />
 
-            <include android:id="@+id/reporting_step2"
-                layout="@layout/textview"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:id="@+id/reporting_step2" />
 
-            <include android:id="@+id/reporting_step3"
-                layout="@layout/textview"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:id="@+id/reporting_step3" />
 
-            <include android:id="@+id/reporting_step4"
-                layout="@layout/textview"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:orientation="vertical"
+                android:id="@+id/reporting_step4" />
 
-            <include android:id="@+id/reporting_step5"
-                layout="@layout/textview"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:orientation="vertical"
+                android:id="@+id/reporting_step5" />
 
-            <include android:id="@+id/reporting_step6"
-                layout="@layout/textview"/>
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_textview_rounded_rectangle"
+                android:orientation="vertical"
+                android:id="@+id/reporting_step6" />
         </LinearLayout>
 
     </LinearLayout>

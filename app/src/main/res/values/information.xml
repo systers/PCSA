@@ -77,36 +77,50 @@
     </string>
 
     <!-- Details of Other Staff to be contacted in case of crime and the contact number-->
-    <string name="reporting_desc_pcsaves">
+    <string name="reporting_desc_pcsaves_part1">
         The PC SAVES Helpline provides anonymous confidential crisis intervention, support and information to Peace Corps Volunteers
         and trainees who have been affected by sexual assault via a variety of different platforms. All options are staffed by
         trained professionals not affiliated with Peace Corps, available 24/7.  No personally identifying information will be
-        collected.\n\n
-        Online Chat: pcsaveshelpline.org
+        collected.&lt;br/> &lt;br/> </string>
+    <string name="reporting_desc_pcsaves_part2">
+        Online Chat: <![CDATA[<font color=#024002>pcsaveshelpline.org]]>
     </string>
+    <string name="reporting_desc_pcsaves_url">pcsaveshelpline.org</string>
     <string name="reporting_contact_pcsaves">+1 408 844 4357</string>
 
-    <string name="reporting_desc_ova">
+    <string name="reporting_desc_ova_part1">
         CVictim Advocates are available for Volunteers who are victims of crimes. They can provide information regarding available response services,
-        address questions/concerns, and ensure their voices are heard and considered in all decisions affecting service and care.\n\n
-        e-mail: victimadvocate@peacecorps.gov
+        address questions/concerns, and ensure their voices are heard and considered in all decisions affecting service and care.&lt;br/> &lt;br/>
+       </string>
+    <string name="reporting_desc_ova_part2">
+    e-mail: <![CDATA[<font color=#024002>victimadvocate@peacecorps.gov]]>
     </string>
+    <string name="reporting_desc_ova_url">victimadvocate@peacecorps.gov</string>
     <string name="reporting_contact_ova">202 409 2701</string>
 
-    <string name="reporting_desc_oig">
+    <string name="reporting_desc_oig_part1">
         OIG is a resource for those who have been harmed by misconduct or criminal wrongdoing by a fellow Volunteer or Peace Corps Staff.
         They are independent from Peace Corps with law enforcement officers who have the unique authorities to help seek a fair resolution and,
-        in appropriate cases, to seek prosecution in the United States or host country.\n\n
-        e-mail: victimadvocate@peacecorps.gov\n\n
-        Learn more: peacecorps.gov/OIG
+        in appropriate cases, to seek prosecution in the United States or host country.&lt;br/> &lt;br/>
+         </string>
+    <string name="reporting_desc_oig_part2">
+        e-mail:  <![CDATA[<font color=#024002>victimadvocate@peacecorps.gov</font>]]> &lt;br/> &lt;br/>
     </string>
+     <string name="reporting_desc_oig_part3">
+        Learn more: <![CDATA[<font color=#024002>peacecorps.gov/OIG]]>
+    </string>
+    <string name="reporting_desc_oig_url1">victimadvocate@peacecorps.gov</string>
+    <string name="reporting_desc_oig_url2">peacecorps.gov/OIG</string>
     <string name="reporting_contact_oig">202 692 2915</string>
     
-    <string name="reporting_desc_ocrd">
+    <string name="reporting_desc_ocrd_part1">
         Resource to provide leadership and guidance on all civil rights, equal employment opportunity and diversity matters; and to address
-        issues of discrimination and harassment, including sexual harassment, in the recruitment/service of Volunteers/Trainees.\n\n
-        email: ocrd@peacecorps.gov
+        issues of discrimination and harassment, including sexual harassment, in the recruitment/service of Volunteers/Trainees. &lt;br/> &lt;br/>
+        </string>
+    <string name="reporting_desc_ocrd_part2">
+        email: <![CDATA[<font color=#024002>ocrd@peacecorps.gov]]>
     </string>
+    <string name="reporting_desc_ocrd_url">ocrd@peacecorps.gov</string>
     <string name="reporting_desc_standard"><b>Services available for <i>both Standard and Restricted reports</i> are as follows:</b>\n\n
 ·Medical Care related to injury, pregnancy, or sexually transmitted infections\n\n
 ·A sexual assault forensic exam (SAFE) to preserve evidence \n\n
@@ -293,106 +307,106 @@
 
     <string name="safety_plan_1_concerns">
         &lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
-        \t\t\tHave you anticipated where and in which ways you might come into contact with the perpetrator and perpetrator’s friends/family?&lt;br/>&lt;br/>
-        \t\t\tIf you were to come into contact with the perpetrator and perpetrator’s family/friends, what specific things could you do that might help you feel safe in that situation?&lt;br/>&lt;br/>
-        \t\t\tHave you thought about making a plan in case of emergencies of who you could call, where you could go, and how you could get there? How can Peace Corps assist you in developing this plan?
+        &#160;&#160;&#160;&#160;Have you anticipated where and in which ways you might come into contact with the perpetrator and perpetrator’s friends/family?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If you were to come into contact with the perpetrator and perpetrator’s family/friends, what specific things could you do that might help you feel safe in that situation?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Have you thought about making a plan in case of emergencies of who you could call, where you could go, and how you could get there? How can Peace Corps assist you in developing this plan?
     </string>
 
     <string name="safety_plan_1_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tKnow where to go for help&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tHave a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tHelp develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tEnsure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tIf requested, establish contacts between PC and counterpart, neighbors, local police and community leaders so they know how to contact PC&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tHave your important documents ready in case of an emergency
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Know where to go for help&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Have a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Help develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Ensure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;If requested, establish contacts between PC and counterpart, neighbors, local police and community leaders so they know how to contact PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Have your important documents ready in case of an emergency
     </string>
 
     <string name="safety_plan_2_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
-        \t\t\tDo you suspect the perpetrator or the perpetrator’s family/friends know where you live? If so, do you believe the perpetrator may have access to your housing?&lt;br/>&lt;br/>
-        \t\t\tDo you feel safe inside your home? What can Peace Corps do to help you feel safe inside your home (e.g., working locks on door/windows, etc.)?&lt;br/>&lt;br/>
-        \t\t\tIf you live with a host family or on a family compound, does anyone know about the incident? If not, would they be supportive if they were to learn of the incident?&lt;br/>&lt;br/>
-        \t\t\tIf the perpetrator or the perpetrator’s family/friends were to show up at your home are there people you can turn to for assistance?&lt;br/>&lt;br/>
-        \t\t\tIn the unlikely event of a non-medical emergency, are there local friends, community members, or other Volunteers nearby who you can stay with or contact for assistance? If not, can Peace Corps help you identify individuals and establish those contacts? &lt;br/>&lt;br/>
-        \t\t\tHow could you contact these individuals?&lt;br/>&lt;br/>
-        \t\t\tCan you think of other resources or things you can do to feel safer where you live? What can Peace Corps do to assist you with this?
+        &#160;&#160;&#160;&#160;Do you suspect the perpetrator or the perpetrator’s family/friends know where you live? If so, do you believe the perpetrator may have access to your housing?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Do you feel safe inside your home? What can Peace Corps do to help you feel safe inside your home (e.g., working locks on door/windows, etc.)?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If you live with a host family or on a family compound, does anyone know about the incident? If not, would they be supportive if they were to learn of the incident?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If the perpetrator or the perpetrator’s family/friends were to show up at your home are there people you can turn to for assistance?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;In the unlikely event of a non-medical emergency, are there local friends, community members, or other Volunteers nearby who you can stay with or contact for assistance? If not, can Peace Corps help you identify individuals and establish those contacts? &lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;How could you contact these individuals?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Can you think of other resources or things you can do to feel safer where you live? What can Peace Corps do to assist you with this?
     </string>
 
     <string name="safety_plan_2_action">
         &lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tKnow where to go for help&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tAsk staff to conduct a safety inspection of your home, if necessary&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tEnsure needed security upgrades are completed&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tHelp develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tEnsure that you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tHave a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tTake steps to enhance privacy (use locks, keep curtains closed, etc)
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Know where to go for help&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Ask staff to conduct a safety inspection of your home, if necessary&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Ensure needed security upgrades are completed&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Help develop a phone list of people to call in an emergency&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Ensure that you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Have a way to alert neighbors/counterparts if there’s a problem&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Take steps to enhance privacy (use locks, keep curtains closed, etc)
     </string>
 
     <string name="safety_plan_4_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
-        \t\t\tDoes the perpetrator know your cell phone number? Your email address? Have you thought about what you would do if the perpetrator or perpetrator’s friends/family attempts to contact you or posts things about you online?  What can Peace Corps do to help you?&lt;br/>&lt;br/>
-        \t\t\tDoes the perpetrator know any of your passwords? If so, have you considered changing your passwords?&lt;br/>&lt;br/>
-        \t\t\tDo you have any social media accounts (e.g., Facebook, Google, Twitter, Linked In, blogs)? Are you “friends” with the perpetrator or perpetrator’s friends/family? If so, do you know how to block the perpetrator or perpetrator’s family or friends?&lt;br/>&lt;br/>
-        \t\t\tAre you concerned that the perpetrator or perpetrator’s family/friends will contact you on the Internet?  If they do, have you thought about what you will do?
+        &#160;&#160;&#160;&#160;Does the perpetrator know your cell phone number? Your email address? Have you thought about what you would do if the perpetrator or perpetrator’s friends/family attempts to contact you or posts things about you online?  What can Peace Corps do to help you?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Does the perpetrator know any of your passwords? If so, have you considered changing your passwords?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Do you have any social media accounts (e.g., Facebook, Google, Twitter, Linked In, blogs)? Are you “friends” with the perpetrator or perpetrator’s friends/family? If so, do you know how to block the perpetrator or perpetrator’s family or friends?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Are you concerned that the perpetrator or perpetrator’s family/friends will contact you on the Internet?  If they do, have you thought about what you will do?
     </string>
 
     <string name="safety_plan_4_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tChange your SIM card or cellphone&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tEnsure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tChange user names and/or passwords for mail and other social media&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tTry to avoid using location services or posting information that may divulge your location&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tNotify Peace Corps as soon as possible of safety and security concerns or if the offender attempts to contact you.&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tProgram your phone with important emergency numbers&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tKeep phone charged and have enough minutes in case of an emergency.
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Change your SIM card or cellphone&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Ensure you have readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Change user names and/or passwords for mail and other social media&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Try to avoid using location services or posting information that may divulge your location&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Notify Peace Corps as soon as possible of safety and security concerns or if the offender attempts to contact you.&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Program your phone with important emergency numbers&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Keep phone charged and have enough minutes in case of an emergency.
     </string>
 
     <string name="safety_plan_3_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
-        \t\t\tDoes the perpetrator or perpetrator’s family/friends know where you work?&lt;br/>&lt;br/>
-        \t\t\tDoes anyone else at work know about the incident?&lt;br/>&lt;br/>
-        \t\t\tIf your counterpart/supervisor learns about the incident, do you think it would make you more or less safe?&lt;br/>&lt;br/>
-        \t\t\tIf you work with the perpetrator, are there steps you can take to avoid interacting with the perpetrator?&lt;br/>&lt;br/>
-        \t\t\tIf the perpetrator shows up at your work are there people you can turn to for support?&lt;br/>&lt;br/>
-        \t\t\tIs there anything that the Peace Corps can do to help you feel safe at work?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Does the perpetrator or perpetrator’s family/friends know where you work?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Does anyone else at work know about the incident?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If your counterpart/supervisor learns about the incident, do you think it would make you more or less safe?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If you work with the perpetrator, are there steps you can take to avoid interacting with the perpetrator?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If the perpetrator shows up at your work are there people you can turn to for support?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Is there anything that the Peace Corps can do to help you feel safe at work?&lt;br/>&lt;br/>
     </string>
 
     <string name="safety_plan_3_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tMake sure PC has established contact with your counterpart so they know how to contact PC&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tIdentify an emergency point of contact in the workplace&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tImmediately notify PC if the offender comes to your work&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tIf working in isolated areas seek accompaniment by a coworker or community member if possible&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tAvoid staying late or alone in the office or workplace&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Make sure PC has established contact with your counterpart so they know how to contact PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Identify an emergency point of contact in the workplace&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Immediately notify PC if the offender comes to your work&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;If working in isolated areas seek accompaniment by a coworker or community member if possible&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Avoid staying late or alone in the office or workplace&lt;br/>&lt;br/>
     </string>
 
     <string name="safety_plan_5_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
-        \t\t\tDo you anticipate that you will see the perpetrator when you are out in public? If yes, where?&lt;br/>&lt;br/>
-        \t\t\tDo you see the perpetrator’s family/friends when you are out in public? If yes, where?&lt;br/>&lt;br/>
-        \t\t\tIf needed, is there someone you trust who can accompany you to the places you need to go?&lt;br/>&lt;br/>
-        \t\t\tIf you were approached by the perpetrator or perpetrator’s friends/family in a public place, do you know where you could go to be safe?&lt;br/>&lt;br/>
-        \t\t\tDo you have any concerns about rumors related to the incident that are mentioned by community members or other Volunteers? How might you respond to these? How might these rumors impact you? How can Peace Corps assist you in dealing with rumors?&lt;br/>&lt;br/>
-        \t\t\tAre there specific things you or Peace Corps can do that might help you feel safer in your community?
+        &#160;&#160;&#160;&#160;Do you anticipate that you will see the perpetrator when you are out in public? If yes, where?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Do you see the perpetrator’s family/friends when you are out in public? If yes, where?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If needed, is there someone you trust who can accompany you to the places you need to go?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;If you were approached by the perpetrator or perpetrator’s friends/family in a public place, do you know where you could go to be safe?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Do you have any concerns about rumors related to the incident that are mentioned by community members or other Volunteers? How might you respond to these? How might these rumors impact you? How can Peace Corps assist you in dealing with rumors?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Are there specific things you or Peace Corps can do that might help you feel safer in your community?
     </string>
 
     <string name="safety_plan_5_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tEstablish regular check-in plan with PCMO and other PC staff&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tFind out what support services are available to you, including Volunteer Support Network and PCVLs&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tTrust your instincts; don’t worry about appearing to over-react (over-reacting is okay)&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tBe aware of unhealthy coping mechanisms such as self-medicating, isolating oneself, hurting oneself, etc. and seek help from PC&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tAsk Peace Corps for help before stress becomes overwhelming.
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Establish regular check-in plan with PCMO and other PC staff&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Find out what support services are available to you, including Volunteer Support Network and PCVLs&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Trust your instincts; don’t worry about appearing to over-react (over-reacting is okay)&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Be aware of unhealthy coping mechanisms such as self-medicating, isolating oneself, hurting oneself, etc. and seek help from PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Ask Peace Corps for help before stress becomes overwhelming.
     </string>
 
     <string name="safety_plan_6_concerns">&lt;b>CONCERNS&lt;/b>&lt;br/>&lt;br/>
-        \t\t\tDo you have any safety concerns with any modes of transportation related to the incident?&lt;br/>&lt;br/>
-        \t\t\tDoes the perpetrator know your transportation routes? If yes, can you change the routes you take to work, home, shopping?&lt;br/>&lt;br/>
-        \t\t\tDoes the perpetrator or the perpetrator’s friends/family use the same transportation you do? If so, are there other ways you could get where you need to go? Is their opportunity for carpooling with someone else?&lt;br/>&lt;br/>
-        \t\t\tAre there specific things you can think of doing or that Peace Corps might do that might help you feel safer in transport?
+        &#160;&#160;&#160;&#160;Do you have any safety concerns with any modes of transportation related to the incident?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Does the perpetrator know your transportation routes? If yes, can you change the routes you take to work, home, shopping?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Does the perpetrator or the perpetrator’s friends/family use the same transportation you do? If so, are there other ways you could get where you need to go? Is their opportunity for carpooling with someone else?&lt;br/>&lt;br/>
+        &#160;&#160;&#160;&#160;Are there specific things you can think of doing or that Peace Corps might do that might help you feel safer in transport?
     </string>
 
     <string name="safety_plan_6_action">&lt;b>ACTIONS&lt;/b>&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tAssist with identifying a safe taxi/moto-taxi or bus services&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tEnsure that the Volunteer has readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tNotify Peace Corps as soon as possible of safety and security concerns&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tTrust your instincts; don’t worry about appearing to over-react &lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tModify daily routines, change times and routes to frequent locations if possible&lt;br/>&lt;br/>
-        &lt;b>•&lt;/b>\t\t\tKeep personal belongings secure at all times
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Assist with identifying a safe taxi/moto-taxi or bus services&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Ensure that the Volunteer has readily accessible emergency contact numbers for local authorities and PC&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Notify Peace Corps as soon as possible of safety and security concerns&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Trust your instincts; don’t worry about appearing to over-react &lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Modify daily routines, change times and routes to frequent locations if possible&lt;br/>&lt;br/>
+        &lt;b>•&lt;/b>&#160;&#160;&#160;&#160;Keep personal belongings secure at all times
 
     </string>
 
@@ -414,34 +428,34 @@
 
     <!-- PCs commitment to victims -->
     <string name="commitment_info">
-        •\t\t\t	Staff will treat you with dignity and respect. No one deserves to be the victim of a sexual assault.
+        •&#160;&#160;&#160;&#160;Staff will treat you with dignity and respect. No one deserves to be the victim of a sexual assault.
         Peace Corps will believe you if you report a rape or other sexual assault. No one at Peace Corps will blame you or think
         the assault was your fault.&lt;br/>&lt;br/>
-•\t\t\t	Staff will take appropriate steps to provide for your ongoing safety. Every effort will be made to keep you at your site as long
+•&#160;&#160;&#160;&#160;Staff will take appropriate steps to provide for your ongoing safety. Every effort will be made to keep you at your site as long
         as it is safe for you to continue service. BUT – your safety must always come first.&lt;br/>&lt;br/>
-•\t\t\t	Staff will provide you with the support you need to aid in your recovery. This means that Peace Corps will provide both
+•&#160;&#160;&#160;&#160;Staff will provide you with the support you need to aid in your recovery. This means that Peace Corps will provide both
         medical care and emotional support following the event. Each case is handled based on the needs of the Volunteer
         and we do not automatically medevac or separate sexual assault victims from service. Although we may recommend medevac so
         that you can get the medical and psychological help you need, the decision to medevac is jointly determined by the Volunteer,
         the PCMO and the Counseling and Outreach Unit in Washington.&lt;br/>&lt;br/>
-•\t\t\t	Staff will help you to understand the relevant legal processes and your legal options. Peace Corps understands there may be
+•&#160;&#160;&#160;&#160;Staff will help you to understand the relevant legal processes and your legal options. Peace Corps understands there may be
         significant cultural, language and legal challenges and as a result will help you navigate the local system. If you are
         interested in reporting to the police, we will stand beside you at every step of the process.The decision to report to the police is
         yours and yours alone – we will respect whatever decision you make.&lt;br/>&lt;br/>
-•\t\t\t	Staff will keep you informed of the progress of your case, should you choose to pursue prosecution. Peace Corps will ensure that you
+•&#160;&#160;&#160;&#160;Staff will keep you informed of the progress of your case, should you choose to pursue prosecution. Peace Corps will ensure that you
         receive timely updates regarding your case whether or not you continue your service. A Victim Advocate will be available to answer
         any questions or concerns you have regarding the status of your case.&lt;br/>&lt;br/>
-•\t\t\t	Staff will work closely with you to make decisions regarding your continued service. No decisions about your site and service will be
+•&#160;&#160;&#160;&#160;Staff will work closely with you to make decisions regarding your continued service. No decisions about your site and service will be
         made without your input and collaboration.&lt;br/>&lt;br/>
-•\t\t\t	Staff will respect your privacy and will not, without your consent, disclose your identity or share the details of the incident with
+•&#160;&#160;&#160;&#160;Staff will respect your privacy and will not, without your consent, disclose your identity or share the details of the incident with
         anyone who does not have a legitimate need to know. Only those people who will be directly involved in your medical, emotional
         and security support will know your identity. &lt;br/>&lt;br/>
-    \t\tThe Peace Corps Director has made it clear that all staff are expected to uphold these commitments, both in actions and words.
+    &#160;&#160;&#160;The Peace Corps Director has made it clear that all staff are expected to uphold these commitments, both in actions and words.
         If you are sexually assaulted and you feel that Peace Corps staff members are not living up to the agency’s commitment, you can:&lt;br/>&lt;br/>
     &lt;b>Contact the agency’s Office of Victim Advocacy, which is independent from staff at post.&lt;br/>
         &lt;br/>Contact the Office of the Inspector General, or OIG, which provides independent oversight of agency programs and operations
         through regular audits, evaluations and investigations.&lt;/b> &lt;br/>&lt;br/>
-•\t\t\t	If you feel that a sexual assault was not handled according to the agency’s Commitment to Sexual Assault Victims you can
+•&#160;&#160;&#160;&#160;If you feel that a sexual assault was not handled according to the agency’s Commitment to Sexual Assault Victims you can
         confidentially report to the OIG via an online web form located on Peace Corps’ website, or by phone, or email.</string>
 
     <string name="ongoing_info">
@@ -582,23 +596,23 @@ assist you with your legal options. Peace Corps will be with you every step of t
 
     <string name="impact_sexual_assault">
     &lt;b>Physical/Physiological:&lt;/b>&lt;br/>
-        •\t\t\tPhysical injury from the assault itself &lt;br/>
-        •\t\t\tPregnancy&lt;br/>
-        •\t\t\tSexually Transmitted Infections &lt;br/>
-        •\t\t\tSelf-medicating (i.e., alcohol/drug abuse) &lt;br/>
-        •\t\t\tSleep disorders&lt;br/>
-        •\t\t\tEating disorders &lt;br/>
-        •\t\t\tPhysical triggers (sights, smells, sounds, touching) that may produce a physical or psychological reaction &lt;br/>
-        •\t\t\tSelf-mutilation (self-inflicted cuts but not to commit suicide) &lt;br/>&lt;br/>
+        •&#160;&#160;&#160;&#160;Physical injury from the assault itself &lt;br/>
+        •&#160;&#160;&#160;&#160;Pregnancy&lt;br/>
+        •&#160;&#160;&#160;&#160;Sexually Transmitted Infections &lt;br/>
+        •&#160;&#160;&#160;&#160;Self-medicating (i.e., alcohol/drug abuse) &lt;br/>
+        •&#160;&#160;&#160;&#160;Sleep disorders&lt;br/>
+        •&#160;&#160;&#160;&#160;Eating disorders &lt;br/>
+        •&#160;&#160;&#160;&#160;Physical triggers (sights, smells, sounds, touching) that may produce a physical or psychological reaction &lt;br/>
+        •&#160;&#160;&#160;&#160;Self-mutilation (self-inflicted cuts but not to commit suicide) &lt;br/>&lt;br/>
 
     &lt;b>Psychological/ Emotional:&lt;/b>&lt;br/>
-        •\t\t\tDepression &lt;br/>
-        •\t\t\tAnger &lt;br/>
-        •\t\t\tFear &lt;br/>
-        •\t\t\tAnxiety &lt;br/>
-        •\t\t\tGuilt &lt;br/>
-        •\t\t\tShock&lt;br/>
-        •\t\t\tShame/ Embarrassment &lt;br/>&lt;br/>
+        •&#160;&#160;&#160;&#160;Depression &lt;br/>
+        •&#160;&#160;&#160;&#160;Anger &lt;br/>
+        •&#160;&#160;&#160;&#160;Fear &lt;br/>
+        •&#160;&#160;&#160;&#160;Anxiety &lt;br/>
+        •&#160;&#160;&#160;&#160;Guilt &lt;br/>
+        •&#160;&#160;&#160;&#160;Shock&lt;br/>
+        •&#160;&#160;&#160;&#160;Shame/ Embarrassment &lt;br/>&lt;br/>
     It is important to recognize that all of the reactions are NORMAL. They are NORMAL reactions to an ABNORMAL situation.
     They are symptoms of a traumatic experience that your body and mind are trying to deal with - like running a fever to fight off infection. While the symptoms are normal, it’s okay to seek help.
 
@@ -621,39 +635,39 @@ assist you with your legal options. Peace Corps will be with you every step of t
 
     <string name="helping1">
     &lt;b>Believe.&lt;/b>&lt;br/>&lt;br/>
-    •\t\t\t	If a survivor chooses to share their story with you, do not to question
+    •&#160;&#160;&#160;&#160;If a survivor chooses to share their story with you, do not to question
     their story, judge it, or ask for details about it.&lt;br/>
-	•\t\t\t	Show them and tell them that you believe them, and that they are believed. &lt;br/>
+	•&#160;&#160;&#160;&#160;Show them and tell them that you believe them, and that they are believed. &lt;br/>
  </string>
 
  <string name="helping2">
     &lt;b>Respect.&lt;/b>&lt;br/>&lt;br/>
-    •\t\t\t	Listen patiently and allow them to share their story on their own terms.
+    •&#160;&#160;&#160;&#160;Listen patiently and allow them to share their story on their own terms.
     You may be the first and only person your friend tells.&lt;br/>
-    •\t\t\t	Encourage them to take their time, or reassure them that you are there to listen when they are ready. &lt;br/>
-    •\t\t\t	You can also respect their privacy by not sharing with others. &lt;br/></string>
+    •&#160;&#160;&#160;&#160;Encourage them to take their time, or reassure them that you are there to listen when they are ready. &lt;br/>
+    •&#160;&#160;&#160;&#160;You can also respect their privacy by not sharing with others. &lt;br/></string>
 
  <string name="helping3">
     &lt;b>No pressure.&lt;/b>&lt;br/>&lt;br/>
-    •\t\t\tIt is important to not ask/tell a survivor to report their assault to family, loved ones, the police,
+    •&#160;&#160;&#160;&#160;It is important to not ask/tell a survivor to report their assault to family, loved ones, the police,
      or the authorities or seek certain help. &lt;br/>
-    •\t\t\tAllow a survivor to seek help and heal at their own pace.  Instead, offer to support them, accompany them
+    •&#160;&#160;&#160;&#160;tAllow a survivor to seek help and heal at their own pace.  Instead, offer to support them, accompany them
     , or help them seek information at a pace that they want and are comfortable with. &lt;br/> </string>
 
 <string name="helping4">
     &lt;b>Connect and share.&lt;/b>&lt;br/>&lt;br/>
-    •\t\t\tA survivor may want additional support and information. You can provide an enormous amount
+    •&#160;&#160;&#160;&#160;A survivor may want additional support and information. You can provide an enormous amount
      of support by expressing concern and offering to look into resources for them. This could be
      medical treatment at a hospital, a sexual assault hotline, local advocacy services, counseling, or a local support group. &lt;br/>
-    •\t\t\tIt could also be as simple as providing a phone number or going with them to an appointment&lt;br/> </string>
+    •&#160;&#160;&#160;&#160;It could also be as simple as providing a phone number or going with them to an appointment&lt;br/> </string>
 
 <string name="helping5">
     &lt;b>Repeat.&lt;/b>&lt;br/>&lt;br/>
-    •\t\t\tOffer to be there for your friend whenever they need you. Encourage them to come
+    •&#160;&#160;&#160;&#160;Offer to be there for your friend whenever they need you. Encourage them to come
     back to you for further support when appropriate. Remind them that you will be there to listen when they do. &lt;br/>
-    •\t\t\tThis will help your friend know that you are a safe source of support and that they
+    •&#160;&#160;&#160;&#160;This will help your friend know that you are a safe source of support and that they
     can rely on when they need it.  &lt;br/>
-    •\t\t\tCreating this culture of openness with a friend can be comforting to a
+    •&#160;&#160;&#160;&#160;Creating this culture of openness with a friend can be comforting to a
     survivor who may need space to begin healing on their own terms.&lt;br/> </string>
 
     <string name="policies_all">&lt;b>MS 243 Responding to Sexual Assault&lt;/b>&lt;br/>&lt;br/>

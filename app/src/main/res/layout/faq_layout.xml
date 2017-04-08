@@ -32,14 +32,15 @@
         android:textStyle="bold|italic"/>
     </LinearLayout>
 
-    <TextView
+    <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+        ext:documentView_textAlignment="justified"
         android:id="@+id/faqdescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/abc_text_size_small_material"
-        android:textColor="@color/primary_text_default_material_dark"
-        android:maxLines="0"
-        android:visibility="invisible"
+        ext:documentView_textSize="@dimen/abc_text_size_small_material"
+        ext:documentView_textColor="@color/primary_text_default_material_dark"
+        android:visibility="gone"
+        ext:documentView_antialias="true"
         android:background="@drawable/bg_textview_faq_rounded_lower"
-        android:padding="@dimen/faq_padding"/>
+        ext:documentView_insetPadding="@dimen/faq_padding" />
 </LinearLayout>

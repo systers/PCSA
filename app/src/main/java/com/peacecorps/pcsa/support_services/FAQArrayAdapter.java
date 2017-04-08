@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bluejamesbond.text.DocumentView;
+import com.bluejamesbond.text.hyphen.DefaultHyphenator;
 import com.peacecorps.pcsa.R;
 
 
@@ -38,31 +40,32 @@ public class FAQArrayAdapter extends ArrayAdapter<String> {
         View faq = inflater.inflate(R.layout.faq_layout, parent, false);
 
         final TextView faqTitle = (TextView) faq.findViewById(R.id.faqtitle);
-        final TextView faqDesc = (TextView) faq.findViewById(R.id.faqdescription);
+        final DocumentView faqDesc = (DocumentView) faq.findViewById(R.id.faqdescription);
         final LinearLayout faq_title_and_image = (LinearLayout) faq.findViewById(R.id.faq_title_and_image);
         final TextView viewMoreArrow = (TextView) faq.findViewById(R.id.arrow);
 
         faqTitle.setText(String.valueOf(faqTitles[position]));
         faqDesc.setText(String.valueOf(faqDescptions[position]));
 
-        faq_title_and_image.setOnClickListener(new View.OnClickListener(){
+        faqDesc.getDocumentLayoutParams().setHyphenator(DefaultHyphenator.
+                getInstance(DefaultHyphenator.HyphenPattern.PT));
+        faqDesc.getDocumentLayoutParams().setHyphenated(true);
+
+        faq_title_and_image.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (faqDesc.getVisibility() == View.INVISIBLE) {
+                if (faqDesc.getVisibility() == View.GONE) {
                     faqDesc.setVisibility(View.VISIBLE);
-                    faqDesc.setMaxLines(Integer.MAX_VALUE);
                     faq_title_and_image.setBackgroundResource(R.drawable.bg_textview_faq_rounded_upper);
                     viewMoreArrow.setRotation(180);
                 } else {
-                    faqDesc.setVisibility(View.INVISIBLE);
-                    faqDesc.setMaxLines(0);
+                    faqDesc.setVisibility(View.GONE);
                     faq_title_and_image.setBackgroundResource(R.drawable.bg_textview_rounded_rectangle);
                     viewMoreArrow.setRotation(90);
                 }
             }
         });
-
         return faq;
     }
 }

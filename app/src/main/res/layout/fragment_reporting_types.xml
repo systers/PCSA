@@ -51,30 +51,34 @@
                 android:fadeScrollbars="false"
                 android:paddingLeft="@dimen/reporting_types_paddingLeft">
 
-                <TextView
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    ext:documentView_textAlignment="justified"
                     android:layout_width="@dimen/reporting_types_width"
                     android:layout_height="match_parent"
-                    android:textColor="@color/primary_text_default_material_dark"
+                    ext:documentView_textColor="@color/primary_text_default_material_dark"
                     android:id="@+id/reporting_both"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/bg_textview_rounded_rectangle"
-                    android:padding="@dimen/reporting_types_padding"
+                    ext:documentView_insetPadding="@dimen/reporting_types_padding"
                     android:scrollbars="vertical"
                     android:fadeScrollbars="false"
-                    android:scrollbarStyle="insideInset"/>
+                    android:scrollbarStyle="insideInset"
+                    ext:documentView_antialias="true" />
 
-                <TextView
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    ext:documentView_textAlignment="justified"
                     android:layout_width="@dimen/reporting_types_width"
                     android:layout_height="match_parent"
-                    android:textColor="@color/primary_text_default_material_dark"
+                    ext:documentView_textColor="@color/primary_text_default_material_dark"
                     android:id="@+id/reporting_standard"
                     android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:background="@drawable/bg_textview_rounded_rectangle"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:padding="@dimen/reporting_types_padding"
+                    ext:documentView_insetPadding="@dimen/reporting_types_padding"
                     android:scrollbars="vertical"
                     android:fadeScrollbars="false"
-                    android:scrollbarStyle="insideInset"/>
+                    android:scrollbarStyle="insideInset"
+                    ext:documentView_antialias="true" />
 
             </LinearLayout>
         </HorizontalScrollView>

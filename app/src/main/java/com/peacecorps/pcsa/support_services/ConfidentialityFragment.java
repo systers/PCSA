@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.peacecorps.pcsa.R;
+import com.peacecorps.pcsa.safety_tools.FormattedSafetyPlanBasicsContentFragment;
 import com.peacecorps.pcsa.safety_tools.SafetyPlanBasicsContentFragment;
 
 /*
@@ -49,7 +50,9 @@ public class ConfidentialityFragment extends Fragment {
         assaultedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SafetyPlanBasicsContentFragment.showDialog(getActivity(),getString(R.string.assaulted_title),getString(R.string.confidentiality_assault));
+                FormattedSafetyPlanBasicsContentFragment.showDialog(getActivity(),
+                        getString(R.string.assaulted_title),
+                        getString(R.string.confidentiality_assault));
 
             }
         });

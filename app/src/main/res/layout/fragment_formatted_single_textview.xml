@@ -25,24 +25,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/contact_pick_button_margin">
+
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
-            android:background="@drawable/bg_textview_rounded_rectangle">
+            android:background="@drawable/bg_textview_rounded_rectangle"
+            android:fadeScrollbars="false"
+            android:scrollbarStyle="insideInset">
 
-            <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
-                ext:documentView_textAlignment="justified"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                ext:documentView_textColor="@color/primary_text_default_material_dark"
                 android:id="@+id/layout_content"
-                ext:documentView_insetPadding="@dimen/reporting_types_padding"
-                ext:documentView_textSize="18sp"
-                android:fadeScrollbars="false"
-                android:scrollbarStyle="insideInset"
-                ext:documentView_antialias="true" />
+                android:orientation="vertical" />
 
         </ScrollView>
     </LinearLayout>

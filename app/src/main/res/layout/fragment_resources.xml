@@ -20,8 +20,6 @@
         android:textSize="@dimen/sub_title_font"
         android:text="@string/further_resources"/>
 
-
-
     <TextView
         android:id="@+id/resources_content"
         android:layout_width="wrap_content"
@@ -33,7 +31,6 @@
         android:padding="@dimen/textview_padding"
         android:textSize="@dimen/textsize_links"
         android:autoLink="web"
-        android:text="@string/resources_all"
-        />
+        android:text="@string/resources_all" />
 
 </LinearLayout>
