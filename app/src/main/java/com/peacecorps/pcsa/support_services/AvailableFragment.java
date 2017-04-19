@@ -1,5 +1,6 @@
 package com.peacecorps.pcsa.support_services;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -43,8 +44,8 @@ public class AvailableFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.title_activity_faq);
-                Fragment faqFragment = new FAQFragment();
-                MainActivity.swapFragmentIn(getActivity(),faqFragment, FAQFragment.TAG,true);
+                Intent intent=new Intent(getActivity(),FAQFragment.class);
+                startActivity(intent);
 
             }
         });
