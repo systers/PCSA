@@ -5,14 +5,10 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.location.Location;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
@@ -135,14 +131,17 @@ public class CircleOfTrustFragment extends Fragment {
                             if(!sent.get(i))
                                 logMessage += numbers[i] + " : " + getString(R.string.sms_send_pass);
                             else
-                                logMessage += numbers[i] + " : " + getString(R.string.sms_send_fail);
+                                logMessage += numbers[i] + " : " + context.getString(R.string.sms_send_fail);
                             logMessage += "\n";
                         }
 
                     }
-                    CustomAlertDialogFragment customAlertDialogFragment = CustomAlertDialogFragment.newInstance(getString(R.string.log_title),logMessage);
-                    customAlertDialogFragment.show(getActivity().getSupportFragmentManager(),getString(R.string.dialog_tag));
                     sent.clear();
+                    //starts the dialog activity which will show the report
+                    Intent intent1 = new Intent(context,SMSReportDialogActivity.class);
+                    intent1.putExtra(SmsConstants.SMS_REPORT,logMessage);
+                    context.startActivity(intent1);
+
                 }
             }
         };
