@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
 
 /*
@@ -164,6 +165,14 @@ public class CircleIntroActivity extends AppCompatActivity {
         finish();//finishing activity
     }
 
+    @Override
+    public void onBackPressed() {
+        if (isFirstRun){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
+    }
 
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
