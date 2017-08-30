@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+import com.peacecorps.pcsa.circle_of_trust.CircleIntroActivity;
 import com.peacecorps.pcsa.circle_of_trust.CircleOfTrustFragment;
 import com.peacecorps.pcsa.get_help_now.ContactOtherStaff;
 import com.peacecorps.pcsa.get_help_now.ContactPostStaff;
@@ -115,9 +116,14 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 1:
                             //Swapping CircleOfTrustFragment into the container
-                            CircleOfTrustFragment circleOfTrustFragment = new CircleOfTrustFragment();
-                            MainActivity.swapFragmentIn(MainActivity.this, circleOfTrustFragment, CircleOfTrustFragment.TAG, true);
-                            mDrawer.closeDrawer(GravityCompat.START);
+                            boolean isFirstRun =  getSharedPreferences("prefs", 0).getBoolean("firstRun", true);
+                            if(isFirstRun) {
+                                startActivityForResult(new Intent(MainActivity.this, CircleIntroActivity.class),2);
+                            } else {
+                                CircleOfTrustFragment circleOfTrustFragment = new CircleOfTrustFragment();
+                                MainActivity.swapFragmentIn(MainActivity.this, circleOfTrustFragment, CircleOfTrustFragment.TAG, true);
+                                mDrawer.closeDrawer(GravityCompat.START);
+                            }
                             break;
                         case 6:
                             Intent intent = new Intent(MainActivity.this, UserSettingsActivity.class);
@@ -376,5 +382,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode)
+        {
+            case 2:
+                //Swapping CircleOfTrustFragment into the container
+                CircleOfTrustFragment circleOfTrustFragment = new CircleOfTrustFragment();
+                MainActivity.swapFragmentIn(MainActivity.this,circleOfTrustFragment,CircleOfTrustFragment.TAG,true);
+                mDrawer.closeDrawer(GravityCompat.START);
+        }
     }
 }
