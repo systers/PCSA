@@ -50,7 +50,6 @@ public class SafetyPlanBasicsContentFragment extends DialogFragment {
             titleToDisplay.setTypeface(null,Typeface.BOLD);
             titleToDisplay.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
             titleToDisplay.setGravity(Gravity.CENTER);
-            getDialog().setTitle(title);
         }
         else
         {
