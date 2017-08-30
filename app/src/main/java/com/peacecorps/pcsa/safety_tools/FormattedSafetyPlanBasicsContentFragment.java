@@ -8,6 +8,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.text.Html;
+import android.text.style.RelativeSizeSpan;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,16 +19,18 @@ import android.widget.TextView;
 
 import com.bluejamesbond.text.DocumentView;
 import com.bluejamesbond.text.hyphen.DefaultHyphenator;
+import com.bluejamesbond.text.style.JustifiedSpan;
+import com.bluejamesbond.text.style.TextAlignment;
+import com.bluejamesbond.text.util.ArticleBuilder;
+import com.peacecorps.pcsa.JustificationUtil;
 import com.peacecorps.pcsa.R;
 
-/*
+/**
  * One Fragment which acts like a placeholder for every different screens of Safety Plan Basics
- *
- * @author rohan
- * @since 2016-07-08
+ * Created by ashu on 5/2/17.
  */
-public class SafetyPlanBasicsContentFragment extends DialogFragment {
 
+public class FormattedSafetyPlanBasicsContentFragment extends DialogFragment {
     public static final String TITLE_KEY = "title";
     public static final String CONTENT_KEY = "content";
     TextView titleToDisplay;
@@ -42,7 +45,7 @@ public class SafetyPlanBasicsContentFragment extends DialogFragment {
      */
     public static void showDialog(FragmentActivity context, String title, String contentToShow) {
         FragmentManager fm = context.getSupportFragmentManager();
-        SafetyPlanBasicsContentFragment safetyPlanBasicsContentFragment = new SafetyPlanBasicsContentFragment();
+        FormattedSafetyPlanBasicsContentFragment safetyPlanBasicsContentFragment = new FormattedSafetyPlanBasicsContentFragment();
         Bundle bundle = new Bundle();
         bundle.putString(TITLE_KEY, title);
         bundle.putString(CONTENT_KEY, contentToShow);
@@ -53,18 +56,22 @@ public class SafetyPlanBasicsContentFragment extends DialogFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View rootView = inflater.inflate(R.layout.fragment_safety_plan_basics_content, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_formatted_safety_plan_basics_content, container, false);
+        JustificationUtil util = new JustificationUtil(getActivity().getApplicationContext());
         parentView = (LinearLayout) rootView.findViewById(R.id.myView);
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        contenttoDisplay = (DocumentView) rootView.findViewById(R.id.justified_textView);
         titleToDisplay = (TextView) rootView.findViewById(R.id.safety_plan_basics_title);
         String title = getArguments().getString(TITLE_KEY);
         String content = getArguments().getString(CONTENT_KEY);
-        contenttoDisplay.setText(Html.fromHtml(content));
+        ArticleBuilder articleBuilder = new ArticleBuilder();
+        articleBuilder.append(content, true, new RelativeSizeSpan(1f), new JustifiedSpan());
+        contenttoDisplay = util.addDocumentView(Html.toHtml(articleBuilder), DocumentView.FORMATTED_TEXT, false, null,getActivity());
+        contenttoDisplay.getDocumentLayoutParams().setTextAlignment(TextAlignment.JUSTIFIED);
         contenttoDisplay.getDocumentLayoutParams().setHyphenator(DefaultHyphenator.
                 getInstance(DefaultHyphenator.HyphenPattern.PT));
         contenttoDisplay.getDocumentLayoutParams().setHyphenated(true);
+        LinearLayout linearLayout = (LinearLayout) rootView.findViewById(R.id.safety_plan_basics_content);
+        linearLayout.addView(contenttoDisplay);
 
         //contenttoDisplay.setMovementMethod(new ScrollingMovementMethod());
         if (title != null) {

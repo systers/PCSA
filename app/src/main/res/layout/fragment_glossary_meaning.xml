@@ -7,13 +7,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_horizontal_margin">
     <!-- Words Meaning -->
-    <TextView
+    <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+        ext:documentView_textAlignment="justified"
         android:background="@drawable/bg_textview_rounded_rectangle"
-        android:padding="@dimen/textview_padding"
-        android:textColor="@color/primary_text_default_material_dark"
+        ext:documentView_insetPadding="@dimen/textview_padding"
+        ext:documentView_textColor="@color/primary_text_default_material_dark"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/font_size_meaning"
+        ext:documentView_textSize="@dimen/font_size_meaning"
         android:layout_width="match_parent"
+        ext:documentView_antialias="true"
         android:id="@+id/word_meaning"/>
 
 </LinearLayout>

@@ -33,11 +33,17 @@
         <include
             android:id="@+id/contact_now"
             layout="@layout/button"/>
-        <include android:id="@+id/reporting_contact_description"
-            layout="@layout/textview"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:background="@drawable/bg_textview_rounded_rectangle"
+            android:fadeScrollbars="false"
+            android:scrollbars="vertical"
+            android:id="@+id/reporting_contact_description"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
 </ScrollView>

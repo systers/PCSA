@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.peacecorps.pcsa.FormattedSingleTextViewFragment;
 import com.peacecorps.pcsa.MainActivity;
 import com.peacecorps.pcsa.R;
 import com.peacecorps.pcsa.SingleTextViewFragment;
@@ -55,7 +56,7 @@ public class MainFragment extends Fragment{
         impactButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SingleTextViewFragment.showSingleTextLayout(getActivity(),getString(R.string.impact),
+                FormattedSingleTextViewFragment.showSingleTextLayout(getActivity(), getString(R.string.impact),
                         getString(R.string.impact_subtitle),getString(R.string.impact_sexual_assault));
             }
         });

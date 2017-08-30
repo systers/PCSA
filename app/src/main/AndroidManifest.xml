@@ -25,7 +25,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
-      
+
         <activity
             android:name=".reporting.Confidentiality"
             android:label="@string/title_activity_confidentiality" />
@@ -36,8 +36,7 @@
             android:name=".circle_of_trust.Trustees"
             android:label="@string/title_activity_trustees"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
-            >
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.MainActivity" />
@@ -60,10 +59,10 @@
         </activity>
         <activity
             android:name=".UserSettingsActivity"
+            android:configChanges="orientation|screenSize"
             android:label="@string/user_settings_activity"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
-            android:configChanges="orientation|screenSize">
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.MainActivity" />
@@ -73,18 +72,18 @@
             android:label="@string/title_activity_login"
             android:parentActivityName=".SplashScreenActivity"
             android:theme="@style/MyMaterialTheme"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
-            >
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.peacecorps.pcsa.SplashScreenActivity" />
         </activity>
-        <activity android:name=".circle_of_trust.CircleIntroActivity"
+        <activity
+            android:name=".circle_of_trust.CircleIntroActivity"
             android:label="@string/title_activity_circle_intro"
             android:parentActivityName=".MainActivity">
-                        <meta-data
-                            android:name="android.support.PARENT_ACTIVITY"
-                            android:value="com.peacecorps.pcsa.MainActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.peacecorps.pcsa.MainActivity" />
         </activity>
         <activity android:name=".circle_of_trust.SMSReportDialogActivity"
             android:theme="@android:style/Theme.Holo.Light.Dialog">

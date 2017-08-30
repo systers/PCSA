@@ -20,10 +20,14 @@
         android:textColorLink="@color/text_color_link"
         android:textSize="@dimen/abc_text_size_medium_material" />
 
-    <include
-        android:id="@+id/safety_plan_basics_content"
-        layout="@layout/textview"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/dialog_height" />
+        android:layout_height="@dimen/dialog_height"
+        android:id="@+id/safety_plan_basics_content"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_textview_rounded_rectangle" />
 
 </LinearLayout>

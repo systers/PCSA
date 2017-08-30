@@ -49,6 +49,7 @@
 
     <!-- Title and sub-title font sizes-->
     <dimen name="title_font">32sp</dimen>
+    <dimen name="text_medium">17sp</dimen>
     <dimen name="sub_title_font">28sp</dimen>
     <dimen name="menu_icon_width">200dp</dimen>
     <dimen name="text_extra_small">12sp</dimen>
