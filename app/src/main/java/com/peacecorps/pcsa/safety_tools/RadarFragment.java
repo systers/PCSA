@@ -92,8 +92,13 @@ public class RadarFragment extends Fragment {
                     nextStep.setVisibility(View.INVISIBLE);
                 else if(position == 1)
                     prevStep.setVisibility(View.VISIBLE);
-                else if(position == 3)
+                else if(position == 3) {
                     nextStep.setVisibility(View.VISIBLE);
+                    prevStep.setVisibility(View.VISIBLE);
+                }
+                else if(position == 2)
+                    prevStep.setVisibility(View.VISIBLE);
+
             }
 
             @Override
