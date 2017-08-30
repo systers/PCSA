@@ -60,12 +60,13 @@ public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
     private Integer fetchThumbnailId(String phoneNumber) {
         ContentResolver contentResolver = context.getContentResolver();
 
-        final Uri uri = Uri.withAppendedPath(ContactsContract.CommonDataKinds.Phone.CONTENT_FILTER_URI, Uri.encode(phoneNumber));
-        final Cursor cursor = contentResolver.query(uri, PHOTO_ID_PROJECTION, null, null, ContactsContract.Contacts.DISPLAY_NAME + " ASC");
+        final Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(phoneNumber));
+
+        final Cursor cursor = contentResolver.query(uri, PHOTO_ID_PROJECTION, null, null, null);
 
         try {
             Integer thumbnailId = null;
-            if (cursor!= null && cursor.moveToFirst()) {
+            if (cursor != null && cursor.moveToFirst()) {
                 thumbnailId = cursor.getInt(cursor.getColumnIndex(ContactsContract.Contacts.PHOTO_ID));
             }
             return thumbnailId;
@@ -73,8 +74,8 @@ public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
             Log.e(TAG, "Unable to load thumbnail ID", e);
             return null;
         } finally {
-            if(cursor !=null)
-            cursor.close();
+            if (cursor != null)
+                cursor.close();
         }
 
     }
@@ -103,8 +104,8 @@ public class ContactPhotoLoader extends AsyncTask<String, Integer, Bitmap> {
             Log.e(TAG, "Unable to load thumbnail image", e);
             return null;
         } finally {
-            if(cursor != null)
-            cursor.close();
+            if (cursor != null)
+                cursor.close();
         }
 
     }
