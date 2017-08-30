@@ -86,6 +86,9 @@
                             android:name="android.support.PARENT_ACTIVITY"
                             android:value="com.peacecorps.pcsa.MainActivity" />
         </activity>
+        <activity android:name=".circle_of_trust.SMSReportDialogActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+        </activity>
     </application>
 
 </manifest>

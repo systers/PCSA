@@ -230,4 +230,5 @@
     <string name="theft">Theft</string>
     <string name="vulnerability">Vulnerability</string>
     <string name="lookup_important_words">Lookup important words</string>
+    <string name="dialog_ok">OK</string>
 </resources>

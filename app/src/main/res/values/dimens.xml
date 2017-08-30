@@ -116,5 +116,12 @@
     <dimen name="safety_plan_marginTop">20dp</dimen>
     <dimen name="sub_title_font_trustee">28sp</dimen>
     <dimen name="navgn_bar_marginRight">0dp</dimen>
+    <dimen name="dialog_title_textSize">20sp</dimen>
+    <dimen name="dialog_title_marginLeft">10dp</dimen>
+    <dimen name="dialog_title_marginTop">10dp</dimen>
+    <dimen name="dialog_title_marginBottom">40dp</dimen>
+    <dimen name="dialog_marginRight">10dp</dimen>
+    <dimen name="dialog_content_marginBottom">20dp</dimen>
+    <dimen name="dialog_textSize">15sp</dimen>
 
 </resources>
