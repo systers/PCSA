@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -30,7 +31,7 @@ public class SplashScreenActivity extends Activity {
         setContentView(R.layout.activity_splashscreen);
         getWindow().setBackgroundDrawable(null);
         progressBar = (ProgressBar)findViewById(R.id.splash_screen_progress);
-        progressBar.getIndeterminateDrawable().setColorFilter(getResources().getColor(R.color.background_textview),android.graphics.PorterDuff.Mode.MULTIPLY);
+        progressBar.getIndeterminateDrawable().setColorFilter(ContextCompat.getColor(getApplicationContext(),R.color.background_textview),android.graphics.PorterDuff.Mode.MULTIPLY);
         progressBar.setVisibility(View.VISIBLE);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(SplashScreenActivity.this);
         runnable = new Runnable() {

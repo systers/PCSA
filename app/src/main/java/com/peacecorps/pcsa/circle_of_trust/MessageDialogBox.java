@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -70,7 +71,7 @@ public class MessageDialogBox extends DialogFragment {
         //Adding the header(title) to the dialog box
         TextView textView = new TextView(context);
         textView.setText(getString(R.string.select_request));
-        textView.setTextColor(context.getResources().getColor(R.color.primary_text_default_material_dark));
+        textView.setTextColor(ContextCompat.getColor(context , R.color.primary_text_default_material_dark));
         textView.setTypeface(Typeface.DEFAULT_BOLD);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
         textView.setGravity(Gravity.CENTER);

@@ -3,6 +3,7 @@ package com.peacecorps.pcsa.circle_of_trust;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -111,7 +112,7 @@ public class CircleIntroActivity extends AppCompatActivity {
      */
     private void addBottomDots(int current_slide) {
         dots = new TextView[introSlides.length];
-        int dot_colorActive = getResources().getColor(R.color.selected_dot);
+        int dot_colorActive = ContextCompat.getColor(getApplicationContext(), R.color.selected_dot);
         int[] dot_colorsInactive = getResources().getIntArray(R.array.array_dot_inactive);
         indicatingDotsContainer.removeAllViews();
 
