@@ -63,6 +63,8 @@ public class LocationHelper {
                 Log.e(TAG, "Unable to listen to GPS location updates", e);
             } catch (NullPointerException e) {
                 Log.e(TAG, "Unable to get location services", e);
+            } catch (SecurityException e) {
+                Log.e(TAG, "No permission for location", e);
             }
         }
     }
@@ -74,7 +76,11 @@ public class LocationHelper {
     public void stopAcquiringLocation() {
         if (locationManager != null && locationListener != null) {
             // Remove the listener which added by calling #startAcquiringLocation
-            locationManager.removeUpdates(locationListener);
+            try {
+                locationManager.removeUpdates(locationListener);
+            } catch (SecurityException e) {
+                Log.e(TAG, "No permission for location", e);
+            }
         }
     }
 
@@ -86,7 +92,11 @@ public class LocationHelper {
      */
     public Location retrieveLocation(boolean needLastKnown) {
         if (lastLocation == null && locationManager != null && needLastKnown) {
-            lastLocation = locationManager.getLastKnownLocation(LOCATION_PROVIDER);
+            try {
+                lastLocation = locationManager.getLastKnownLocation(LOCATION_PROVIDER);
+            } catch (SecurityException e) {
+                Log.e(TAG, "No permission for location", e);
+            }
         }
         return lastLocation;
     }

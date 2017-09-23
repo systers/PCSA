@@ -40,7 +40,6 @@ import com.peacecorps.pcsa.support_services.AvailableFragment;
 import com.peacecorps.pcsa.support_services.ConfidentialityFragment;
 import com.peacecorps.pcsa.support_services.MythbustersFragment;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -50,43 +49,42 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final int PERMISSION_CALLBACK = 100;
+    private static final int PERMISSION_SETTINGS = 101;
+    public static boolean refreshList = false;
+    public static String FRAGMENT_TAG = MainActivityFragment.TAG;
     private Toolbar toolbar;
     private DrawerLayout mDrawer;
     private NavDrawerListAdapter listAdapter;
     private ExpandableListView expListView;
     private List<String> listDataHeader;
-    public static boolean refreshList= false;
     private HashMap<String, List<String>> listDataChild;
-    private static final String TAG = MainActivity.class.getSimpleName();
-    public static String FRAGMENT_TAG = MainActivityFragment.TAG;
     private FragmentManager fragmentManager = getSupportFragmentManager();
     SharedPreferences sharedPreferences;
-    private int lastExpandedGroup=-1;
+    private int lastExpandedGroup = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(savedInstanceState != null)
-        {
+        if (savedInstanceState != null) {
             /*
             * Check if instance of the required fragment is available
             * in the backstack and swap it into the container
             */
             Fragment unknownFragment = fragmentManager.findFragmentByTag(FRAGMENT_TAG);
-            if(unknownFragment != null){
-                MainActivity.swapFragmentIn(this,unknownFragment,FRAGMENT_TAG,false);
+            if (unknownFragment != null) {
+                MainActivity.swapFragmentIn(this, unknownFragment, FRAGMENT_TAG, false);
             }
-        }
-        else
-        {
+        } else {
             Fragment mainActivityFragment = new MainActivityFragment();
-            swapFragmentIn(this,mainActivityFragment,MainActivityFragment.TAG,false);
+            swapFragmentIn(this, mainActivityFragment, MainActivityFragment.TAG, false);
         }
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mDrawer = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, mDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawer.addDrawerListener(toggle);
@@ -102,13 +100,13 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         //Swapping ContactPostStaff into the fragment container dynamically
                         Fragment contactPostStaffFragment = new ContactPostStaff();
-                        MainActivity.swapFragmentIn(MainActivity.this,contactPostStaffFragment,ContactPostStaff.TAG,true);
+                        MainActivity.swapFragmentIn(MainActivity.this, contactPostStaffFragment, ContactPostStaff.TAG, true);
                         mDrawer.closeDrawer(GravityCompat.START);
                         break;
                     case 1:
                         //Swapping CircleOfTrustFragment into the container
                         CircleOfTrustFragment circleOfTrustFragment = new CircleOfTrustFragment();
-                        MainActivity.swapFragmentIn(MainActivity.this,circleOfTrustFragment,CircleOfTrustFragment.TAG,true);
+                        MainActivity.swapFragmentIn(MainActivity.this, circleOfTrustFragment, CircleOfTrustFragment.TAG, true);
                         mDrawer.closeDrawer(GravityCompat.START);
                         break;
                     case 6:
@@ -117,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                         mDrawer.closeDrawer(GravityCompat.START);
                         break;
                     case 7:
-                        Toast.makeText(MainActivity.this,getString(R.string.change_name),Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, getString(R.string.change_name), Toast.LENGTH_LONG).show();
                 }
                 return false;
             }
@@ -136,111 +134,108 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
-                switch (groupPosition)
-                {
+                switch (groupPosition) {
                     case 2:
-                        switch (childPosition)
-                        {
+                        switch (childPosition) {
                             case 0:
                                 //Swapping RadarFragment into the container
                                 RadarFragment radarFragment = new RadarFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,radarFragment,RadarFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, radarFragment, RadarFragment.TAG, true);
                                 break;
                             case 1:
                                 //Swapping UnwantedAttentionStrategies into the container
                                 CopingFragment copingFragment = new CopingFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,copingFragment,CopingFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, copingFragment, CopingFragment.TAG, true);
                                 break;
                             case 2:
                                 //Swapping TacticsFragment into the container
                                 TacticsFragment tacticsFragment = new TacticsFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,tacticsFragment, TacticsFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, tacticsFragment, TacticsFragment.TAG, true);
                                 break;
                             case 3:
                                 //Swapping Bystander Fragment into the container
                                 BystanderInterventionFragment bystanderInterventionFragment = new BystanderInterventionFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,bystanderInterventionFragment, BystanderInterventionFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, bystanderInterventionFragment, BystanderInterventionFragment.TAG, true);
                                 break;
                             case 4:
                                 //Swapping Safety Plan Basics Fragment into the container
                                 SafetyPlanBasicsFragment safetyPlanBasicsFragment = new SafetyPlanBasicsFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,safetyPlanBasicsFragment, SafetyPlanBasicsFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, safetyPlanBasicsFragment, SafetyPlanBasicsFragment.TAG, true);
                                 break;
                             case 5:
                                 //Swapping Safety Plan Fragment into the container
-                                Intent intent  = new Intent(MainActivity.this,SafetyPlanActivity.class);
+                                Intent intent = new Intent(MainActivity.this, SafetyPlanActivity.class);
                                 startActivity(intent);
                                 break;
 
                         }
                         break;
                     case 3:
-                        switch (childPosition)
-                        {
+                        switch (childPosition) {
                             case 0:
-                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.benefits),getString(R.string.benefits_subtitle),getString(R.string.benefits_info));            break;
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this, getString(R.string.benefits), getString(R.string.benefits_subtitle), getString(R.string.benefits_info));
+                                break;
                             case 1:
                                 AvailableFragment availableFragment = new AvailableFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,availableFragment,AvailableFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, availableFragment, AvailableFragment.TAG, true);
                                 break;
                             case 2:
-                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.commitment),getString(R.string.commitment_subtitle),getString(R.string.commitment_info));
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this, getString(R.string.commitment), getString(R.string.commitment_subtitle), getString(R.string.commitment_info));
                                 break;
                             case 3:
                                 //Swapping AfterAssaultFragment into the container
                                 AfterAssaultFragment afterAssaultFragment = new AfterAssaultFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,afterAssaultFragment,AfterAssaultFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, afterAssaultFragment, AfterAssaultFragment.TAG, true);
                                 break;
                             case 4:
                                 //Swapping ConfidentialityFragment into the container
                                 ConfidentialityFragment confidentialityFragment = new ConfidentialityFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,confidentialityFragment,ConfidentialityFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, confidentialityFragment, ConfidentialityFragment.TAG, true);
                                 break;
                             case 5:
                                 //Swapping MythbustersFragment into the container
                                 MythbustersFragment mythbustersFragment = new MythbustersFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,mythbustersFragment,MythbustersFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, mythbustersFragment, MythbustersFragment.TAG, true);
                                 break;
                         }
                         break;
                     case 4:
-                        switch (childPosition)
-                        {
+                        switch (childPosition) {
                             case 0:
                                 Fragment wasFragment = new WasFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,wasFragment,WasFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, wasFragment, WasFragment.TAG, true);
                                 break;
                             case 1:
                                 Fragment commonFragment = new CommonFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,commonFragment,CommonFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, commonFragment, CommonFragment.TAG, true);
                                 break;
                             case 2:
-                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.impact),
-                                        getString(R.string.impact_subtitle),getString(R.string.impact_sexual_assault));                                break;
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this, getString(R.string.impact),
+                                        getString(R.string.impact_subtitle), getString(R.string.impact_sexual_assault));
+                                break;
                             case 3:
                                 Fragment harassmentFragment = new HarassmentFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,harassmentFragment,HarassmentFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, harassmentFragment, HarassmentFragment.TAG, true);
                                 break;
                             case 4:
                                 Fragment helpingButton = new HelpingFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,helpingButton,HelpingFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, helpingButton, HelpingFragment.TAG, true);
                                 break;
                         }
                         break;
                     case 5:
-                        switch (childPosition)
-                        {
+                        switch (childPosition) {
                             case 0:
-                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this,getString(R.string.policies_title),getString(R.string.subtitle_policies)
-                                        ,getString(R.string.policies_all));
+                                SingleTextViewFragment.showSingleTextLayout(MainActivity.this, getString(R.string.policies_title), getString(R.string.subtitle_policies)
+                                        , getString(R.string.policies_all));
                                 break;
                             case 1:
                                 GlossaryFragment glossaryFragment = new GlossaryFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,glossaryFragment,GlossaryFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, glossaryFragment, GlossaryFragment.TAG, true);
                                 break;
                             case 2:
                                 FurtherResourcesFragment furtherResourcesFragment = new FurtherResourcesFragment();
-                                MainActivity.swapFragmentIn(MainActivity.this,furtherResourcesFragment,FurtherResourcesFragment.TAG,true);
+                                MainActivity.swapFragmentIn(MainActivity.this, furtherResourcesFragment, FurtherResourcesFragment.TAG, true);
                                 break;
                         }
                         break;
@@ -251,8 +246,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public static void swapFragmentIn(FragmentActivity activity, Fragment fragment, String TAG, boolean addToBackStack)
-    {
+    public static void swapFragmentIn(FragmentActivity activity, Fragment fragment, String TAG, boolean addToBackStack) {
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
         // Insert the fragment by replacing any existing fragment
         FRAGMENT_TAG = TAG;
@@ -261,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
         int animPopEnter = R.anim.fade_in_back;
         int animPopExit = R.anim.fade_out_back;
 
-        if(addToBackStack){
+        if (addToBackStack) {
             if (TAG.equals(ContactOtherStaff.TAG)) {
                 animEnter = R.anim.fade_in;
                 animExit = R.anim.fade_out;
@@ -271,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentManager.beginTransaction()
                     .setCustomAnimations(animEnter, animExit, animPopEnter, animPopExit)
                     .replace(R.id.fragment_container
-                            , fragment,TAG)
+                            , fragment, TAG)
                     .addToBackStack(TAG)
                     .commit();
         } else {
@@ -280,7 +274,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentManager.beginTransaction()
                     .setCustomAnimations(animEnter, animExit, animPopEnter, animPopExit)
                     .replace(R.id.fragment_container
-                            , fragment,TAG)
+                            , fragment, TAG)
                     .commit();
         }
     }
@@ -292,9 +286,9 @@ public class MainActivity extends AppCompatActivity {
 
         listDataChild = new HashMap<String, List<String>>();
         listDataHeader = new LinkedList<>(Arrays.asList(getResources().getStringArray(R.array.headers)));
-        String userName = sharedPreferences.getString(getString(R.string.key_name),"");
-        String lastElement = listDataHeader.get(listDataHeader.size()-1) + " " + userName.trim();
-        listDataHeader.remove(listDataHeader.size()-1);
+        String userName = sharedPreferences.getString(getString(R.string.key_name), "");
+        String lastElement = listDataHeader.get(listDataHeader.size() - 1) + " " + userName.trim();
+        listDataHeader.remove(listDataHeader.size() - 1);
         listDataHeader.add(lastElement);
 
         List<String> getHelpNow = new ArrayList<>();
@@ -329,11 +323,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
-        try{
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        try {
             unregisterReceiver(CircleOfTrustFragment.sentReceiver);
-        }catch (IllegalArgumentException e){
-            Log.e(TAG,"Not registered");
+        } catch (IllegalArgumentException e) {
+            Log.e(TAG, "Not registered");
         }
     }
 
@@ -341,8 +335,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         registerReceiver(CircleOfTrustFragment.sentReceiver, new IntentFilter(CircleOfTrustFragment.SENT));
-        if(refreshList)
-        {
+        if (refreshList) {
             refreshList = false;
             prepareListData();
             listAdapter = new NavDrawerListAdapter(this, listDataHeader, listDataChild);
