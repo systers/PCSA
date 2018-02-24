@@ -17,14 +17,14 @@ You can learn more about the Systers organization, whose members work on the dev
 
 Download [Android Studio](http://developer.android.com/sdk/index.html) and the required SDK tools or get the Eclipse ADT plugin
 
-###Installation:
+### Installation:
 Go to your terminal and execute this command
 
     $ git clone https://github.com/systers/FirstAide-Android
 
 Or download the ZIP file from above
 
-###Opening and Running 
+### Opening and Running 
 
 1. Launch android studio
 2. Click on File, then New and then Import Project Or from the welcome screen of android studio click on Import project. (If you wish to contribute, you can directly link to GitHub)
@@ -55,7 +55,3 @@ If you find an issue yourself you can report it, a community member will get bac
 If there are any problems encountered when installing the IDE, you may want to check and make sure you have a JDK and JRE installed. If you experience trouble building or running the project, you may not have the necessary build tools, which you can download directly through the IDE. If the app does not run on the emulator, it may be that the emulator is too slow, and you should look into installing one from an outside source. 
 
 If there are any other questions or concerns, you can either send a mail to the systers-dev mailing list adding the tag [FirstAide-Android] to the title or join #firstaide channel in our slack group. To get an invitation to the slack group [click here](http://systers.io/slack-systers-opensource/). 
-
-
-
-
