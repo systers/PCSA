@@ -1,68 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:fitsSystemWindows="true"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:background="@color/background_app"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:fitsSystemWindows="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".SignupActivity"
     tools:showIn="@layout/activity_login">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/first"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_10"
         android:gravity="center"
-        android:id="@+id/first"
+        android:text="@string/first_aide"
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/title_font"
-        android:textStyle="bold"
-        android:layout_marginBottom="@dimen/padding_10"
-        android:text="@string/first_aide"
-        />
+        android:textStyle="bold" />
 
     <View
         android:id="@+id/second"
         android:layout_width="match_parent"
-        android:layout_below="@id/first"
         android:layout_height="@dimen/contacting_post_staff_view_width"
-        android:background="@color/photo_border"/>
+        android:layout_below="@id/first"
+        android:background="@color/photo_border" />
 
     <TextView
+        android:id="@+id/third"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/third"
         android:layout_below="@id/second"
+        android:layout_marginTop="@dimen/padding_10"
+        android:gravity="center"
+        android:text="@string/home_title"
         android:textColor="@color/primary_text_default_material_dark"
         android:textSize="@dimen/sub_title_font"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/padding_10"
-        android:text="@string/home_title"
-        />
+        android:textStyle="bold" />
 
 
     <LinearLayout
-        android:layout_marginTop="@dimen/fragment_main_marginTop_35"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
+        android:layout_height="wrap_content"
         android:layout_below="@id/third"
-        android:layout_height="wrap_content">
+        android:layout_marginTop="@dimen/fragment_main_marginTop_35"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <EditText
-            android:background="@drawable/edit_text_bg"
-            android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
-            android:layout_height="wrap_content"
             android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
+            android:background="@drawable/edit_text_bg"
             android:hint="@string/enter_name"
             android:inputType="textPersonName|textCapWords" />
 
@@ -70,18 +67,18 @@
             android:id="@+id/spinner_country"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:dropDownWidth="@dimen/contacting_post_staff_spinner_width"
-            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15" />
-        <Button
-            android:id="@+id/loginButton"
-            style="@style/NavigateButton"
-            android:text="@string/login"
-            android:layout_marginTop="@dimen/fragment_main_marginTop_35"
-            android:layout_width="match_parent" />
+            android:layout_marginTop="@dimen/contacting_post_staff_marginTop_15"
+            android:dropDownWidth="match_parent" />
 
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/NavigateButton"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/fragment_main_marginTop_35"
+        android:text="@string/login" />
 
 </RelativeLayout>
-</ScrollView>
