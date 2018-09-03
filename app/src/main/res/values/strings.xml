@@ -4,6 +4,11 @@
     <!--Common-->
     <string name="dialog_call">Voice Call</string>
     <string name="dialog_message">Send Message</string>
+    <string name="permission_dialog_negative_button">No</string>
+    <string name="permission_dialog_message">Some features of the application may not work correctly due to denied permissions. Do you want to grant permissions?</string>
+    <string name="permission_dialog_positive_button">Yes</string>
+    <string name="permission_dialog_title">Need Permissions</string>
+    <string name="permission_toast">Permissions Not Granted</string>
 
     <!--Activity Titles-->
     <string name="title_activity_faq">Frequently Asked Questions</string>
